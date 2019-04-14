@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/BankAccounts/DashboardMain.jsx</title>
+    <title>Code coverage report for src/components/js/MoviesList.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/BankAccounts</a> DashboardMain.jsx
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/js</a> MoviesList.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/4</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>4/4</span>
       </div>
     </div>
   </div>
@@ -78,22 +78,13 @@
 33
 34
 35
-36
-37
-38
-39
-40
-41</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+36</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -116,60 +107,54 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {Component} from 'react'
-import '../css/DashboardView.css'
-import AccountsList from './AcountsList'
-import DepositWithdraw from './DepositWithdraw'
-import NewAccount from './NewAccount'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { LinkedList } from './LinkedList'
 &nbsp;
 &nbsp;
-class DashboardMain extends Component {
-    render(props) {
-        return (
-            &lt;React.Fragment&gt;
-                &lt;div id="mainContentWrapper"&gt;
-                    &lt;AccountsList 
-                        clickHandler={this.props.clickHandler} 
-                        accountsArray={this.props.accountsArray}
-                        currentAccount={this.props.currentAccount}
-                    /&gt;
-                    {this.props.currentCard === 'DepositWithdraw' &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >                        &lt;DepositWithdraw </span>
-                            clickHandler={this.props.clickHandler} 
-                            accountsArray={this.props.accountsArray}
-                            currentAccount={this.props.currentAccount}
-                            chgBalInput={this.props.chgBalInput}
-                            onChange={this.props.onChange}
-                        /&gt;
-                    )}
-                    {this.props.currentCard === 'NewAccount' &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >                        &lt;NewAccount </span>
-                            accountname={this.props.accountname}
-                            accountbalance={this.props.accountbalance}
-                            clickHandler={this.props.clickHandler}
-                            onChange={this.props.onChange}
-                        /&gt;
-                    )}
-                &lt;/div&gt;
-            &lt;/React.Fragment&gt;
-        )
+class Movie {
+    constructor(title = '', gross = 0) {
+        this.title = title
+        this.gross = gross
     }
 }
-export default DashboardMain
+&nbsp;
+&nbsp;
+/*
+This class defines a LinkedList of Movie Objects
+&nbsp;
+&nbsp;
+--- PROPERTIES ---
+inherited from parent class
+&nbsp;
+&nbsp;
+--- METHODS ---
+inherited from parent class, and:
+&nbsp;
+totalGross()    - returns the total gross of all Movies in the list
+*/
+class MoviesList extends LinkedList {
+&nbsp;
+    // Use LinkedList's map() method to obtain an array containing the
+    // gross of each Movie, then reduce() the array
+    totalGross() {
+        return this.map(node =&gt; node.data.gross)
+            .reduce((acc, cur) =&gt; acc + cur)
+    }
+}
+&nbsp;
+export { Movie, MoviesList }
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Mar 06 2019 01:53:01 GMT-0700 (Mountain Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 13 2019 23:35:29 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
