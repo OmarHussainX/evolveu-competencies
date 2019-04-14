@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "EvolveU App",
+  "name": "App showcasing some EvolveU competencies",
   "icons": [
     {
       "src": "favicon.ico",

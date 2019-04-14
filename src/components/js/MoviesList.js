@@ -12,14 +12,11 @@ class Movie {
 /*
 This class defines a LinkedList of Movie Objects
 
-
 --- PROPERTIES ---
 inherited from parent class
 
-
 --- METHODS ---
 inherited from parent class, and:
-
 totalGross()    - returns the total gross of all Movies in the list
 */
 class MoviesList extends LinkedList {
