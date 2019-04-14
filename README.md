@@ -1,10 +1,10 @@
 <p align="center">
-<!-- <img src="src/logo.svg" alt="EvolveU Projects" width="400" /> -->
-<img src="src/screenshot.gif" alt="EvolveU Projects" />
+<img src="src/logo.svg" alt="EvolveU Projects" width="400" />
+<!-- <img src="src/screenshot.gif" alt="EvolveU Projects" /> -->
 </p>
 
 # EvolveU Competencies
-Showcasing solutions for some of the competencies assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program).
+Showcasing solutions for some of the competencies assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program), via [React](https://reactjs.org/).
 
 
 
