@@ -11,6 +11,7 @@ import { faPlus, faMinus, faTimes, faDivide, faEquals, faSurprise } from '@forta
 import { faEdit, faBackspace, faSortAmountDown, faSortAmountUp, faSortAlphaDown, faSortAlphaUp, faExchangeAlt } from '@fortawesome/free-solid-svg-icons'
 //-----------------------------------------------
 
+
 import './App.css'
 import AppNavBar from './components/AppNavBar'
 import ReactGreeter from './components/ReactGreeter'
@@ -19,10 +20,12 @@ import OneAccount from './components/OneAccount'
 import BankAccounts from './components/BankAccounts'
 
 
+// ----- font-awesome ---------------------------
 // build library of imported SVG for re-use in all child components
 library.add(faHome, faCalculator, faHandHoldingUsd, faDollarSign,
     faPlus, faMinus, faTimes, faDivide, faEquals, faSurprise,
     faEdit, faBackspace, faSortAmountDown, faSortAmountUp, faSortAlphaDown, faSortAlphaUp, faExchangeAlt)
+//-----------------------------------------------
 
 
 class App extends Component {
@@ -37,10 +40,10 @@ class App extends Component {
     }
 
 
-    // NOTE 1: THIS ONLY WORKED VIA `event.currentTarget` (NOT 'event.target')
+    // NOTE: THIS ONLY WORKED VIA `event.currentTarget` (NOT 'event.target')
     //         https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget
     //
-    // NOTE 2: LOOK INTO React's SYNTHETIC EVENT OBJECT, AND 'event.nativeEvent'?
+    // NOTE: LOOK INTO React's SYNTHETIC EVENT OBJECT, AND 'event.nativeEvent'?
     //         https://reactjs.org/docs/events.html
     //         (looked into it, didn't make much headway with 'event.nativeEvent'...)
 

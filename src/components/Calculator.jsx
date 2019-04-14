@@ -12,12 +12,13 @@ class Calculator extends Component {
             mathOperator: '+',
             result: '0'
         }
-        this.changeHandler = this.changeHandler.bind(this)
     }
     
-    changeHandler(event) {
+    changeHandler = event => {
         // obtain info on event from 'target' object
         const {name, value, type, checked} = event.target
+
+        console.log(`----calc event type: ${type}----`)
 
         // update state based on input received
         type === 'checkbox' ? this.setState({ [name] : checked }) : this.setState({ [name] : value })
@@ -39,19 +40,19 @@ class Calculator extends Component {
         let tempResult = ''
         switch(mathOperator) {
             case '+':
-            tempResult = sum(parseInt(arg1), parseInt(arg2))
+            tempResult = sum(parseFloat(arg1), parseFloat(arg2))
             break
             
             case '-':
-            tempResult = difference(parseInt(arg1), parseInt(arg2))
+            tempResult = difference(parseFloat(arg1), parseFloat(arg2))
             break
             
             case 'x':
-            tempResult = multiply(parseInt(arg1), parseInt(arg2))
+            tempResult = multiply(parseFloat(arg1), parseFloat(arg2))
             break
             
             case '/':
-            tempResult = divide(parseInt(arg1), parseInt(arg2))
+            tempResult = divide(parseFloat(arg1), parseFloat(arg2))
             break
             
             default:
@@ -125,7 +126,7 @@ class Calculator extends Component {
                     </li>
                 </ul>
 
-                <h2>{this.state.arg1} {this.state.mathOperator} {this.state.arg2} = {this.state.result}</h2>
+                <h2>{this.state.arg1} {this.state.mathOperator} {this.state.arg2} = {(+this.state.result).toFixed(2)}</h2>
 
                 {/* <div class="container">
 

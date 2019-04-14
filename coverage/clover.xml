@@ -1,40 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1555220129240" clover="3.2.0">
-  <project timestamp="1555220129240" name="All files">
-    <metrics statements="492" coveredstatements="158" conditionals="282" coveredconditionals="69" methods="112" coveredmethods="50" elements="886" coveredelements="277" complexity="0" loc="492" ncloc="492" packages="4" files="22" classes="22">
+<coverage generated="1555281644365" clover="3.2.0">
+  <project timestamp="1555281644365" name="All files">
+    <metrics statements="469" coveredstatements="162" conditionals="280" coveredconditionals="73" methods="112" coveredmethods="54" elements="861" coveredelements="289" complexity="0" loc="469" ncloc="469" packages="4" files="22" classes="22">
       <package name="src">
-        <metrics statements="73" coveredstatements="8" conditionals="42" coveredconditionals="1" methods="18" coveredmethods="2"/>
+        <metrics statements="50" coveredstatements="5" conditionals="40" coveredconditionals="5" methods="18" coveredmethods="2"/>
         <file name="App.js" path="/home/omar/Documents/evolveu/objects/src/App.js">
-          <metrics statements="29" coveredstatements="8" conditionals="10" coveredconditionals="1" methods="3" coveredmethods="2"/>
-          <line num="23" count="1" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="34" count="1" type="stmt"/>
-          <line num="54" count="0" type="stmt"/>
-          <line num="56" count="0" type="cond" truecount="0" falsecount="5"/>
-          <line num="58" count="0" type="stmt"/>
-          <line num="59" count="0" type="stmt"/>
-          <line num="62" count="0" type="stmt"/>
-          <line num="63" count="0" type="stmt"/>
-          <line num="66" count="0" type="stmt"/>
-          <line num="67" count="0" type="stmt"/>
-          <line num="70" count="0" type="stmt"/>
-          <line num="71" count="0" type="stmt"/>
-          <line num="74" count="0" type="stmt"/>
-          <line num="75" count="0" type="stmt"/>
-          <line num="83" count="1" type="stmt"/>
-          <line num="84" count="1" type="cond" truecount="1" falsecount="4"/>
-          <line num="86" count="0" type="stmt"/>
-          <line num="87" count="0" type="stmt"/>
-          <line num="90" count="0" type="stmt"/>
-          <line num="91" count="0" type="stmt"/>
-          <line num="94" count="0" type="stmt"/>
-          <line num="95" count="0" type="stmt"/>
-          <line num="98" count="1" type="stmt"/>
-          <line num="99" count="1" type="stmt"/>
-          <line num="102" count="0" type="stmt"/>
-          <line num="103" count="0" type="stmt"/>
-          <line num="104" count="0" type="stmt"/>
-          <line num="107" count="1" type="stmt"/>
+          <metrics statements="6" coveredstatements="5" conditionals="8" coveredconditionals="5" methods="3" coveredmethods="2"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="62" count="1" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
         </file>
         <file name="index.js" path="/home/omar/Documents/evolveu/objects/src/index.js">
           <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -88,15 +65,15 @@
         </file>
       </package>
       <package name="src.components">
-        <metrics statements="234" coveredstatements="4" conditionals="132" coveredconditionals="4" methods="37" coveredmethods="3"/>
+        <metrics statements="234" coveredstatements="11" conditionals="132" coveredconditionals="4" methods="37" coveredmethods="7"/>
         <file name="AppNavBar.jsx" path="/home/omar/Documents/evolveu/objects/src/components/AppNavBar.jsx">
           <metrics statements="1" coveredstatements="1" conditionals="8" coveredconditionals="4" methods="1" coveredmethods="1"/>
           <line num="10" count="1" type="stmt"/>
         </file>
         <file name="BankAccounts.jsx" path="/home/omar/Documents/evolveu/objects/src/components/BankAccounts.jsx">
           <metrics statements="183" coveredstatements="3" conditionals="108" coveredconditionals="0" methods="26" coveredmethods="2"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="11" count="1" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
           <line num="70" count="0" type="stmt"/>
           <line num="76" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="77" count="0" type="stmt"/>
@@ -277,38 +254,38 @@
           <line num="672" count="0" type="stmt"/>
           <line num="675" count="0" type="stmt"/>
           <line num="681" count="0" type="stmt"/>
-          <line num="691" count="1" type="stmt"/>
+          <line num="691" count="2" type="stmt"/>
         </file>
         <file name="Calculator.jsx" path="/home/omar/Documents/evolveu/objects/src/components/Calculator.jsx">
-          <metrics statements="22" coveredstatements="0" conditionals="13" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="15" count="0" type="stmt"/>
-          <line num="20" count="0" type="stmt"/>
-          <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+          <metrics statements="22" coveredstatements="3" conditionals="13" coveredconditionals="0" methods="3" coveredmethods="2"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="39" count="0" type="stmt"/>
-          <line num="40" count="0" type="cond" truecount="0" falsecount="5"/>
-          <line num="42" count="0" type="stmt"/>
+          <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="cond" truecount="0" falsecount="5"/>
           <line num="43" count="0" type="stmt"/>
-          <line num="46" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
           <line num="47" count="0" type="stmt"/>
-          <line num="50" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
           <line num="51" count="0" type="stmt"/>
-          <line num="54" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
           <line num="55" count="0" type="stmt"/>
-          <line num="58" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
           <line num="59" count="0" type="stmt"/>
-          <line num="62" count="0" type="stmt"/>
-          <line num="70" count="0" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
         </file>
         <file name="OneAccount.jsx" path="/home/omar/Documents/evolveu/objects/src/components/OneAccount.jsx">
-          <metrics statements="27" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="6" coveredmethods="0"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="14" count="0" type="stmt"/>
+          <metrics statements="27" coveredstatements="4" conditionals="3" coveredconditionals="0" methods="6" coveredmethods="2"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
           <line num="18" count="0" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
           <line num="29" count="0" type="stmt"/>
@@ -332,7 +309,7 @@
           <line num="59" count="0" type="stmt"/>
           <line num="62" count="0" type="stmt"/>
           <line num="64" count="0" type="stmt"/>
-          <line num="71" count="0" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
         </file>
         <file name="ReactGreeter.jsx" path="/home/omar/Documents/evolveu/objects/src/components/ReactGreeter.jsx">
           <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -343,19 +320,19 @@
         <metrics statements="53" coveredstatements="14" conditionals="58" coveredconditionals="14" methods="15" coveredmethods="3"/>
         <file name="AccountsList.jsx" path="/home/omar/Documents/evolveu/objects/src/components/BankAccounts/AccountsList.jsx">
           <metrics statements="8" coveredstatements="5" conditionals="20" coveredconditionals="3" methods="2" coveredmethods="1"/>
-          <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="8" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="2" type="cond" truecount="1" falsecount="1"/>
           <line num="14" count="0" type="stmt"/>
-          <line num="46" count="1" type="stmt"/>
+          <line num="46" count="2" type="stmt"/>
           <line num="47" count="0" type="stmt"/>
           <line num="48" count="0" type="stmt"/>
-          <line num="101" count="1" type="stmt"/>
+          <line num="101" count="2" type="stmt"/>
         </file>
         <file name="Body.jsx" path="/home/omar/Documents/evolveu/objects/src/components/BankAccounts/Body.jsx">
           <metrics statements="2" coveredstatements="2" conditionals="14" coveredconditionals="8" methods="1" coveredmethods="1"/>
-          <line num="15" count="1" type="cond" truecount="3" falsecount="1"/>
-          <line num="17" count="1" type="stmt"/>
+          <line num="15" count="2" type="cond" truecount="3" falsecount="1"/>
+          <line num="17" count="2" type="stmt"/>
         </file>
         <file name="DeleteAccount.jsx" path="/home/omar/Documents/evolveu/objects/src/components/BankAccounts/DeleteAccount.jsx">
           <metrics statements="7" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -381,18 +358,18 @@
         </file>
         <file name="Header.jsx" path="/home/omar/Documents/evolveu/objects/src/components/BankAccounts/Header.jsx">
           <metrics statements="12" coveredstatements="7" conditionals="8" coveredconditionals="3" methods="2" coveredmethods="1"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="12" count="1" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="11" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="12" count="2" type="stmt"/>
           <line num="17" count="0" type="stmt"/>
           <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="19" count="0" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="26" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="26" count="2" type="cond" truecount="1" falsecount="1"/>
           <line num="27" count="0" type="stmt"/>
-          <line num="35" count="1" type="stmt"/>
+          <line num="35" count="2" type="stmt"/>
         </file>
         <file name="NewAccount.jsx" path="/home/omar/Documents/evolveu/objects/src/components/BankAccounts/NewAccount.jsx">
           <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -484,8 +461,8 @@
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
           <line num="6" count="21" type="stmt"/>
           <line num="7" count="21" type="stmt"/>
-          <line num="30" count="21" type="stmt"/>
-          <line num="31" count="20" type="stmt"/>
+          <line num="27" count="21" type="stmt"/>
+          <line num="28" count="20" type="stmt"/>
         </file>
         <file name="Node.js" path="/home/omar/Documents/evolveu/objects/src/components/js/Node.js">
           <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
@@ -506,10 +483,10 @@
         </file>
         <file name="account.js" path="/home/omar/Documents/evolveu/objects/src/components/js/account.js">
           <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
-          <line num="6" count="34" type="stmt"/>
-          <line num="7" count="34" type="stmt"/>
-          <line num="10" count="117" type="stmt"/>
-          <line num="11" count="131" type="stmt"/>
+          <line num="6" count="35" type="stmt"/>
+          <line num="7" count="35" type="stmt"/>
+          <line num="10" count="118" type="stmt"/>
+          <line num="11" count="132" type="stmt"/>
           <line num="13" count="1" type="stmt"/>
           <line num="14" count="2" type="stmt"/>
           <line num="17" count="1" type="stmt"/>
@@ -519,7 +496,7 @@
         </file>
         <file name="accountsController.js" path="/home/omar/Documents/evolveu/objects/src/components/js/accountsController.js">
           <metrics statements="44" coveredstatements="44" conditionals="23" coveredconditionals="23" methods="16" coveredmethods="16"/>
-          <line num="7" count="12" type="stmt"/>
+          <line num="7" count="13" type="stmt"/>
           <line num="13" count="33" type="stmt"/>
           <line num="17" count="1" type="stmt"/>
           <line num="18" count="1" type="stmt"/>
@@ -543,7 +520,7 @@
           <line num="55" count="2" type="stmt"/>
           <line num="56" count="2" type="cond" truecount="2" falsecount="0"/>
           <line num="57" count="1" type="stmt"/>
-          <line num="63" count="7" type="stmt"/>
+          <line num="63" count="9" type="stmt"/>
           <line num="72" count="8" type="stmt"/>
           <line num="74" count="8" type="cond" truecount="3" falsecount="0"/>
           <line num="78" count="3" type="stmt"/>
