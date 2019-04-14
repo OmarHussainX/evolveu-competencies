@@ -9,9 +9,7 @@ class OneAccount extends Component {
         this.state = {
             userAccount: new Account(1000000, 'Heisenberg'),
             userinput: 0
-
         }
-        this.clickHandler = this.clickHandler.bind(this)
     }
     
     changeHandler = event => {
@@ -23,7 +21,7 @@ class OneAccount extends Component {
         // console.log(`VALUE: ${value}`)
     }
 
-    clickHandler(event) {
+    clickHandler = event => {
         // console.log(`event.target.id: ${event.target.id}`)
         // console.log(`event.currentTarget.id: ${event.currentTarget.id}`)
         console.log(`this.state...name: ${this.state.userAccount.name}`)
