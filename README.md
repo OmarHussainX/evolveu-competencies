@@ -4,7 +4,7 @@
 </p>
 
 # EvolveU Competencies
-Showcasing solutions for some of the competencies assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program), via [React](https://reactjs.org/).
+ [React](https://reactjs.org/) app showcasing solutions for some of the competencies assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program).
 
 
 
