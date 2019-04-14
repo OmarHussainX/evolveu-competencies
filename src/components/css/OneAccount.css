@@ -1,0 +1,15 @@
+/* -------------------------------------------
+Styles to setup deposit/withdraw buttons for banking app
+*/
+
+#OneAccount .bankbutton {
+    background: lightgray;
+    color: black;
+    margin: 1em;
+    padding: 0.5em;
+    display: inline-block;
+    cursor: pointer;
+    /* width: 20%; */
+    border-radius: 5px;
+
+}

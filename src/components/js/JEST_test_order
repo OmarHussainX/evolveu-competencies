@@ -1,0 +1,52 @@
+describe('describe 1', () => {
+    console.log(`__describe 1`)
+
+    describe('describe 2', () => {
+        console.log(`__describe 2`)
+
+        beforeEach(() => {
+            console.log(`__beforeEach 1`)
+        })
+
+        it('it 1', () => {
+            console.log(`__it 1`)
+        })
+
+        it('it 2', () => {
+            console.log(`__it 2`)
+        })
+    })
+
+    describe('describe 3', () => {
+        console.log(`__describe 3'`)
+
+        beforeEach(() => {
+            console.log(`__beforeEach 2`)
+        })
+
+        it('it 3', () => {
+            console.log(`__it 3`)
+        })
+
+        it('it 4', () => {
+            console.log(`__it 4`)
+        })
+
+        describe('describe 4', () => {
+            console.log(`__describe 4`)
+
+            beforeEach(() => {
+                console.log(`__beforeEach 3`)
+            })
+
+            it('it 5', () => {
+                console.log(`__it 5`)
+            })
+
+            it('it 6', () => {
+                console.log(`__it 6`)
+            })
+        })
+    })
+})
+

@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/js/LinkedList.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/js</a> LinkedList.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>64/64</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>19/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>56/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Node } from './Node'
+&nbsp;
+/*
+This class defines a *positional*, singly-linked list of Node Objects
+&nbsp;
+&nbsp;
+--- PROPERTIES ---
+head        - points to the first Node of the list
+&nbsp;
+tail        - points to the last Node of the list
+&nbsp;
+position    - points to the 'current Node'. The current Node is the last Node in
+              the list (i.e. the 'tail'), until 'position' is moved via one of
+              the positional methods [first(), last(), next(), previous()] to
+              to point to another Node
+            - controls behaviour of insert() and delete() [see below for details]
+&nbsp;
+length      - the number of Nodes in the list
+&nbsp;
+&nbsp;
+--- METHODS ---
+insert()    - inserts a new Node after the current Node, and makes the
+              new Node the current Node
+&nbsp;
+delete()    - removes the current Node, and makes the previous Node the
+              the current Node
+&nbsp;
+first()     - makes the head the current Node
+last()      - makes the tail the current Node
+next()      - makes the next Node the current Node
+previous()  - makes the previous Node the current Node
+&nbsp;
+map()       - returns an Array of (references to) all Node Objects in the list
+              in sequence, from head to tail
+&nbsp;
+&nbsp;
+--- NOTES ---
+- All methods allow call chaining, including map()
+&nbsp;
+- Empty list:
+    'head', 'tail', 'position' are null and 'length' is 0
+&nbsp;
+- The way this list has been defined, the only way to change the 'head', or 'tail'
+or any Node in the list, really, is to move 'position' to the target Node, making it
+the current Node, deleting it, and then inserting new Node(s) if desired.
+*/
+&nbsp;
+// Set to 'true' to enable output of debug messages from methods
+const DEBUG_MSG = false
+&nbsp;
+&nbsp;
+&nbsp;
+class LinkedList {
+&nbsp;
+    constructor() {
+        this.head = null
+        this.tail = null
+        this.position = null
+        this.length = 0
+    }
+&nbsp;
+&nbsp;
+    // Inserts a new Node containing 'data' after the current Node, and
+    // makes the new Node the current Node
+    insert(data = null) {
+        // Disallow addition of Nodes with no data
+        if (data === null) return this
+&nbsp;
+        let statusMsg = '__insert() '
+&nbsp;
+        // List is empty:
+        // - create the first Node of the list, containing data,
+        //   _linked_ to null
+        // - update head, position, tail to point to new Node
+        if (this.position === null) {
+            this.position = this.head = this.tail = new Node(data, null)
+           statusMsg += '__created new Node: head'
+        }
+&nbsp;
+        // Current Node is the tail, insertion is to be done *after* the
+        // current Node, and after insertion, the inserted Node becomes the
+        // new tail, and also the new current Node:
+        // - create Node containing data (_linked_ to null), which will be the new tail
+        // - modify the current Node so that it _links_ to the new tail
+        // - update tail and position to _point_ to the new Node, making it the new
+        //   tail, and the new current Node
+        else if (this.position === this.tail) {
+            const oldTail = this.tail
+            this.tail = this.position = new Node(data, null)
+            oldTail.next = this.tail
+           statusMsg += '__created new Node: tail'
+        }
+&nbsp;
+        // Current Node is the head, or any Node *but* the tail, insertion
+        // is to be done *after* the current Node, and after insertion, 
+        // the inserted Node becomes the new current Node:
+        // - save a reference to the (soon to be old) current Node
+        // - create new Node containing data, _linked_ to the (soon to be old) 
+        //   current Node's next Node
+        // - update position to _point_ to the newly created Node, making it the
+        //   new current Node
+        // - modify the old current Node so that it _links_ to the new current Node
+        else {
+            let oldCurrentNode = this.position
+            this.position = new Node(data, this.position.next)
+            oldCurrentNode.next = this.position
+            statusMsg += `__added Node after '{${Object.entries(oldCurrentNode.data)}}'`
+        }
+&nbsp;
+        // A new Node was added to the list, increment length
+        this.length++
+        // if (DEBUG_MSG) console.log(`${statusMsg}, length: ${this.length}`)
+        return this
+    }
+&nbsp;
+&nbsp;
+    // Deletes the current Node, making the previous Node (if there is one)
+    // the current Node
+    delete() {
+        // Case 1: empty list, nothing to do
+        if (this.head === null) return this
+&nbsp;
+        let statusMsg = '__delete() '
+&nbsp;
+        // Case 2a: there is only one Node in the list (head, position, tail are equal)
+        // Case 2b: there is more than one Node, and head is the current Node
+        //
+        // Delete the head, since it's the current Node - there is no previous node
+        // so the Node after the head (if there is one) becomes the new current Node
+        if (this.head === this.position) {
+            // Save a reference to the current head, which is to be deleted
+            const oldHead = this.head
+&nbsp;
+            // The next Node (if it exists) becomes the new head &amp; new current Node
+            this.position = this.head = oldHead.next
+            oldHead.next = null // unlink old head
+            
+            // In the case of a list with one Node, the tail needs to be updated as well
+            if (this.tail === oldHead) this.tail = null
+            statusMsg += `__deleted: head '{${Object.entries(oldHead.data)}}'`
+        }
+        
+        // Case 3: The list has more than one Node, and the current Node is the tail, or
+        //         any Node *but* the head
+        //
+        // Delete the current Node, making the previous node the current Node
+        else {
+            // Find the previous Node
+            let prevNode = this.head
+            while (prevNode.next !== this.position) prevNode = prevNode.next
+            // The previous Node has been located at this point
+&nbsp;
+            // If the tail is the current Node, this unlinks the current tail
+            // If the current Node is not the tail, then this causes the current Node
+            // to be unlnked from the list
+            prevNode.next = this.position.next
+&nbsp;
+            // This has no impact if the current Node was the tail, but if the current
+            // Node was not the tail, this completes its unlinking from the the list
+            this.position.next = null
+&nbsp;
+            // If the tail was the current Node, update the tail to point to the
+            // new tail: the previous Node
+            if (this.tail === this.position) this.tail = prevNode
+&nbsp;
+            // Make the previous Node the current Node
+            this.position = prevNode
+&nbsp;
+            statusMsg += `deleted Node that was after '{${Object.entries(prevNode.data)}}'`
+        }
+&nbsp;
+        // A Node was removed from the list, decrement length
+        this.length--
+        // if (DEBUG_MSG) console.log(`${statusMsg}, length: ${this.length}`)
+&nbsp;
+        return this
+    }
+&nbsp;
+&nbsp;
+    // Makes position point to the head, making the head the current Node
+    // (Note: not concerned about checking for a null head/empty list, in an
+    // empty list the vale of position is null in any case)
+    first() {
+        this.position = this.head
+        return this
+    }
+&nbsp;
+&nbsp;
+    // Makes position point to the tail, making the tail the current Node
+    // (Note: not concerned about checking for a null head/empty list, in an
+    // empty list the vale of position is null in any case)
+    last() {
+        this.position = this.tail
+        return this
+    }
+&nbsp;
+&nbsp;
+    // Makes position point to the Node after the current Node, making it 
+    // the new current Node
+    next() {
+        // If the list is empty, or the current Node is the tail, the tail and position
+        // will be equal, and there is no next Node to move to
+        if (this.position === this.tail) return this
+&nbsp;
+        // ASSERT: this.position will not be null at this point
+        // (If position were null, tail would have been null too, satisfying the 
+        // conditional check above)
+        this.position = this.position.next
+        
+        return this
+    }
+&nbsp;
+&nbsp;
+    // Makes position point to the Node before the current Node, making it
+    // the new current Node
+    previous() {
+        // If the list is empty, or the current Node is the head, the head and position
+        // will be equal, and there is no previous Node to move to
+        if (this.position === this.head) return this
+&nbsp;
+        // Otherwise, search the list for the Node prior to the current Node, and when
+        // found, make it the current Node
+        // The previous Node _links_ to the current Node, so if we find a Node whose
+        // _link_ is equal to position, we have found the previous Node
+        let prevNode = this.head
+        while (prevNode.next !== this.position) prevNode = prevNode.next
+        this.position = prevNode
+&nbsp;
+        return this
+    }
+&nbsp;
+&nbsp;
+    // Creates a new Array with the results of calling the provided function
+    // on every Node in the list
+    map(callback) {
+        const listArray = []
+        let currentNode = this.head
+&nbsp;
+        while (currentNode !== null) {
+            listArray.push(callback(currentNode))
+            currentNode = currentNode.next
+        }
+        return listArray
+    }
+}
+&nbsp;
+export { LinkedList }
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 13 2019 15:51:45 GMT-0600 (Mountain Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

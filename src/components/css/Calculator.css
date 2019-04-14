@@ -1,0 +1,39 @@
+/* -------------------------------------------
+Add space between input fields
+*/
+
+#Calculator input + .inputspacer {
+    display: inline-block;
+    width: 2em;
+}
+
+
+
+/* -------------------------------------------
+Styles to create a horizontal list of radio inputs, in
+which the radio inputs are hidden
+*/
+
+#Calculator ul li {
+    display:inline;
+    padding-right: 1em;
+}
+
+#Calculator ul li label {
+    cursor: pointer;
+    transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+}
+
+#Calculator ul li:hover label {
+    color: #61dafb;
+}
+
+#Calculator input[type=radio]:checked ~ label {
+    color: #61dafb;
+}
+
+#Calculator ul li input[type=radio] {
+    display: none;
+    visibility: hidden;
+}

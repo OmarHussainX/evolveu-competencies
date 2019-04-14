@@ -1,0 +1,123 @@
+- parseInt any array index calculations
+
+- set focus on certain elements?
+
+- write helper functions/refactor
+
+- re-think component breakdown...
+
+- Help button & screen (show on launch?)
+
+- document state, especially default state, draw state diagram?
+
+- truncate account names (and balances?) that exceed a lentgh that would mess up the UI (provide notice to the user that names longer than 'x' characters may be truncated)
+
+- see if there are any better array methods instead of using forEach everywhere
+
+- consider if there are better ways of achieving the desired outcomes
+
+
+
+
+
+
+----------------------------------------------------------
+DONE
+----------------------------------------------------------
+
+- clean up sorting
+
+- clean up UI (and make it responsive!)
+
+- investigate fontAwesom library
+
+- status bar/message area/TOOLTIPS! POPUP NOTIFICATIONS
+  if going with status bar/message area, could be used to display error messages (e.g. in red)
+  
+  Would need to think about how often to update... - if error message shown in exactly same place as status messages, then it will be lost as soon as another element is hovered over... (add button to dismiss notification)
+
+- error message when duplicate account name entered
+
+- 'Make a transfer' component:
+  1. 'Make a transfer' only enabled when there are at least two accounts
+  2.  Clicking 'Make a transfer' displays a new component, with two dropdown selectors:
+                From:
+                To:
+  3. 'To:' only has one entry 'Select "From" account first'
+  4. 'From:' has all available accounts
+  5. When a 'From:' account is selected, 'To:' is populated with all accounts *except* for the one selected in 'From:'
+  6. When 'Transfer' pressed:
+     - get From account
+     - get To account
+     - get amount
+     - if amount is >0 and <=From account.balance, then
+          withdraw amount from From
+          deposit amount in To
+  7. Switch back to dashboard view
+  (Perhaps this whole component could be built & tested spearately...)
+
+- Up/down arrows above balance column to allow for sorting ascending/descending (OR: one arrow that changes states!!)
+  * Just need to sort array in ascending order - if descending order is needed, generate the list in reverse order!
+
+- remove highlight actions from accounts list (do I want to...?)
+
+- Start screen for when there are no accounts...Maybe a different component?
+  * Big logo
+  * Big new account button
+
+- Make account edit/rename controls somewhat transparent, then fully opaque on hover
+
+- enable float bank balances in Account class
+
+- enable float operations in OneAccount?
+
+- re-organise project files
+
+- instead of modifying AccountsController.getArrayRef() directly, and then causing component updates by changing view (which may not even always work(?), since only components affected by 'view' state changes will be re-render()ed):
+  1. make a copy of AccountsController (deep clone needed?):
+     https://developera.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+  2. let newAC = Object.assign({}, AccountsController)
+  3. newArray = newAC.getArrayRef()
+  4. modify newArray as needed
+  5. this.setState({accountsController: newAC})
+This will ensure that setState will render any components affected by changes to state.accountsController
+Wait... Are there even any such components!? I don't think so.
+So perhaps the approach of directly modifying the array and then using setState to 'update' view (to the same view) is valid, provided that the render() methods always dynamically generate page content based on the array contents - which I think they do...
+
+
+- for accounts list rename & delete controls: generate them in the <li> as the accounts list is generated 
+   * delete shouldn't be too hard to handle
+   * for rename, could just pop up an alert asking for the new name, OR
+     somehow hide the <li> text, and have an input field appear (with old account name as placeholder)
+
+ALTERNATIVE UI: only allow for renaming & deletion of the current account
+    but then which account gets set as current after deletion? just default to the first one maybe (watch out for deletion of last account?)
+
+
+- Could be useful e.g. if one wishes to use <a> tags but not have the default click action (go to URL) take place:
+https://www.w3schools.com/jquery/event_preventdefault.asp
+
+
+- make sure all necessary steps are taken when an account is removed...(is there anythng special that needs to be done?)
+
+
+- for 'withdraw' and 'deposit' buttons: a separate clickHandler, or can the current take an arbitrary parameter...?
+
+  CHALLENGING PROBLEM: how to pass data from child component to parent?
+
+  * Parameter cannot be passed to the clickhandler, e.g. normally we'd write (in the child):
+     onClick={this.props.clickHandler}
+    This is impossible, and wrong:
+     onClick={this.props.clickHandler(event, {amount})}
+
+  * Another idea: set custom 'data-amount' attribute in child, and then in the parent's clickHandler, use 'event.target.dataset.amount' to access the data - this works!
+  https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+  https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html#should-i-keep-data-in-custom-attributes
+
+  The only issue in this case (apart from storing data in attributes not being the best thing to do), is that the child needs to have 'data-amount' set by state, since the value is coming from a user input field...
+
+  If we're going to have to generate the child with 'data-amount' being determined by user input as saved in the child's state, then we may as well use this way of passing data (using the child's own state) from the child to the parent:
+  https://codepen.io/PiotrBerebecki/pen/dpRdKP
+  
+  Also see:
+  https://anthonymineo.com/simple-child-to-parent-communication-in-react/
