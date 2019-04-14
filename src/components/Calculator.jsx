@@ -7,24 +7,28 @@ class Calculator extends Component {
     constructor() {
         super()
         this.state = {
-            arg1: '0',
-            arg2: '0',
+            argument1: '0',
+            argument2: '0',
             mathOperator: '+',
             result: '0'
         }
     }
     
+    // Any time there is an input event:
+    // - check the inputs and update state
+    // - calculate the result of the expression and update state
     changeHandler = event => {
-        // obtain info on event from 'target' object
+        // obtain data on event from 'target' object
         const {name, value, type, checked} = event.target
 
-        console.log(`----calc event type: ${type}----`)
-
-        // update state based on input received
+        // Update state based on input received
+        // (NOTE: not using 'checkbox' inputs anymore, but leaving the special
+        // handling for checkboxes in for future reference...)
         type === 'checkbox' ? this.setState({ [name] : checked }) : this.setState({ [name] : value })
 
-        // calculate result (is it smart to do this everytime there's a change event?)
-        // NOTE: It is CRITICAL to check which input ('arg1' or 'arg2') was just updated via input,
+        // calculate result
+        //
+        // NOTE: It is CRITICAL to check which input ('argument1' or 'argument2') was just updated via input,
         //       and then use that value in the calculation, with the other argument alone
         //       being obtained from state.
         //       Even though state has ostensibly been updated at this point, cannot just
@@ -33,41 +37,36 @@ class Calculator extends Component {
         //          "due to the asynchronous nature of setState, you have no guarantee you
         //           will have immediate access to this.state after setState has been called"
         //       https://stackoverflow.com/questions/41896878/react-setstate-getstate-and-asynchronous
-        const arg1 = name === 'arg1' ? value : this.state.arg1
-        const arg2 = name === 'arg2' ? value : this.state.arg2
+        const argument1 = name === 'argument1' ? value : this.state.argument1
+        const argument2 = name === 'argument2' ? value : this.state.argument2
         const mathOperator = name === 'mathOperator' ? value : this.state.mathOperator
 
         let tempResult = ''
         switch(mathOperator) {
             case '+':
-            tempResult = sum(parseFloat(arg1), parseFloat(arg2))
+            tempResult = sum(parseFloat(argument1), parseFloat(argument2))
             break
             
             case '-':
-            tempResult = difference(parseFloat(arg1), parseFloat(arg2))
+            tempResult = difference(parseFloat(argument1), parseFloat(argument2))
             break
             
             case 'x':
-            tempResult = multiply(parseFloat(arg1), parseFloat(arg2))
+            tempResult = multiply(parseFloat(argument1), parseFloat(argument2))
             break
             
             case '/':
-            tempResult = divide(parseFloat(arg1), parseFloat(arg2))
+            tempResult = divide(parseFloat(argument1), parseFloat(argument2))
             break
             
             default:
             tempResult = undefined
             break
-            
         }
         this.setState({ result : tempResult })
     }
 
     render() {
-
-        // TODO: Create a string containing the result to be shown, based on the current state
-        // let resultTxt=''
-
         return (
             <div id='Calculator'>
                 <h1>
@@ -78,22 +77,22 @@ class Calculator extends Component {
                 <input 
                     type="number"
                     className='basic'
-                    value={this.state.arg1}
-                    name="arg1"
+                    value={this.state.argument1}
+                    name="argument1"
                     onChange={this.changeHandler}
                 />
                 <span className='inputspacer'></span>
                 <input 
                     type="number"
                     className='basic'
-                    value={this.state.arg2}
-                    name="arg2"
+                    value={this.state.argument2}
+                    name="argument2"
                     onChange={this.changeHandler}
                 />
                 
                 <ul>
                     <li>
-                        <input type="radio" id="add" name="mathOperator" value="+"
+                        <input type="radio" name="mathOperator" id="add" value="+"
                             checked={this.state.mathOperator === "+"}
                             onChange={this.changeHandler} />
                         <label htmlFor="add">
@@ -101,7 +100,7 @@ class Calculator extends Component {
                         </label>
                     </li>
                     <li>
-                        <input type="radio" id="subtract" name="mathOperator" value="-"
+                        <input type="radio" name="mathOperator" id="subtract" value="-"
                             checked={this.state.mathOperator === "-"}
                             onChange={this.changeHandler} />
                         <label htmlFor="subtract">
@@ -109,7 +108,7 @@ class Calculator extends Component {
                         </label>
                     </li>
                     <li>
-                        <input type="radio" id="multiply" name="mathOperator" value="x"
+                        <input type="radio" name="mathOperator" id="multiply" value="x"
                             checked={this.state.mathOperator === "x"}
                             onChange={this.changeHandler} />
                         <label htmlFor="multiply">
@@ -117,7 +116,7 @@ class Calculator extends Component {
                         </label>
                     </li>
                     <li>
-                        <input type="radio" id="divide" name="mathOperator" value="/"
+                        <input type="radio" name="mathOperator" id="divide" value="/"
                             checked={this.state.mathOperator === "/"}
                             onChange={this.changeHandler} />
                         <label htmlFor="divide">
@@ -126,35 +125,7 @@ class Calculator extends Component {
                     </li>
                 </ul>
 
-                <h2>{this.state.arg1} {this.state.mathOperator} {this.state.arg2} = {(+this.state.result).toFixed(2)}</h2>
-
-                {/* <div class="container">
-
-                    <h2>{this.state.arg1} + {this.state.arg2} = {this.state.result}</h2>
-
-                    <ul>
-                        <li>
-                            <input type="radio" id="f-option" name="selector" />
-                            <label for="f-option"><FontAwesomeIcon icon={faPlus} size="1x" /></label>
-                            <div class="check"></div>
-                        </li>
-                        <li>
-                            <input type="radio" id="s-option" name="selector" />
-                            <label for="s-option"><FontAwesomeIcon icon={faMinus} size="1x" /></label>
-                            <div class="check"><div class="inside"></div></div>
-                        </li>
-                        <li>
-                            <input type="radio" id="t-option" name="selector" />
-                            <label for="t-option"><FontAwesomeIcon icon={faTimes} size="1x" /></label>
-                            <div class="check"><div class="inside"></div></div>
-                        </li>
-                        <li>
-                            <input type="radio" id="u-option" name="selector" />
-                            <label for="u-option"><FontAwesomeIcon icon={faDivide} size="1x" /></label>
-                            <div class="check"><div class="inside"></div></div>
-                        </li>
-                    </ul>
-                </div> */}
+                <h2>{this.state.argument1} {this.state.mathOperator} {this.state.argument2} = {(+this.state.result).toFixed(2)}</h2>
 
             </div>
         )

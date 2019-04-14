@@ -29,6 +29,7 @@ which the radio inputs are hidden
     color: #61dafb;
 }
 
+/* Select all <label> preceded by checked <input type='radio'> */
 #Calculator input[type=radio]:checked ~ label {
     color: #61dafb;
 }
