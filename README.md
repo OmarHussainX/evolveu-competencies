@@ -12,7 +12,7 @@
 
 ## How To Use
 
-You'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [npm](http://npmjs.com) ([Node.js](https://nodejs.org/en/download/) comes with [npm](http://npmjs.com)):
+You'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [npm](http://npmjs.com) installed ([Node.js](https://nodejs.org/en/download/) includes [npm](http://npmjs.com))
 
 ```bash
 # Clone repository
