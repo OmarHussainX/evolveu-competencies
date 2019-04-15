@@ -12,55 +12,54 @@ class OneAccount extends Component {
         }
     }
     
+
+    // Update state with the user's input amount for deposit/withdrawal anytime
+    // there is a change in the input field
     changeHandler = event => {
         const {name, value} = event.target
-        this.setState({
+
+        // Only update state for valid input (disallow blank input, basically)
+        if (value) this.setState({
             [name]: value
         })
-        // console.log(`NAME: ${name}`)
-        // console.log(`VALUE: ${value}`)
     }
 
-    clickHandler = event => {
-        // console.log(`event.target.id: ${event.target.id}`)
-        // console.log(`event.currentTarget.id: ${event.currentTarget.id}`)
-        console.log(`this.state...name: ${this.state.userAccount.name}`)
-        console.log(`this.state...balance: ${this.state.userAccount.balance}`)
-        //read input
-        // - if deposit, make deposit
-        // - if withdrawal, make withdrawal
-        //update state
-        //clear input
-        const input = event.target.value
-        console.log(`input: ${input}`)
-        const action = event.target.id
 
-        switch(action) {
+    // When a button has been clicked:
+    // - user's input amount for deposit/withdrawal is in state
+    // - current bank balance is in Account Object in state
+    // - calculate new balance based on which button was clicked (deposit/withdrawal)
+    // - create a new Account Object using account name from state, and new balance
+    // - update state with new Account Object
+    // - clear user's input (preventing it from being re-used)
+    clickHandler = event => {
+
+        const accountAction = event.target.id
+
+        switch(accountAction) {
             case 'depositBtn':
-                
                 this.setState(prevState => {
-                    const accountName = prevState.userAccount.name
-                    const accountBalance = (prevState.userAccount.balance) + parseFloat(prevState.userinput)
-                    let updatedAccount = new Account(accountBalance, accountName)
-                    updatedAccount.setName('Lydia')
-                    return { userAccount: updatedAccount }
+                    const newBalance = (prevState.userAccount.balance) + parseFloat(prevState.userinput)
+                    return {
+                        userAccount: new Account(newBalance, prevState.userAccount.name),
+                        userinput: 0
+                    }
                 })
                 break
 
             case 'withdrawBtn':
                 this.setState(prevState => {
-                    const accountName = prevState.userAccount.name
-                    const accountBalance = (prevState.userAccount.balance) - parseFloat(prevState.userinput)
-                    let updatedAccount = new Account(accountBalance, accountName)
-                    return { userAccount: updatedAccount }
+                    const newBalance = (prevState.userAccount.balance) - parseFloat(prevState.userinput)
+                    return {
+                        userAccount: new Account(newBalance, prevState.userAccount.name),
+                        userinput: 0
+                    }
                 })            
                 break
 
             default:
                 break
         }
-        this.setState({ userinput: 0})
-
     }
 
     render() {
