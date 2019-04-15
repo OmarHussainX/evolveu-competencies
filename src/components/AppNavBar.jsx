@@ -40,6 +40,13 @@ class AppNavBar extends Component {
                             icon='dollar-sign'
                             size="2x" />
                     </button>
+                    <button onClick={this.props.clickHandler} name="datastructures">
+                        <FontAwesomeIcon
+                            className={'button grow' +
+                                (this.props.activeApp === 'datastructures' ? ' selected' : '')}
+                            icon='server'
+                            size="2x" />
+                    </button>
                 </header>
 
             </div>

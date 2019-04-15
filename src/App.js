@@ -9,6 +9,9 @@ import { faHome, faCalculator, faHandHoldingUsd, faDollarSign } from '@fortaweso
 import { faPlus, faMinus, faTimes, faDivide, faEquals, faSurprise } from '@fortawesome/free-solid-svg-icons'
 // AccountsList icons
 import { faEdit, faBackspace, faSortAmountDown, faSortAmountUp, faSortAlphaDown, faSortAlphaUp, faExchangeAlt } from '@fortawesome/free-solid-svg-icons'
+
+// AccountsList icons
+import { faServer } from '@fortawesome/free-solid-svg-icons'
 //-----------------------------------------------
 
 
@@ -18,13 +21,14 @@ import ReactGreeter from './components/ReactGreeter'
 import Calculator from './components/Calculator'
 import OneAccount from './components/OneAccount'
 import BankAccounts from './components/BankAccounts'
+import DataStructures from './components/DataStructures'
 
 
 // ----- font-awesome ---------------------------
 // build library of imported SVG for re-use in all child components
 library.add(faHome, faCalculator, faHandHoldingUsd, faDollarSign,
     faPlus, faMinus, faTimes, faDivide, faEquals, faSurprise,
-    faEdit, faBackspace, faSortAmountDown, faSortAmountUp, faSortAlphaDown, faSortAlphaUp, faExchangeAlt)
+    faEdit, faBackspace, faSortAmountDown, faSortAmountUp, faSortAlphaDown, faSortAlphaUp, faExchangeAlt, faServer)
 //-----------------------------------------------
 
 
@@ -35,7 +39,7 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            activeApp: 'home'
+            activeApp: 'datastructures'
         }
     }
 
@@ -73,8 +77,8 @@ class App extends Component {
                     {activeApp === 'calc' && <Calculator />}
                     {activeApp === 'oneaccount' && <OneAccount />}
                     {activeApp === 'bankaccounts' && <BankAccounts />}
+                    {activeApp === 'datastructures' && <DataStructures />}
                 </div>
-
             </div>
         )
     }
