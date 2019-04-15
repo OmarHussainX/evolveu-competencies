@@ -69,10 +69,10 @@ class Calculator extends Component {
     render() {
         return (
             <div id='Calculator'>
-                <h1>
+                <h2>
                     A <em>calculator!?&nbsp;&nbsp;</em> 
                     <FontAwesomeIcon icon='surprise' size="1x" />
-                </h1>
+                </h2>
                 <input 
                     type="number"
                     className='basic'
@@ -80,15 +80,6 @@ class Calculator extends Component {
                     name="argument1"
                     onChange={this.changeHandler}
                 />
-                <span className='inputspacer'></span>
-                <input 
-                    type="number"
-                    className='basic'
-                    value={this.state.argument2}
-                    name="argument2"
-                    onChange={this.changeHandler}
-                />
-                
                 <ul>
                     <li>
                         <input type="radio" name="mathOperator" id="add" value="+"
@@ -123,9 +114,16 @@ class Calculator extends Component {
                         </label>
                     </li>
                 </ul>
-
-                <h2>{this.state.argument1} {this.state.mathOperator} {this.state.argument2} = {(+this.state.result).toFixed(2)}</h2>
-
+                <input 
+                    type="number"
+                    className='basic'
+                    value={this.state.argument2}
+                    name="argument2"
+                    onChange={this.changeHandler}
+                />
+                <h2>
+                    {this.state.argument1} {this.state.mathOperator} {this.state.argument2} = {(+this.state.result).toFixed(2)}
+                </h2>
             </div>
         )
     }

@@ -70,8 +70,8 @@ class OneAccount extends Component {
 
         return (
             <div id='OneAccount'>
-                <h2>Account: {this.state.userAccount.name}</h2>
-                <h3>Balance: {this.state.userAccount.balance.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</h3>
+                <h3>Account: {this.state.userAccount.name}</h3>
+                <h4>Balance: {this.state.userAccount.balance.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</h4>
                 <div>
                     <input
                         type='number'
