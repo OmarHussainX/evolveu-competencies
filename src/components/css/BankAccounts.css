@@ -56,7 +56,7 @@ Body
 
 
 /* ######################################################### */
-@media (max-width: 760px) {
+@media only screen and (max-width: 760px) {
     #BankAccountsHeader {
         grid-template-areas:   'currentAccount'
                                'accountStats' !important;
@@ -77,7 +77,13 @@ Body
     #AccountsListWrapper, #BankAccountCardWrapper {
         background: white !important;
         border-radius: 5px !important;
+        padding: 0.3em !important;
         /* border: 1px dotted red !important; */
+    }
+    /* shrink fonts, buttons in accounts list on smaller screens to prevent layout from breaking */
+    #accountsList {
+        /* background-color: lightblue !important; */
+        font-size: 0.6em !important;
     }
 }
 /* ######################################################### */
@@ -245,8 +251,8 @@ For the accounts list (and a few basic settings for the active card)
 }
 
 /* Account list: account name display adjustments */
-#accountsList tr span {
-}
+/* #accountsList tr span {
+} */
 
 
 
