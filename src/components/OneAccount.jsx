@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import Account from './js/account'
 import './css/OneAccount.css';
 
@@ -11,12 +11,12 @@ class OneAccount extends Component {
             userinput: 0
         }
     }
-    
+
 
     // Update state with the user's input amount for deposit/withdrawal anytime
     // there is a change in the input field
     changeHandler = event => {
-        const {name, value} = event.target
+        const { name, value } = event.target
 
         // Only update state for valid input (disallow blank input, basically)
         if (value) this.setState({
@@ -36,7 +36,7 @@ class OneAccount extends Component {
 
         const accountAction = event.target.id
 
-        switch(accountAction) {
+        switch (accountAction) {
             case 'depositBtn':
                 this.setState(prevState => {
                     const newBalance = (prevState.userAccount.balance) + parseFloat(prevState.userinput)
@@ -54,7 +54,7 @@ class OneAccount extends Component {
                         userAccount: new Account(newBalance, prevState.userAccount.name),
                         userinput: 0
                     }
-                })            
+                })
                 break
 
             default:
@@ -77,9 +77,14 @@ class OneAccount extends Component {
                         onChange={this.changeHandler}
                         value={this.state.userinput}
                     />
-                    <br />
-                    <div id="depositBtn" className="bankbutton" onClick={this.clickHandler}>Deposit</div>
-                    <div id="withdrawBtn" className="bankbutton" onClick={this.clickHandler}>Withdraw</div>
+                    <div className='flexCenter'>
+                        <button id='depositBtn' onClick={this.clickHandler}>
+                            Deposit
+                        </button>
+                        <button id='withdrawBtn' onClick={this.clickHandler}>
+                            Withdraw
+                        </button>
+                    </div>
                 </div>
             </div>
         )
