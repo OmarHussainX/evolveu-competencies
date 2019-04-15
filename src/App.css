@@ -44,11 +44,11 @@ input[type=text].basic, input[type=number].basic {
     border: 1px solid #ccc;
     color: grey;
     background: white;
-    font-size: 1em; /* if not 'inherit'ed/set, is calculated as a small value */
+    font-size: 0.8em; /* if not 'inherit'ed/set, is calculated as a small value */
     font-family: inherit; /* if not 'inherit'ed/set, is set to some boring font */
     font-weight: bold;
     text-align: center;
-    padding: 15px 10px;
+    padding: 10px;
     transition: border-color 80ms ease-in-out;
 }
 

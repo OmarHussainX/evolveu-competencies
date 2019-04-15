@@ -73,7 +73,6 @@ class Calculator extends Component {
                     A <em>calculator!?&nbsp;&nbsp;</em> 
                     <FontAwesomeIcon icon='surprise' size="1x" />
                 </h1>
-                <br />
                 <input 
                     type="number"
                     className='basic'
