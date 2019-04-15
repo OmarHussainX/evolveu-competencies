@@ -8,7 +8,7 @@ class OneAccount extends Component {
         super()
         this.state = {
             userAccount: new Account(1000000, 'Heisenberg'),
-            userinput: 0
+            userinput: ''
         }
     }
 
@@ -34,6 +34,9 @@ class OneAccount extends Component {
     // - clear user's input (preventing it from being re-used)
     clickHandler = event => {
 
+        // Do nothing if input is blank or 0...
+        if (!this.state.userinput) return
+
         const accountAction = event.target.id
 
         switch (accountAction) {
@@ -42,7 +45,7 @@ class OneAccount extends Component {
                     const newBalance = (prevState.userAccount.balance) + parseFloat(prevState.userinput)
                     return {
                         userAccount: new Account(newBalance, prevState.userAccount.name),
-                        userinput: 0
+                        userinput: ''
                     }
                 })
                 break
@@ -52,7 +55,7 @@ class OneAccount extends Component {
                     const newBalance = (prevState.userAccount.balance) - parseFloat(prevState.userinput)
                     return {
                         userAccount: new Account(newBalance, prevState.userAccount.name),
-                        userinput: 0
+                        userinput: ''
                     }
                 })
                 break
@@ -74,6 +77,7 @@ class OneAccount extends Component {
                         type='number'
                         className='basic'
                         name='userinput'
+                        placeholder='$0.00'
                         onChange={this.changeHandler}
                         value={this.state.userinput}
                     />
