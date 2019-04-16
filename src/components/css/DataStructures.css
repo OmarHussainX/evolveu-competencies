@@ -1,3 +1,4 @@
+/* Sets the the basic layout: one centered column */
 #DataStructures {
     display: flex;
     flex-direction: column;
@@ -5,6 +6,8 @@
     justify-content: center;
 }
 
+
+/* Select dropdown */
 #DataStructures .select-style {
     display: block;
     font-size: 0.65em;
@@ -32,6 +35,8 @@
     outline: none;
 }
 
+
+/* Input fields */
 #DataStructures input[type=text],
 #DataStructures input[type=number] {
     border-radius: 3px;
@@ -56,6 +61,8 @@
     border-color: darkgrey;
 }
 
+
+/* 'Regular' buttons that actually look like buttons... */
 #DataStructures button {
     background: rgb(50, 120, 200);
     border-radius: 4px;
@@ -86,6 +93,18 @@
     transform: scale(0.95);
 }
 
+#DataStructures button.severe {
+    background: rgb(230, 90, 90);
+}
+
+#DataStructures button.severe:hover,
+#DataStructures button.severe:focus {
+    background: rgb(210, 70, 70);
+}
+
+
+/* Buttons containing FontAwesome SVG, which do not look like
+buttons - just flat glyphs */
 #DataStructures #positionControlsWrapper button {
     background: none;
     box-shadow: none;
