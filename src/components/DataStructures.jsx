@@ -32,6 +32,7 @@ class DataStructures extends Component {
     render() {
         return (
             <div id='DataStructures'>
+            <div id='dataControlsArea'>
                 <select
                     className='select-style'
                     value={this.state.dataStructureChoice}
@@ -92,6 +93,58 @@ class DataStructures extends Component {
                     <FontAwesomeIcon icon='minus-circle' size="sm" style={{marginRight:'5px'}}></FontAwesomeIcon>
                     Delete
                 </button>
+                </div>
+
+                <div id='dataDisplayArea'>
+{/* ------------------------------------------------------------ */}
+{/* Data for the data structure goes here:
+- For linked List, series of cards with arrows on the right, except for the tail
+- For FIFO/LIFO, a vertical stack */}
+
+                <div id='dataCard' className='arrow_box'>
+                    <h5>Captain America: The Winter Soldier</h5>
+                    <p>342.62M</p>
+                    <div class='pointer'>
+                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
+                    </div>
+                </div>
+
+                <div id='dataCard' className='arrow_box'>
+                    <h5>Captain America: The Winter Soldier</h5>
+                    <p>342.62M</p>
+                    <div class='pointer'>
+                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
+                    </div>
+                </div>
+
+                <div id='dataCard' className='arrow_box'>
+                    <h5>Captain America: The Winter Soldier...............</h5>
+                    <p>342.62M</p>
+                    <div class='pointer'>
+                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
+                    </div>
+                </div>
+
+                <div id='dataCard' className='arrow_box'>
+                    <h5>Captain America: The Winter Soldier</h5>
+                    <p>342.62M</p>
+                    <div class='pointer'>
+                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
+                    </div>
+                </div>
+
+                <div id='dataCard' className='arrow_box'>
+                    <h5>Captain America: The Winter Soldier........................</h5>
+                    <p>342.62M</p>
+                    <div class='pointer'>
+                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
+                    </div>
+                </div>
+
+
+{/* ------------------------------------------------------------ */}
+                </div>
+
             </div>
         )
     }

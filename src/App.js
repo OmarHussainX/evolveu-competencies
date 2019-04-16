@@ -11,7 +11,7 @@ import { faPlus, faMinus, faTimes, faDivide, faEquals, faSurprise } from '@forta
 import { faEdit, faBackspace, faSortAmountDown, faSortAmountUp, faSortAlphaDown, faSortAlphaUp, faExchangeAlt } from '@fortawesome/free-solid-svg-icons'
 
 // DataStructures icons
-import { faPlusCircle, faMinusCircle, faAngleDoubleLeft, faAngleLeft, faAngleRight, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
+import { faPlusCircle, faMinusCircle, faAngleDoubleLeft, faAngleLeft, faAngleRight, faAngleDoubleRight, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 //-----------------------------------------------
 
 
@@ -29,7 +29,7 @@ import DataStructures from './components/DataStructures'
 library.add(faHome, faCalculator, faHandHoldingUsd, faDollarSign, faServer,
     faPlus, faMinus, faTimes, faDivide, faEquals, faSurprise,
     faEdit, faBackspace, faSortAmountDown, faSortAmountUp, faSortAlphaDown, faSortAlphaUp, faExchangeAlt,
-    faPlusCircle, faMinusCircle, faAngleDoubleLeft, faAngleLeft, faAngleRight, faAngleDoubleRight)
+    faPlusCircle, faMinusCircle, faAngleDoubleLeft, faAngleLeft, faAngleRight, faAngleDoubleRight, faLongArrowAltRight)
 //-----------------------------------------------
 
 
