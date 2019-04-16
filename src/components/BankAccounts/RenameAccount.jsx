@@ -27,7 +27,6 @@ class RenameAccount extends Component {
 
     return (
       <React.Fragment>
-        <div className='cardWrapper'>
         <div id='BankAccountCardWrapper'>
             <button id='cancelRenameAccount' onClick={this.props.clickHandler}>
                     x
@@ -50,7 +49,6 @@ class RenameAccount extends Component {
                <button id='renameAccountBtn' onClick={this.props.clickHandler}>
                     Rename
                 </button>
-            </div>
         </div>
       </React.Fragment>
     )
