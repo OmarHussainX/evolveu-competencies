@@ -220,7 +220,8 @@ For the accounts list (and a few basic settings for the active card)
     padding: 0 0.1em;
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
-    transition: all
+    transition: all;
+	outline: none;
 }
 #accountsList tr td button:hover, 
 #accountsList tr td button:focus {
