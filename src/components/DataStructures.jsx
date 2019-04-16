@@ -57,7 +57,7 @@ class DataStructures extends Component {
                     <input
                         className=''
                         type="number"
-                        placeholder='Gross (in M)'
+                        placeholder='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gross (in M)'
                         min="0"
                         step="0.01"
                         name="movieGross"
@@ -65,61 +65,28 @@ class DataStructures extends Component {
                         onChange={this.changeHandler}
                     />
                 </label>
-
-
-{/* 
-                <input 
-                    type="number"
-                    className='basic'
-                    value={this.state.argument1}
-                    name="argument1"
-                    onChange={this.changeHandler}
-                />
-                <ul>
-                    <li>
-                        <input type="radio" name="mathOperator" id="add" value="+"
-                            checked={this.state.mathOperator === "+"}
-                            onChange={this.changeHandler} />
-                        <label htmlFor="add">
-                            <FontAwesomeIcon className="grow" icon='plus'size="1x" />
-                        </label>
-                    </li>
-                    <li>
-                        <input type="radio" name="mathOperator" id="subtract" value="-"
-                            checked={this.state.mathOperator === "-"}
-                            onChange={this.changeHandler} />
-                        <label htmlFor="subtract">
-                            <FontAwesomeIcon className="grow" icon='minus' size="1x" />
-                        </label>
-                    </li>
-                    <li>
-                        <input type="radio" name="mathOperator" id="multiply" value="x"
-                            checked={this.state.mathOperator === "x"}
-                            onChange={this.changeHandler} />
-                        <label htmlFor="multiply">
-                            <FontAwesomeIcon className="grow" icon='times' size="1x" />
-                        </label>
-                    </li>
-                    <li>
-                        <input type="radio" name="mathOperator" id="divide" value="/"
-                            checked={this.state.mathOperator === "/"}
-                            onChange={this.changeHandler} />
-                        <label htmlFor="divide">
-                            <FontAwesomeIcon className="grow" icon='divide' size="1x" />
-                        </label>
-                    </li>
-                </ul>
-                <input 
-                    type="number"
-                    className='basic'
-                    value={this.state.argument2}
-                    name="argument2"
-                    onChange={this.changeHandler}
-                />
-                <h2>
-                    {this.state.argument1} {this.state.mathOperator} {this.state.argument2} = {(+this.state.result).toFixed(2)}
-                </h2>
-*/}
+                <button id='insert' onClick={this.clickHandler}>
+                    <FontAwesomeIcon icon='plus-circle' size="sm" style={{marginRight:'5px'}}></FontAwesomeIcon>
+                    Insert
+                </button>
+                <div id='positionControlsWrapper'>
+                    <button id='pos_first' onClick={this.props.clickHandler}>
+                        <FontAwesomeIcon icon='angle-double-left' size="2x"></FontAwesomeIcon>
+                    </button>
+                    <button id='pos_prev' onClick={this.props.clickHandler}>
+                        <FontAwesomeIcon icon='angle-left' size="2x"></FontAwesomeIcon>
+                    </button>
+                    <button id='pos_next' onClick={this.props.clickHandler}>
+                        <FontAwesomeIcon icon='angle-right' size="2x"></FontAwesomeIcon>
+                    </button>
+                    <button id='pos_last' onClick={this.props.clickHandler}>
+                        <FontAwesomeIcon icon='angle-double-right' size="2x"></FontAwesomeIcon>
+                    </button>
+                </div>
+                <button id='delete' onClick={this.clickHandler}>
+                    <FontAwesomeIcon icon='minus-circle' size="sm" style={{marginRight:'5px'}}></FontAwesomeIcon>
+                    Delete
+                </button>
             </div>
         )
     }

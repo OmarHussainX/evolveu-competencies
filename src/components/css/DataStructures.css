@@ -1,3 +1,9 @@
+#DataStructures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 #DataStructures .select-style {
     display: block;
@@ -24,4 +30,75 @@
 
 #DataStructures .select-style select:focus {
     outline: none;
+}
+
+#DataStructures input[type=text],
+#DataStructures input[type=number] {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    color: grey;
+    background: white;
+    font-size: 0.65em; /* if not 'inherit'ed/set, is calculated as a small value */
+    font-family: inherit; /* if not 'inherit'ed/set, is set to some boring font */
+    /* font-weight: bold; */
+    text-align: center;
+    padding: 5px;
+    transition: border-color 80ms ease-in-out;
+}
+
+#DataStructures input[type=text]:hover, 
+#DataStructures input[type=number]:hover {
+    border-color: darkgrey;
+}
+
+#DataStructures input[type=text]:focus, 
+#DataStructures input[type=number]:focus {
+    border-color: darkgrey;
+}
+
+#DataStructures button {
+    background: rgb(50, 120, 200);
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight:bold;
+    line-height: 0.5em;
+    margin: 1em 2em;
+    padding: 0.65em;
+    text-align: center;
+    text-decoration: none;
+    transition: background 100ms ease-in-out, 
+                transform 100ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#DataStructures button:hover,
+#DataStructures button:focus {
+    background: rgb(50, 90, 170);
+}
+
+#DataStructures button:active {
+    transform: scale(0.95);
+}
+
+#DataStructures #positionControlsWrapper button {
+    background: none;
+    box-shadow: none;
+    min-width: 3em;
+    margin: 0em 0.5em;
+	outline: none;
+}
+
+#DataStructures #positionControlsWrapper button:hover {
+    color: #61dafb;
+    cursor: pointer;
+}
+
+#DataStructures #positionControlsWrapper button:active {
+    color: #fbad60;
 }
