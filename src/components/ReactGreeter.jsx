@@ -7,7 +7,7 @@ class ReactGreeter extends Component {
         return (
             <div>
                 <img src={logo} className="App-logo" alt="logo" />
-                <p>
+                {/* <p>
                     Source: <code>src/components/ReactGreeter.js</code>
                 </p>
                 <a
@@ -17,7 +17,7 @@ class ReactGreeter extends Component {
                     rel="noopener noreferrer"
                 >
                     Learn React
-                </a>
+                </a> */}
             </div>
         )
     }

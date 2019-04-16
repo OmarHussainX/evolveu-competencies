@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import { LinkedList } from '../components/js/LinkedList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import './css/DataStructures.css'
+import './css/DataStructures.css'
 
 class DataStructures extends Component {
     constructor() {
@@ -26,23 +26,45 @@ class DataStructures extends Component {
         return (
             <div id='DataStructures'>
                 <select
-                    // className='select-style'
+                    className='select-style'
                     value={this.state.dataStructureChoice}
                     onChange={this.changeHandler}
                     name="dataStructureChoice"
                 >
                     <option value='' disabled>Select a data structure</option>
-                    <optgroup label="Empty (no pre-filled data)">
-                        <option value="llist-empty">Linked List</option>
-                        <option value="queue-empty">Queue (FIFO)</option>
-                        <option value="stack-empty">Stack (LIFO)</option>
-                    </optgroup>
                     <optgroup label="Pre-filled with test data">
                         <option value="llist">Linked List</option>
                         <option value="queue">Queue (FIFO)</option>
                         <option value="stack">Stack (LIFO)</option>
                     </optgroup>
+                    <optgroup label="Empty (no pre-filled data)">
+                        <option value="llist-empty">Linked List</option>
+                        <option value="queue-empty">Queue (FIFO)</option>
+                        <option value="stack-empty">Stack (LIFO)</option>
+                    </optgroup>
                 </select>   
+                <label>
+                    <input
+                        className=''
+                        type='text'
+                        placeholder='Movie title'
+                        name='movieTitle'
+                        value={this.state.movieTitle}
+                        onChange={this.changeHandler}
+                    />
+                </label>
+                <label>
+                    <input
+                        className=''
+                        type="number"
+                        placeholder='Gross (in M)'
+                        min="0"
+                        step="0.01"
+                        name="movieGross"
+                        value={this.state.movieGross}
+                        onChange={this.changeHandler}
+                    />
+                </label>
 
 
 {/* 

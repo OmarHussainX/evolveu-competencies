@@ -90,13 +90,13 @@ Body
         margin-top: -0.1em !important;
         margin-right: -0.1em !important;
     }
-    .select-style {
+    #BankAccountCardWrapper .select-style {
         font-size: 0.9em !important;
     }
     #BankAccountCardWrapper input[type=text], 
     #BankAccountCardWrapper input[type=number] {
     font-size: 0.8em !important;
-}
+    }
 }
 /* ######################################################### */
 
@@ -195,7 +195,7 @@ For the accounts list (and a few basic settings for the active card)
     cursor:pointer;
     /* min-width: 190px; */
     display: block;
-    color: red;
+    color: rgb(55, 100, 220);
 }
 
 #accountsList .active_account {
@@ -344,7 +344,7 @@ Bank account 'card' styles
 }
 
 
-.select-style {
+#BankAccountCardWrapper .select-style {
     /* display: block; */
     float:right;
     font-size: 1em;
@@ -361,7 +361,7 @@ Bank account 'card' styles
     /* background: #fff url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 90% 50%; */
 }
 
-.select-style select {
+#BankAccountCardWrapper .select-style select {
     padding: 5px 8px;
     width: 130%;
     border: none;
@@ -373,6 +373,6 @@ Bank account 'card' styles
             appearance: none;
 }
 
-.select-style select:focus {
+#BankAccountCardWrapper .select-style select:focus {
     outline: none;
 }
