@@ -1,26 +1,84 @@
 import React, {Component} from "react"
 import { LinkedList } from '../components/js/LinkedList'
+import { Movie, MoviesList } from '../components/js/MoviesList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './css/DataStructures.css'
+import DataCard from './DataCard'
+
+
+// Data to use if data structure pre-filled with test data is selected
+const movieData = [
+    new Movie('Captain Marvel', 377.91),
+    new Movie('Spider-Man: Into The Spider-Verse', 190.24),
+    new Movie('Venom', 213.52),
+    new Movie('Ant-Man and the Wasp', 216.65),
+    new Movie('Deadpool 2', 318.49),
+    new Movie('Avengers: Infinity War', 678.82),
+    new Movie('Black Panther', 700.06),
+    new Movie('Thor: Ragnarok', 315.06),
+    new Movie('Spider-Man: Homecoming', 334.20),
+    new Movie('Guardians of the Galaxy: Vol. 2', 389.81),
+    new Movie('Logan', 226.28),
+    new Movie('Doctor Strange', 232.64),
+    new Movie('X-Men: Apocalypse', 155.44),
+    new Movie('Captain America: Civil War', 408.08),
+    new Movie('Deadpool', 363.07),
+    new Movie('Fantastic Four', 56.12),
+    new Movie('Ant-Man', 180.20),
+    new Movie('Avengers: Age of Ultron', 459.00),
+    new Movie('Big Hero 6', 222.53),
+    new Movie('Guardians of the Galaxy', 333.18),
+]
+
+
 
 class DataStructures extends Component {
     constructor() {
         super()
         this.state = {
             dataStructureChoice: '',
+            dataStructure: null,
             movieTitle: '',
             movieGross: '',
         }
     }
     
-    // Ensures state always contains the latest input for:
-    // - data structure choice
+    // When a selection is made, updates state with:
+    // - the data structure choice
+    // - reference to the data structure to be displayed
     changeHandler = event => {
         const { name, value } = event.currentTarget
         console.log(`--- changeHandler() ---\n${name}: ${value}`)
 
+        let selectedData = null
+        switch(value) {
+            case 'llist':
+            selectedData = new MoviesList()
+            movieData.forEach(film => selectedData.insert(film))
+            break
+
+            case 'queue':
+            break
+
+            case 'stack':
+            break
+
+            case 'llist-empty':
+            selectedData = new MoviesList()
+            break
+
+            case 'queue-empty':
+            break
+
+            case 'stack-empty':
+            break
+
+            default:
+        }
+
             this.setState({
                 [name]: value,
+                dataStructure: selectedData
             })
     }
 
@@ -30,6 +88,13 @@ class DataStructures extends Component {
     }
 
     render() {
+        const { dataStructureChoice, dataStructure } = this.state
+
+        const dataCards = []
+        if (dataStructure) dataStructure.map(node => node).forEach(movieNode => {
+            dataCards.push(<DataCard movieData={movieNode.data}/>)
+        })
+
         return (
             <div id='DataStructures'>
             <div id='dataControlsArea'>
@@ -75,7 +140,7 @@ class DataStructures extends Component {
                     <FontAwesomeIcon icon='plus-circle' size="sm" style={{marginRight:'5px'}}></FontAwesomeIcon>
                     Insert
                 </button>
-                <div id='positionControlsWrapper'>
+                {dataStructureChoice.includes('llist') && (<div id='positionControlsWrapper'>
                     <button id='pos_first' onClick={this.clickHandler}>
                         <FontAwesomeIcon icon='angle-double-left' size="2x"></FontAwesomeIcon>
                     </button>
@@ -88,7 +153,7 @@ class DataStructures extends Component {
                     <button id='pos_last' onClick={this.clickHandler}>
                         <FontAwesomeIcon icon='angle-double-right' size="2x"></FontAwesomeIcon>
                     </button>
-                </div>
+                </div>)}
                 <button id='delete' onClick={this.clickHandler} className='severe'>
                     <FontAwesomeIcon icon='minus-circle' size="sm" style={{marginRight:'5px'}}></FontAwesomeIcon>
                     Delete
@@ -100,48 +165,17 @@ class DataStructures extends Component {
 {/* Data for the data structure goes here:
 - For linked List, series of cards with arrows on the right, except for the tail
 - For FIFO/LIFO, a vertical stack */}
-
-                <div id='dataCard' className='arrow_box'>
-                    <h5>Captain America: The Winter Soldier</h5>
-                    <p>342.62M</p>
-                    <div class='pointer'>
-                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
-                    </div>
-                </div>
-
-                <div id='dataCard' className='arrow_box'>
-                    <h5>Captain America: The Winter Soldier</h5>
-                    <p>342.62M</p>
-                    <div class='pointer'>
-                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
-                    </div>
-                </div>
-
-                <div id='dataCard' className='arrow_box'>
-                    <h5>Captain America: The Winter Soldier...............</h5>
-                    <p>342.62M</p>
-                    <div class='pointer'>
-                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
-                    </div>
-                </div>
-
-                <div id='dataCard' className='arrow_box'>
-                    <h5>Captain America: The Winter Soldier</h5>
-                    <p>342.62M</p>
-                    <div class='pointer'>
-                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
-                    </div>
-                </div>
-
-                <div id='dataCard' className='arrow_box'>
-                    <h5>Captain America: The Winter Soldier........................</h5>
-                    <p>342.62M</p>
-                    <div class='pointer'>
-                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
-                    </div>
-                </div>
-
-
+{dataCards}
+                    {/* <DataCard />
+                    <DataCard />
+                    <DataCard />
+                    <DataCard />
+                    <DataCard />
+                    <DataCard />
+                    <DataCard />
+                    <DataCard />
+                    <DataCard />
+ */}
 {/* ------------------------------------------------------------ */}
                 </div>
 
