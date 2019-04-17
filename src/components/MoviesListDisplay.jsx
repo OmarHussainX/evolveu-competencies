@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { MoviesList } from '../components/js/MoviesList'
 import DataCard from './DataCard'
@@ -10,16 +10,19 @@ const DEBUG_MSG = true
 
 class MoviesListDisplay extends Component {
 
-    // Receive reference to array of Movie data to be stored & shown
-    // in a LinkedList - construct the list and save it in state
+    // State contains:
+    // - LinkedList of Movie Objects
+    // - user input for title of new movie to be inserted in the list
+    // - user input for gross of new movie to be inserted in the list
     constructor(props) {
         if (DEBUG_MSG) console.log(`----- MoviesListDisplay constructor()`)
 
+        // Receive reference to array of Movie data to be stored & shown
+        // in a LinkedList - construct the list and save it in state
         super(props)
         const { dataSet } = this.props
         const newMoviesList = new MoviesList()
-        dataSet.forEach(film => newMoviesList.insert(film))
-        
+        dataSet.forEach(movie => newMoviesList.insert(movie))
 
         this.state = {
             movieTitleInput: '',
@@ -28,7 +31,8 @@ class MoviesListDisplay extends Component {
         }
     }
 
-    // Ensures state contains latest user input
+
+    // Ensures state contains the latest user input
     changeHandler = event => {
         const { name, value } = event.currentTarget
         if (DEBUG_MSG) console.log(`----- MoviesListDisplay changeHandler()\n${name}: ${value}`)
@@ -37,12 +41,14 @@ class MoviesListDisplay extends Component {
             })
     }
 
-    // Updated LinkedList in state (by making a new list and assigning it)
+
+    // Update LinkedList in state (by making a new list and assigning it)
     // whenever a change is made to the list
     clickHandler = event => {
         const { id } = event.currentTarget
         if (DEBUG_MSG) console.log(`----- MoviesListDisplay: '${id}' clicked`)
     }
+
 
     render() {
         if (DEBUG_MSG) console.log(`----- MoviesListDisplay render()`)
@@ -50,9 +56,16 @@ class MoviesListDisplay extends Component {
         const { moviesList } = this.state
         
         const movieCards = []
-        if (moviesList.length) moviesList.map(node => node)
-            .forEach((movieNode, i) => {
-            movieCards.push(<DataCard key={i} movieData={movieNode.data}/>)
+        // if (moviesList.length) moviesList.map(node => node)
+        moviesList.map(node => node).forEach((movieNode, i) => {
+            let nodeFlag = ''
+            nodeFlag += (movieNode === moviesList.head) ? '(HEAD)' : ''
+            nodeFlag += (movieNode === moviesList.position) ? ' ^^^' : ''
+            nodeFlag += (movieNode === moviesList.tail) ? ' (TAIL)' : ''
+            movieCards.push(<DataCard
+                key={i}
+                nodeFlag={nodeFlag}
+                movieData={movieNode.data}/>)
         })
 
         return (
