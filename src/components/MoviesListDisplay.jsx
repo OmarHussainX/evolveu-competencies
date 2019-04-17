@@ -47,6 +47,63 @@ class MoviesListDisplay extends Component {
     clickHandler = event => {
         const { id } = event.currentTarget
         if (DEBUG_MSG) console.log(`----- MoviesListDisplay: '${id}' clicked`)
+
+        const newMoviesList = this.makeListCopy(this.state.moviesList)
+
+
+        switch (id) {
+            case 'pos_prev':
+            newMoviesList.previous()
+
+            break
+
+            default:
+        }
+        this.setState({
+            moviesList: newMoviesList,
+        })
+    }
+
+
+    // HELPER FUNCTION
+    // Receives a LinkedList of Movie Objects, and returns a reference to a copy
+    makeListCopy = sourceList => {
+
+        // NOTE:
+        // Cannot use this method to make a copy of the linked list:
+        // copyOfList = JSON.parse(JSON.stringify(sourceList))
+        //
+        // JSON.stringify doesn't preserve methods, Class type... (methods
+        // aren't part of the Class instance, they're part of the Class definition,
+        // so... need to manually copy the list)
+
+        const copyOfList = new MoviesList()
+
+        // Loop through the source list, inserting the data from each
+        // node into the new copy
+        //
+        // (Insertion in the copy begins at the head, and both the tail
+        // and 'position' will always be at the end)
+        let currentNode = this.state.moviesList.head
+
+        while (currentNode !== null) {
+            copyOfList.insert(currentNode.data)
+            currentNode = currentNode.next
+        }
+
+        // At this point we have a perfect copy of hte linked list, apaprt from its 'position' property, so:
+        //
+        // loop through the new list, looking for the node which contains data
+        // that matches the data in the current node/position of the old list
+        // when found, set the current node/position
+        currentNode = copyOfList.head
+        while (currentNode.data.title !== this.state.moviesList.position.data.title) {
+            currentNode = currentNode.next
+        }
+        copyOfList.position = currentNode
+
+        return copyOfList
+
     }
 
 
