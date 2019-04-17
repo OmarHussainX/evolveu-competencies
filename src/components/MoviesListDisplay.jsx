@@ -4,29 +4,34 @@ import { MoviesList } from '../components/js/MoviesList'
 import DataCard from './DataCard'
 
 
+// Set to 'true' to enable output of debug messages from methods
+const DEBUG_MSG = true
+
+
 class MoviesListDisplay extends Component {
 
     // Receive reference to array of Movie data to be stored & shown
     // in a LinkedList - construct the list and save it in state
     constructor(props) {
+        if (DEBUG_MSG) console.log(`----- MoviesListDisplay constructor()`)
+
         super(props)
-        const {dataSet} = this.props
-        const tmpMoviesList = new MoviesList()
-        if (dataSet) dataSet.forEach(film => tmpMoviesList.insert(film))
+        const { dataSet } = this.props
+        const newMoviesList = new MoviesList()
+        dataSet.forEach(film => newMoviesList.insert(film))
         
-        console.log(`================== constructor rec'd ${this.props.dataSet} --------`)
 
         this.state = {
             movieTitleInput: '',
             movieGrossInput: '',
-            moviesList: tmpMoviesList,
+            moviesList: newMoviesList,
         }
     }
 
     // Ensures state contains latest user input
     changeHandler = event => {
         const { name, value } = event.currentTarget
-        console.log(`--- changeHandler() ---\n${name}: ${value}`)
+        if (DEBUG_MSG) console.log(`----- MoviesListDisplay changeHandler()\n${name}: ${value}`)
             this.setState({
                 [name]: value,
             })
@@ -36,13 +41,13 @@ class MoviesListDisplay extends Component {
     // whenever a change is made to the list
     clickHandler = event => {
         const { id } = event.currentTarget
-        console.log(`--- '${id}' clicked ---`)
+        if (DEBUG_MSG) console.log(`----- MoviesListDisplay: '${id}' clicked`)
     }
 
     render() {
-        const { moviesList } = this.state
+        if (DEBUG_MSG) console.log(`----- MoviesListDisplay render()`)
 
-        console.log(`-------- MoviesListDisplay rendering! --------`)
+        const { moviesList } = this.state
         
         const movieCards = []
         if (moviesList.length) moviesList.map(node => node)
@@ -52,7 +57,7 @@ class MoviesListDisplay extends Component {
 
         return (
             <React.Fragment>
-                <div id='dataControlsArea'>
+                <div className='dataControlsArea'>
                     <label>
                         <input
                             type='text'

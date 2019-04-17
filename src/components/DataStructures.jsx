@@ -1,10 +1,14 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import { Movie } from '../components/js/MoviesList'
 import './css/DataStructures.css'
 import MoviesListDisplay from './MoviesListDisplay'
 
 
-// Data to use if data structure pre-filled with test data is selected
+// Set to 'true' to enable output of debug messages in console
+const DEBUG_MSG = false
+
+
+// Data set to use if a pre-filled data structure is selected
 const movieData = [
     new Movie('Captain Marvel', 377.91),
     new Movie('Spider-Man: Into The Spider-Verse', 190.24),
@@ -28,7 +32,22 @@ const movieData = [
     new Movie('Guardians of the Galaxy', 333.18),
 ]
 
+
+
+
 class DataStructures extends Component {
+
+
+    // State contains:
+    // a) The user's selected data structure, one of:
+    //    - Linked List    (pre-filled with test data)
+    //    - Queue (FIFO)   (pre-filled with test data)
+    //    - Stack (LIFO)   (pre-filled with test data)
+    //    - Linked List    (empty)
+    //    - Queue (FIFO)   (empty)
+    //    - Stack (LIFO)   (empty)
+    // b) A reference to the data set to be stored in the
+    //    selected data structure (if any), and then displayed
     constructor() {
         super()
         this.state = {
@@ -36,13 +55,14 @@ class DataStructures extends Component {
             dataStructureChoice: '',
         }
     }
+
     
     // When a selection is made, updates state with:
-    // - the data structure choice
+    // - the data structure selected
     // - reference to the data set to be displayed (if any)
     changeHandler = event => {
         const { name, value } = event.currentTarget
-        console.log(`--- changeHandler() ---\n${name}: ${value}`)
+        if (DEBUG_MSG) console.log(`----- DataStructures changeHandler()\n${name}: ${value}`)
 
         let selectedData = null
         switch(value) {
@@ -57,7 +77,7 @@ class DataStructures extends Component {
             break
 
             case 'llist-empty':
-            // selectedData = []
+            selectedData = []
             break
 
             case 'queue-empty':
@@ -68,11 +88,9 @@ class DataStructures extends Component {
 
             default:
         }
-        this.setState(() => {
-            return {
-                dataSet: selectedData,
-                [name]: value
-            }
+        this.setState({
+            dataSet: selectedData,
+            [name]: value
         })
     }
 
@@ -82,7 +100,7 @@ class DataStructures extends Component {
 
         return (
             <div id='DataStructures'>
-                <div id='dataControlsArea'>
+                <div className='dataControlsArea'>
                     <select
                         className='select-style'
                         value={dataStructureChoice}
@@ -100,11 +118,11 @@ class DataStructures extends Component {
                             <option value="stack-empty">Stack (LIFO)</option>
                         </optgroup>
                     </select>
+                </div>
 
                     {/* See NOTE below on why these condtional rendering checks should not be combined! */}
-                    {dataStructureChoice === 'llist' && <MoviesListDisplay dataSet={this.state.dataSet}/>}
-                    {dataStructureChoice === 'llist-empty' && <MoviesListDisplay dataSet={this.state.dataSet}/>}
-                </div>
+                    {dataStructureChoice === 'llist' && <MoviesListDisplay dataSet={dataSet}/>}
+                    {dataStructureChoice === 'llist-empty' && <MoviesListDisplay dataSet={dataSet}/>}
             </div>
         )
     }
@@ -112,8 +130,11 @@ class DataStructures extends Component {
 
 export default DataStructures
 
-/* 
-NOTE: Combining these two conditionals into one is NOT a good idea, since we want the constructor for <MoviesListDisplay> to be called each time one of the conditions evaluate to true.
+
+
+
+/*
+NOTE: Combining these two conditionals into one is NOT a good idea, since we want the constructor for <MoviesListDisplay> to be called _each_ time one of the conditions evaluates to true.
 
 When combined, e.g.:
 {(dataStructureChoice === 'llist' || dataStructureChoice === 'llist-empty') && <MoviesListDisplay dataSet={this.state.dataSet}/>}
@@ -123,13 +144,13 @@ When combined, e.g.:
 
 EXPLANATION:
 Let us assume we have the following conditional rendering logic:
-(A || B) && <ChildCompponent>
+(A || B) && <ChildComponent>
 
-Let's say A is true, B is false - <ChildComponent>'s constructor() is called due to A, and then it is render()'ed.
+Assume that initially A is true, B is false - <ChildComponent>'s constructor() is called due to A, and then it is render()'ed.
 
-Let's say A becomes false, and now B is true - well, <ChildComponent> will be re-render()'ed due to B, but it's constructor() will not be called, because <ChildComponent> already exists!
+Now assume A becomes false, and B is true - <ChildComponent> will be re-render()'ed due to B, but it's constructor() will not be called, because <ChildComponent> already exists!
 
-So, if there is some importnat setup in the constructor of <ChildComponent> which differs, or is somehow related to A & B, this will cause an issue.
+So, if there is some important setup in the constructor of <ChildComponent> which differs, or is somehow related to A & B, this will cause an issue.
 
-The solution is simple: keep the conditional checks separate, so that A and B cause their own instances of <ChildComponent> to be constructe()'ed and render()'ed
+The solution is simple: keep the conditional checks separate, so that A and B cause their own instances of <ChildComponent> to be constructe()'ed and render()'ed.
 */

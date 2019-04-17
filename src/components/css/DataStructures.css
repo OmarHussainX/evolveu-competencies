@@ -1,11 +1,21 @@
-/* Sets the the basic layout: one centered column */
-#DataStructures #dataControlsArea {
+/* Establishes one centered column for the 'data controls area':
+   - Data structure selection dropdown
+   - Input fields & 'Insert' button
+   - Position/current node controls (for linked list only)
+   - 'Delete' button
+*/
+#DataStructures .dataControlsArea {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+
+/* Define a 3 column grid for displaying the data contained
+   in a data structure
+   (Drop to 2 columns on smaller screens)
+*/
 #DataStructures #dataDisplayArea {
     display: grid;
     margin: 0 1em;
@@ -13,7 +23,6 @@
     grid-gap: 20px;
     border: 1px dotted red;
 }
-
 @media only screen and (max-width: 760px) {
     /* #DataStructures {
         overflow: hidden;
@@ -22,6 +31,7 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
 
 /* Select dropdown */
 #DataStructures .select-style {
@@ -120,7 +130,7 @@
 
 
 /* Buttons containing FontAwesome SVG, which do not look like
-buttons - just flat glyphs */
+'regular' buttons - just flat glyphs */
 #DataStructures #positionControlsWrapper button {
     background: none;
     box-shadow: none;
@@ -139,8 +149,8 @@ buttons - just flat glyphs */
 }
 
 
-/* Main/parent container for 'card' which displays data
-   Allows for absolute (or other) positioning of child arrows
+/* Main/root container for 'card' which displays data
+   Allows for absolute (or other) positioning of child elements
 */
 #dataCard {
     background: white;
@@ -149,7 +159,6 @@ buttons - just flat glyphs */
     color: rgb(90, 90, 90);
     text-align: center;
 	position: relative;
-    /* text-align: left; */
     /* width: 30%; */
     /* margin: 10px; */
 }
@@ -165,7 +174,7 @@ buttons - just flat glyphs */
     margin-top: 10px;
 }
 
-
+/* Right-linking arrow shown for linked list nodes */
 #dataCard .rightarrow {
     color:white;
 	position: absolute;
