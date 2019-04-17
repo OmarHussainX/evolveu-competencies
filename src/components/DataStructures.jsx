@@ -1,9 +1,7 @@
 import React, {Component} from "react"
-import { LinkedList } from '../components/js/LinkedList'
-import { Movie, MoviesList } from '../components/js/MoviesList'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Movie } from '../components/js/MoviesList'
 import './css/DataStructures.css'
-import DataCard from './DataCard'
+import MoviesListDisplay from './MoviesListDisplay'
 
 
 // Data to use if data structure pre-filled with test data is selected
@@ -30,22 +28,18 @@ const movieData = [
     new Movie('Guardians of the Galaxy', 333.18),
 ]
 
-
-
 class DataStructures extends Component {
     constructor() {
         super()
         this.state = {
+            dataSet: null,
             dataStructureChoice: '',
-            dataStructure: null,
-            movieTitle: '',
-            movieGross: '',
         }
     }
     
     // When a selection is made, updates state with:
     // - the data structure choice
-    // - reference to the data structure to be displayed
+    // - reference to the data set to be displayed (if any)
     changeHandler = event => {
         const { name, value } = event.currentTarget
         console.log(`--- changeHandler() ---\n${name}: ${value}`)
@@ -53,8 +47,7 @@ class DataStructures extends Component {
         let selectedData = null
         switch(value) {
             case 'llist':
-            selectedData = new MoviesList()
-            movieData.forEach(film => selectedData.insert(film))
+            selectedData = movieData
             break
 
             case 'queue':
@@ -64,7 +57,7 @@ class DataStructures extends Component {
             break
 
             case 'llist-empty':
-            selectedData = new MoviesList()
+            selectedData = []
             break
 
             case 'queue-empty':
@@ -75,110 +68,38 @@ class DataStructures extends Component {
 
             default:
         }
-
-            this.setState({
-                [name]: value,
-                dataStructure: selectedData
-            })
-    }
-
-    clickHandler = event => {
-        const { id } = event.currentTarget
-        console.log(`--- '${id}' clicked ---`)
-    }
-
-    render() {
-        const { dataStructureChoice, dataStructure } = this.state
-
-        const dataCards = []
-        if (dataStructure) dataStructure.map(node => node).forEach(movieNode => {
-            dataCards.push(<DataCard movieData={movieNode.data}/>)
+        this.setState({
+            [name]: value,
+            dataSet: selectedData
         })
+    }
+
+    
+    render() {
+        const { dataSet, dataStructureChoice } = this.state
 
         return (
             <div id='DataStructures'>
-            <div id='dataControlsArea'>
-                <select
-                    className='select-style'
-                    value={this.state.dataStructureChoice}
-                    onChange={this.changeHandler}
-                    name="dataStructureChoice"
-                >
-                    <option value='' disabled>Select a data structure</option>
-                    <optgroup label="Pre-filled with test data">
-                        <option value="llist">Linked list</option>
-                        <option value="queue">Queue (FIFO)</option>
-                        <option value="stack">Stack (LIFO)</option>
-                    </optgroup>
-                    <optgroup label="Empty (no pre-filled data)">
-                        <option value="llist-empty">Linked list</option>
-                        <option value="queue-empty">Queue (FIFO)</option>
-                        <option value="stack-empty">Stack (LIFO)</option>
-                    </optgroup>
-                </select>   
-                <label>
-                    <input
-                        type='text'
-                        placeholder='Movie title'
-                        name='movieTitle'
-                        value={this.state.movieTitle}
+                <div id='dataControlsArea'>
+                    <select
+                        className='select-style'
+                        value={this.state.dataStructureChoice}
                         onChange={this.changeHandler}
-                    />
-                </label>
-                <label>
-                    <input
-                        type="number"
-                        placeholder='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gross (in M)'
-                        min="0"
-                        step="0.01"
-                        name="movieGross"
-                        value={this.state.movieGross}
-                        onChange={this.changeHandler}
-                    />
-                </label>
-                <button id='insert' onClick={this.clickHandler}>
-                    <FontAwesomeIcon icon='plus-circle' size="sm" style={{marginRight:'5px'}}></FontAwesomeIcon>
-                    Insert
-                </button>
-                {dataStructureChoice.includes('llist') && (<div id='positionControlsWrapper'>
-                    <button id='pos_first' onClick={this.clickHandler}>
-                        <FontAwesomeIcon icon='angle-double-left' size="2x"></FontAwesomeIcon>
-                    </button>
-                    <button id='pos_prev' onClick={this.clickHandler}>
-                        <FontAwesomeIcon icon='angle-left' size="2x"></FontAwesomeIcon>
-                    </button>
-                    <button id='pos_next' onClick={this.clickHandler}>
-                        <FontAwesomeIcon icon='angle-right' size="2x"></FontAwesomeIcon>
-                    </button>
-                    <button id='pos_last' onClick={this.clickHandler}>
-                        <FontAwesomeIcon icon='angle-double-right' size="2x"></FontAwesomeIcon>
-                    </button>
-                </div>)}
-                <button id='delete' onClick={this.clickHandler} className='severe'>
-                    <FontAwesomeIcon icon='minus-circle' size="sm" style={{marginRight:'5px'}}></FontAwesomeIcon>
-                    Delete
-                </button>
+                        name="dataStructureChoice">
+                        <option value='' disabled>Select a data structure</option>
+                        <optgroup label="Pre-filled with test data">
+                            <option value="llist">Linked list</option>
+                            <option value="queue">Queue (FIFO)</option>
+                            <option value="stack">Stack (LIFO)</option>
+                        </optgroup>
+                        <optgroup label="Empty (no pre-filled data)">
+                            <option value="llist-empty">Linked list</option>
+                            <option value="queue-empty">Queue (FIFO)</option>
+                            <option value="stack-empty">Stack (LIFO)</option>
+                        </optgroup>
+                    </select>
+                    {(dataStructureChoice === 'llist' || dataStructureChoice === 'llist-empty') && <MoviesListDisplay dataSet={dataSet}/>}
                 </div>
-
-                <div id='dataDisplayArea'>
-{/* ------------------------------------------------------------ */}
-{/* Data for the data structure goes here:
-- For linked List, series of cards with arrows on the right, except for the tail
-- For FIFO/LIFO, a vertical stack */}
-{dataCards}
-                    {/* <DataCard />
-                    <DataCard />
-                    <DataCard />
-                    <DataCard />
-                    <DataCard />
-                    <DataCard />
-                    <DataCard />
-                    <DataCard />
-                    <DataCard />
- */}
-{/* ------------------------------------------------------------ */}
-                </div>
-
             </div>
         )
     }
