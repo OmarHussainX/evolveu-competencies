@@ -69,13 +69,13 @@ class MoviesListDisplay extends Component {
     // Receives a LinkedList of Movie Objects, and returns a reference to a copy
     makeListCopy = sourceList => {
 
-        // NOTE:
+        // NOTE
         // Cannot use this method to make a copy of the linked list:
         // copyOfList = JSON.parse(JSON.stringify(sourceList))
         //
         // JSON.stringify doesn't preserve methods, Class type... (methods
-        // aren't part of the Class instance, they're part of the Class definition,
-        // so... need to manually copy the list)
+        // aren't part of the Class instance, they're part of the Class definition)
+        // So... need copy the list manually)
 
         const copyOfList = new MoviesList()
 
@@ -84,26 +84,26 @@ class MoviesListDisplay extends Component {
         //
         // (Insertion in the copy begins at the head, and both the tail
         // and 'position' will always be at the end)
-        let currentNode = this.state.moviesList.head
+        let currentNode = sourceList.head
 
         while (currentNode !== null) {
             copyOfList.insert(currentNode.data)
             currentNode = currentNode.next
         }
 
-        // At this point we have a perfect copy of hte linked list, apaprt from its 'position' property, so:
+        // At this point we have a perfect copy of the linked list, apart from
+        // its 'position' property, so:
         //
-        // loop through the new list, looking for the node which contains data
-        // that matches the data in the current node/position of the old list
-        // when found, set the current node/position
+        // Loop through the copied list, looking for the node which contains data
+        // that matches the data in the current node/'position' of the old list
+        // When found, set the current node/'position' in the copied list
         currentNode = copyOfList.head
-        while (currentNode.data.title !== this.state.moviesList.position.data.title) {
+        while (currentNode.data.title !== sourceList.position.data.title) {
             currentNode = currentNode.next
         }
         copyOfList.position = currentNode
 
         return copyOfList
-
     }
 
 
