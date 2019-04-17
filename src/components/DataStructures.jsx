@@ -57,7 +57,7 @@ class DataStructures extends Component {
             break
 
             case 'llist-empty':
-            selectedData = []
+            // selectedData = []
             break
 
             case 'queue-empty':
@@ -68,9 +68,11 @@ class DataStructures extends Component {
 
             default:
         }
-        this.setState({
-            [name]: value,
-            dataSet: selectedData
+        this.setState(() => {
+            return {
+                dataSet: selectedData,
+                [name]: value
+            }
         })
     }
 
@@ -83,7 +85,7 @@ class DataStructures extends Component {
                 <div id='dataControlsArea'>
                     <select
                         className='select-style'
-                        value={this.state.dataStructureChoice}
+                        value={dataStructureChoice}
                         onChange={this.changeHandler}
                         name="dataStructureChoice">
                         <option value='' disabled>Select a data structure</option>
@@ -98,7 +100,10 @@ class DataStructures extends Component {
                             <option value="stack-empty">Stack (LIFO)</option>
                         </optgroup>
                     </select>
-                    {(dataStructureChoice === 'llist' || dataStructureChoice === 'llist-empty') && <MoviesListDisplay dataSet={dataSet}/>}
+
+                    {/* See NOTE below on why these condtional rendering checks should not be combined! */}
+                    {dataStructureChoice === 'llist' && <MoviesListDisplay dataSet={this.state.dataSet}/>}
+                    {dataStructureChoice === 'llist-empty' && <MoviesListDisplay dataSet={this.state.dataSet}/>}
                 </div>
             </div>
         )
@@ -106,3 +111,25 @@ class DataStructures extends Component {
 }
 
 export default DataStructures
+
+/* 
+NOTE: Combining these two conditionals into one is NOT a good idea, since we want the constructor for <MoviesListDisplay> to be called each time one of the conditions evaluate to true.
+
+When combined, e.g.:
+{(dataStructureChoice === 'llist' || dataStructureChoice === 'llist-empty') && <MoviesListDisplay dataSet={this.state.dataSet}/>}
+
+<MoviesListDisplay>'s constructor() only gets called the first time one of the conditions is true. 
+
+
+EXPLANATION:
+Let us assume we have the following conditional rendering logic:
+(A || B) && <ChildCompponent>
+
+Let's say A is true, B is false - <ChildComponent>'s constructor() is called due to A, and then it is render()'ed.
+
+Let's say A becomes false, and now B is true - well, <ChildComponent> will be re-render()'ed due to B, but it's constructor() will not be called, because <ChildComponent> already exists!
+
+So, if there is some importnat setup in the constructor of <ChildComponent> which differs, or is somehow related to A & B, this will cause an issue.
+
+The solution is simple: keep the conditional checks separate, so that A and B cause their own instances of <ChildComponent> to be constructe()'ed and render()'ed
+*/
