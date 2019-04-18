@@ -1,7 +1,11 @@
 import React, {Component} from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-class DataCard extends Component {
+
+// Displays a Node's Movie data (title, gross) on a 'card'
+// - the card for the current Node receives a CSs class to distinguish it
+// - the cards for all Nodes BUT the tail receive right-linking arrows
+class MovieCard extends Component {
 
     render() {
         const { nodeFlag, movieNode, clickHandler } = this.props
@@ -20,4 +24,4 @@ class DataCard extends Component {
     }
 }
 
-export default DataCard
+export default MovieCard

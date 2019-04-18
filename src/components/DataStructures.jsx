@@ -15,7 +15,8 @@ class DataStructures extends Component {
 
 
     // State contains:
-    // a) The user's selected data structure, one of:
+    // a) The user's selected data structure (which may optionally
+    //     be pre-filled with test data), one of:
     //    - Linked List
     //    - Queue (FIFO)
     //    - Stack (LIFO)

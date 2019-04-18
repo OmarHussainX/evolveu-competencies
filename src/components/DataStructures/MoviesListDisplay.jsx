@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Movie, MoviesList } from '../js/MoviesList'
-import DataCard from './DataCard'
+import MovieCard from './MovieCard'
 // import Scrollable from './Scrollable'
 
 
 // Set to 'true' to enable output of debug messages from methods
-const DEBUG_MSG = true
+const DEBUG_MSG = false
 
 
 class MoviesListDisplay extends Component {
@@ -20,6 +20,7 @@ class MoviesListDisplay extends Component {
 
         // Receive reference to array of Movie data to be stored & shown
         // in a LinkedList - construct the list and save it in state
+        // (When the data set is empty, the linked list will also be empty)
         super(props)
         const { dataSet } = this.props
         const newMoviesList = new MoviesList()
@@ -133,7 +134,7 @@ class MoviesListDisplay extends Component {
         //
         // JSON.stringify doesn't preserve methods, Class type... (methods
         // aren't part of the Class instance, they're part of the Class definition)
-        // So... need copy the list manually)
+        // So... need to copy the list manually)
 
         const copyOfList = new MoviesList()
 
@@ -141,7 +142,7 @@ class MoviesListDisplay extends Component {
         // node into the new copy
         //
         // (Insertion in the copy begins at the head, and both the tail
-        // and 'position' will always be at the end)
+        // and 'position' will always be at the end in a new list)
         let currentNode = sourceList.head
 
         while (currentNode !== null) {
@@ -177,7 +178,7 @@ class MoviesListDisplay extends Component {
             nodeFlag += (movieNode === moviesList.head) ? 'HEAD' : ''
             nodeFlag += (movieNode === moviesList.position) ? ' CURRENT' : ''
             nodeFlag += (movieNode === moviesList.tail) ? ' TAIL' : ''
-            movieCards.push(<DataCard
+            movieCards.push(<MovieCard
                 key={i}
                 nodeFlag={nodeFlag}
                 movieNode={movieNode}
