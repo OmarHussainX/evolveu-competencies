@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { MoviesList } from '../components/js/MoviesList'
+import { Movie, MoviesList } from '../components/js/MoviesList'
 import DataCard from './DataCard'
 
 
@@ -52,6 +52,22 @@ class MoviesListDisplay extends Component {
 
 
         switch (id) {
+            // Insert new Movie into the list:
+            // - Ensure title is not blank, gross is sensible,
+            //   then insert
+            // - Clear user input
+            case 'insert':
+            const { movieTitleInput } = this.state
+            const movieGrossInput = parseFloat(this.state.movieGrossInput)
+            if (movieTitleInput !== '' && movieGrossInput >= 0) {
+                newMoviesList.insert(new Movie(movieTitleInput, movieGrossInput))
+                this.setState({
+                    movieTitleInput: '',
+                    movieGrossInput: '',
+                })
+            } else return
+            break
+
             case 'pos_first':
             newMoviesList.first()
             break
@@ -131,9 +147,9 @@ class MoviesListDisplay extends Component {
         // if (moviesList.length) moviesList.map(node => node)
         moviesList.map(node => node).forEach((movieNode, i) => {
             let nodeFlag = ''
-            nodeFlag += (movieNode === moviesList.head) ? '(HEAD)' : ''
-            nodeFlag += (movieNode === moviesList.position) ? ' ^^^' : ''
-            nodeFlag += (movieNode === moviesList.tail) ? ' (TAIL)' : ''
+            nodeFlag += (movieNode === moviesList.head) ? 'HEAD' : ''
+            nodeFlag += (movieNode === moviesList.position) ? ' CURRENT' : ''
+            nodeFlag += (movieNode === moviesList.tail) ? ' TAIL' : ''
             movieCards.push(<DataCard
                 key={i}
                 nodeFlag={nodeFlag}
