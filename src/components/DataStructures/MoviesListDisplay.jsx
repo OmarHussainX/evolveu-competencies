@@ -230,12 +230,12 @@ class MoviesListDisplay extends Component {
                         Delete
                     </button>
                 </div>
-                {moviesList.length && <div className='totalgross'>
+                {moviesList.length ? <div className='totalgross'>
                     <strong>Total Gross: </strong> {moviesList.totalGross().toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}M for {moviesList.length} movies
-                </div>}
-                {moviesList.length && <div className='currenttitle'>
+                </div> : ''}
+                {moviesList.length ? <div className='currenttitle'>
                     Current node: {moviesList.position.data.title}
-                </div>}
+                </div> : ''}
                 {/* <Scrollable> */}
                 <div id='dataDisplayArea'>
                     {movieCards}
