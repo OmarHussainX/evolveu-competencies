@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Movie, MoviesList } from '../components/js/MoviesList'
+import { Movie, MoviesList } from '../js/MoviesList'
 import DataCard from './DataCard'
 
 
@@ -42,14 +42,40 @@ class MoviesListDisplay extends Component {
     }
 
 
-    // Update LinkedList in state (by making a new list and assigning it)
-    // whenever a change is made to the list
+    // Allows for setting current Node/'position' in the Linked List by 
+    // clicking on the displayed Node
+    //
+    // NOTE
+    // To pass parameters to event handlers while using property initializer syntax, need to use currying
+    // https://medium.freecodecamp.org/reactjs-pass-parameters-to-event-handlers-ca1f5c422b9
+    setCurrentNode = newCurrentNode => event => {
+        const { moviesList } = this.state
+        if (DEBUG_MSG) console.log(`----- MoviesListDisplay setCurrentNode()\n${newCurrentNode.data.title}`)
+        
+        // This should be fine: modifying the list in state directly, BUT
+        // not depending on this modification for a state change/re-render
+        //
+        // The modified list in state will immediately be replaced by a
+        // new linked list object
+        moviesList.position = newCurrentNode
+
+        const newMoviesList = this.makeListCopy(moviesList)
+
+        this.setState({
+            moviesList: newMoviesList
+        })
+    }
+
+
+    // Update LinkedList in state (by making a copy of the list and assigning
+    // the copy to state) whenever a change is made to the list
+    // Changes are: modifying the 'position'/current Node, or inserting
+    // or deleting an item
     clickHandler = event => {
         const { id } = event.currentTarget
         if (DEBUG_MSG) console.log(`----- MoviesListDisplay: '${id}' clicked`)
 
         const newMoviesList = this.makeListCopy(this.state.moviesList)
-
 
         switch (id) {
             // Insert new Movie into the list:
@@ -153,7 +179,8 @@ class MoviesListDisplay extends Component {
             movieCards.push(<DataCard
                 key={i}
                 nodeFlag={nodeFlag}
-                movieData={movieNode.data}/>)
+                movieNode={movieNode}
+                clickHandler={this.setCurrentNode}/>)
         })
 
         return (
@@ -201,6 +228,9 @@ class MoviesListDisplay extends Component {
                         <FontAwesomeIcon icon='minus-circle' size="sm" style={{ marginRight: '5px' }}></FontAwesomeIcon>
                         Delete
                     </button>
+                </div>
+                <div className='totalgross'>
+                    <strong>Total Gross: </strong> {moviesList.totalGross().toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}M
                 </div>
 
 {/* ------------------------------------------------------------ */}

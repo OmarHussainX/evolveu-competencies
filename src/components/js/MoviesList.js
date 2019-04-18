@@ -25,7 +25,7 @@ class MoviesList extends LinkedList {
     // gross of each Movie, then reduce() the array
     totalGross() {
         return this.map(node => node.data.gross)
-            .reduce((acc, cur) => acc + cur)
+            .reduce((acc, cur) => acc + cur, 0)
     }
 }
 

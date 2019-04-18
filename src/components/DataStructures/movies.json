@@ -1,0 +1,82 @@
+[  
+   {  
+      "title":"Captain Marvel",
+      "gross":388.71
+   },
+   {  
+      "title":"Spider-Man: Into The Spider-Verse",
+      "gross":190.24
+   },
+   {  
+      "title":"Venom",
+      "gross":213.52
+   },
+   {  
+      "title":"Ant-Man and the Wasp",
+      "gross":216.65
+   },
+   {  
+      "title":"Deadpool 2",
+      "gross":318.49
+   },
+   {  
+      "title":"Avengers: Infinity War",
+      "gross":678.82
+   },
+   {  
+      "title":"Black Panther",
+      "gross":700.06
+   },
+   {  
+      "title":"Thor: Ragnarok",
+      "gross":315.06
+   },
+   {  
+      "title":"Spider-Man: Homecoming",
+      "gross":334.20
+   },
+   {  
+      "title":"Guardians of the Galaxy: Vol. 2",
+      "gross":389.81
+   },
+   {  
+      "title":"Logan",
+      "gross":226.28
+   },
+   {  
+      "title":"Doctor Strange",
+      "gross":232.64
+   },
+   {  
+      "title":"X-Men: Apocalypse",
+      "gross":155.44
+   },
+   {  
+      "title":"Captain America: Civil War",
+      "gross":408.08
+   },
+   {  
+      "title":"Deadpool",
+      "gross":363.07
+   },
+   {  
+      "title":"Fantastic Four",
+      "gross":56.12
+   },
+   {  
+      "title":"Ant-Man",
+      "gross":180.20
+   },
+   {  
+      "title":"Avengers: Age of Ultron",
+      "gross":459.00
+   },
+   {  
+      "title":"Big Hero 6",
+      "gross":222.53
+   },
+   {  
+      "title":"Guardians of the Galaxy",
+      "gross":333.18
+   }
+]
