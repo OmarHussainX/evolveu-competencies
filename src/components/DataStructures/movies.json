@@ -72,11 +72,11 @@
       "gross":459.00
    },
    {  
-      "title":"Big Hero 6",
-      "gross":222.53
-   },
-   {  
       "title":"Guardians of the Galaxy",
       "gross":333.18
-   }
+   },
+   {  
+    "title":"X-Men: Days of Future Past",
+    "gross":233.92
+ }
 ]

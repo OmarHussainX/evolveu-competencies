@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Movie, MoviesList } from '../js/MoviesList'
 import DataCard from './DataCard'
+// import Scrollable from './Scrollable'
 
 
 // Set to 'true' to enable output of debug messages from methods
@@ -229,18 +230,17 @@ class MoviesListDisplay extends Component {
                         Delete
                     </button>
                 </div>
-                <div className='totalgross'>
-                    <strong>Total Gross: </strong> {moviesList.totalGross().toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}M
-                </div>
-
-{/* ------------------------------------------------------------ */}
-{/* Data for the data structure goes here:
-- For linked List, series of cards with arrows on the right, except for the tail
-- For FIFO/LIFO, a vertical stack */}
+                {moviesList.length && <div className='totalgross'>
+                    <strong>Total Gross: </strong> {moviesList.totalGross().toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}M for {moviesList.length} movies
+                </div>}
+                {moviesList.length && <div className='currenttitle'>
+                    Current node: {moviesList.position.data.title}
+                </div>}
+                {/* <Scrollable> */}
                 <div id='dataDisplayArea'>
                     {movieCards}
                 </div>
-{/* ------------------------------------------------------------ */}
+                {/* </Scrollable> */}
             </React.Fragment>
         )
     }
