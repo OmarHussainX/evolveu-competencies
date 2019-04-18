@@ -64,7 +64,7 @@ class DataStructures extends Component {
         const { name, value } = event.currentTarget
         if (DEBUG_MSG) console.log(`----- DataStructures changeHandler()\n${name}: ${value}`)
 
-        let selectedData = null
+        let selectedData = []
         switch(value) {
             case 'llist':
             selectedData = movieData
@@ -77,7 +77,6 @@ class DataStructures extends Component {
             break
 
             case 'llist-empty':
-            selectedData = []
             break
 
             case 'queue-empty':

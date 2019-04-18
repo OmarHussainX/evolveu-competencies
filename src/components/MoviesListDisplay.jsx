@@ -52,9 +52,24 @@ class MoviesListDisplay extends Component {
 
 
         switch (id) {
+            case 'pos_first':
+            newMoviesList.first()
+            break
+
             case 'pos_prev':
             newMoviesList.previous()
+            break
 
+            case 'pos_next':
+            newMoviesList.next()
+            break
+
+            case 'pos_last':
+            newMoviesList.last()
+            break
+
+            case 'delete':
+            newMoviesList.delete()
             break
 
             default:
@@ -98,7 +113,7 @@ class MoviesListDisplay extends Component {
         // that matches the data in the current node/'position' of the old list
         // When found, set the current node/'position' in the copied list
         currentNode = copyOfList.head
-        while (currentNode.data.title !== sourceList.position.data.title) {
+        while (currentNode != null && currentNode.data.title !== sourceList.position.data.title) {
             currentNode = currentNode.next
         }
         copyOfList.position = currentNode
