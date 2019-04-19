@@ -20,8 +20,8 @@ class City {
 
 
     //  Receives a number that will be subtracted from the city’s population
-    movedOut() {
-
+    movedOut(num) {
+        if (num > 0 && num < this.population) this.population -= parseInt(num)
     }
 
 

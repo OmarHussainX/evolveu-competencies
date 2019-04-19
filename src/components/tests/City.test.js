@@ -31,17 +31,17 @@ describe('The City class constructor with parameters', () => {
     })
 })
 
-describe('Testing population adjustment:', () => {
+describe('Population adjustment:', () => {
     const testCity = new City('Calgary', 51.0486, -114.0708, 1239000)
 
     it('should be possible to grow the population', () => {
         testCity.movedIn(1000000)
         expect(testCity.population).toEqual(1239000 + 1000000)
     })
-    // it('should be possible to shrink the population', () => {
-    //     testCity.movedOut(1000000)
-    //     expect(testCity.population).toEqual(1239000 - 1000000)
-    // })
+    it('should be possible to shrink the population', () => {
+        testCity.movedOut(2000000)
+        expect(testCity.population).toEqual(1239000 + 1000000 - 2000000)
+    })
 })
 
 // describe('Testing city classification based on population:', () => {
