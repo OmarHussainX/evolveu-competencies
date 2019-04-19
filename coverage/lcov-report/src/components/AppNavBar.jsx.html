@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>5/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>1/1</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -100,16 +100,7 @@
 55
 56
 57
-58</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+58</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -117,6 +108,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,16 +150,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, { Component } from 'react';</span>
-<span class="cstat-no" title="statement not covered" >import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'</span>
-<span class="cstat-no" title="statement not covered" >import './css/AppNavBar.css';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './css/AppNavBar.css';
 &nbsp;
 &nbsp;
 class AppNavBar extends Component {
 &nbsp;
-<span class="fstat-no" title="function not covered" >    render</span>(props) {
+    render(props) {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        return (</span>
+        return (
             &lt;div&gt;
 &nbsp;
                 {/* Buttons used to change the active component  */}
@@ -174,35 +174,35 @@ class AppNavBar extends Component {
                     &lt;button onClick={this.props.clickHandler} name="home"&gt;
                         &lt;FontAwesomeIcon
                             className={'button grow' +
-                                (this.props.activeApp === 'home' ? ' selected' : '')}
+                                (this.props.activeApp === 'home' ? <span class="branch-0 cbranch-no" title="branch not covered" >' selected' </span>: '')}
                             icon='home'
                             size="2x" /&gt;
                     &lt;/button&gt;
                     &lt;button onClick={this.props.clickHandler} name="calc"&gt;
                         &lt;FontAwesomeIcon
                             className={'button grow' +
-                                (this.props.activeApp === 'calc' ? ' selected' : '')}
+                                (this.props.activeApp === 'calc' ? <span class="branch-0 cbranch-no" title="branch not covered" >' selected' </span>: '')}
                             icon='calculator'
                             size="2x" /&gt;
                     &lt;/button&gt;
                     &lt;button onClick={this.props.clickHandler} name="oneaccount"&gt;
                         &lt;FontAwesomeIcon
                             className={'button grow' +
-                                (this.props.activeApp === 'oneaccount' ? ' selected' : '')}
+                                (this.props.activeApp === 'oneaccount' ? <span class="branch-0 cbranch-no" title="branch not covered" >' selected' </span>: '')}
                             icon='hand-holding-usd'
                             size="2x" /&gt;
                     &lt;/button&gt;
                     &lt;button onClick={this.props.clickHandler} name="bankaccounts"&gt;
                         &lt;FontAwesomeIcon
                             className={'button grow' +
-                                (this.props.activeApp === 'bankaccounts' ? ' selected' : '')}
+                                (this.props.activeApp === 'bankaccounts' ? <span class="branch-0 cbranch-no" title="branch not covered" >' selected' </span>: '')}
                             icon='dollar-sign'
                             size="2x" /&gt;
                     &lt;/button&gt;
                     &lt;button onClick={this.props.clickHandler} name="datastructures"&gt;
                         &lt;FontAwesomeIcon
                             className={'button grow' +
-                                (this.props.activeApp === 'datastructures' ? ' selected' : '')}
+                                (this.props.activeApp === 'datastructures' ? ' selected' : <span class="branch-1 cbranch-no" title="branch not covered" >'')</span>}
                             icon='server'
                             size="2x" /&gt;
                     &lt;/button&gt;
@@ -220,7 +220,7 @@ export default AppNavBar
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:14:09 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:16:19 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

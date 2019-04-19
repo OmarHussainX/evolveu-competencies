@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/js/MoviesList.js</title>
+    <title>Code coverage report for src/components/js/City.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/js</a> MoviesList.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/js</a> City.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>18/18</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>18/18</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>12/12</span>
       </div>
     </div>
   </div>
@@ -75,70 +75,88 @@
 30
 31
 32
-33</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+33
+34
+35
+36
+37
+38
+39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">41x</span>
-<span class="cline-any cline-yes">41x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { LinkedList } from './LinkedList'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class City {
+    constructor(name = null, latitude = 0, longtitude = 0, population = 0) {
+        this.name = name
+        this.latitude = parseFloat(latitude)
+        this.longtitude = parseFloat(longtitude)
+        this.population = parseInt(population)
+    }
 &nbsp;
 &nbsp;
-class Movie {
-    constructor(title = '', gross = 0) {
-        this.title = title
-        this.gross = gross
+    // Creates a String representation of the City
+    show() {
+        return `${this.name} [${this.latitude}, ${this.longtitude}] (pop. ${this.population.toLocaleString(undefined)})`
+    }
+&nbsp;
+&nbsp;
+    //  Receives a number that will be added to the city’s population
+    movedIn(num) {
+        this.population += parseInt(num)
+    }
+&nbsp;
+&nbsp;
+    //  Receives a number that will be subtracted from the city’s population
+    movedOut(num) {
+        if (num &gt; 0 &amp;&amp; num &lt; this.population) this.population -= parseInt(num)
+    }
+&nbsp;
+&nbsp;
+    //  Returns a String representing the scale of the city based on its population
+    howBig() {
+        if (this.population &gt; 100000) return 'City'
+        if (this.population &gt; 20000) return 'Large town'
+        if (this.population &gt; 1000) return 'Town'
+        if (this.population &gt; 100) return 'Village'
+        if (this.population &gt; 1) return 'Hamlet'
     }
 }
 &nbsp;
-&nbsp;
-/*
-This class defines a LinkedList of Movie Objects
-&nbsp;
---- PROPERTIES ---
-inherited from parent class
-&nbsp;
---- METHODS ---
-inherited from parent class, and:
-totalGross()    - returns the total gross of all Movies in the list
-*/
-class MoviesList extends LinkedList {
-&nbsp;
-    // Use LinkedList's map() method to obtain an array containing the
-    // gross of each Movie, then reduce() the array
-    totalGross() {
-        return this.map(node =&gt; node.data.gross)
-            .reduce((acc, cur) =&gt; acc + cur, 0)
-    }
-}
-&nbsp;
-export { Movie, MoviesList }
+export { City }
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

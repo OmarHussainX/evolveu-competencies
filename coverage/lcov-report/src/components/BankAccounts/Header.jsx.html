@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">58.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/13</span>
+        <span class='fraction'>7/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">37.5% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>3/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">58.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/13</span>
+        <span class='fraction'>7/12</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -93,26 +93,18 @@
 48
 49
 50
-51</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+51</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -120,13 +112,13 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,6 +127,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,23 +136,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, {Component} from "react"</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {Component} from "react"
 &nbsp;
 class Header extends Component {
-<span class="fstat-no" title="function not covered" >  render</span>(props) {
+  render(props) {
 &nbsp;
-    let accountName = <span class="cstat-no" title="statement not covered" >''</span>
-    let accountBalance = <span class="cstat-no" title="statement not covered" >''</span>
+    let accountName = ''
+    let accountBalance = ''
     
     // If no account has been created yet, prompt the user to
     // create a new account
-<span class="cstat-no" title="statement not covered" >    if (this.props.currentAccount === '') {</span>
-<span class="cstat-no" title="statement not covered" >        accountName = 'Create a new account to get started'</span>
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.currentAccount === '') {
+        accountName = 'Create a new account to get started'
     
     // Otherwise, obtain name and balance of the current account,
     // and display current account info
     } else {
-<span class="cstat-no" title="statement not covered" >        this.props.accountsArray.forEach((<span class="fstat-no" title="function not covered" >account) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.props.accountsArray.forEach(<span class="fstat-no" title="function not covered" >(a</span>ccount) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >            if (account.name === this.props.currentAccount) {</span>
 <span class="cstat-no" title="statement not covered" >                accountName = account.name</span>
 <span class="cstat-no" title="statement not covered" >                accountBalance = account.balance.toLocaleString('en-US', { style: 'currency', currency: 'USD' })</span>
@@ -167,8 +167,8 @@ class Header extends Component {
         })
     }
 &nbsp;
-    let accountStats = <span class="cstat-no" title="statement not covered" >''</span>
-<span class="cstat-no" title="statement not covered" >    if (this.props.currentAccount !== '') {</span>
+    let accountStats = ''
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.currentAccount !== '') {
 <span class="cstat-no" title="statement not covered" >        accountStats = </span>
             &lt;div className='account-stats'&gt;
                 &lt;div&gt;Lowest balance: {this.props.accountsController.getLowestBalance().toLocaleString('en-US', { style: 'currency', currency: 'USD' })}&lt;/div&gt;
@@ -177,13 +177,13 @@ class Header extends Component {
             &lt;/div&gt;
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
       &lt;React.Fragment&gt;
         &lt;div id="BankAccountsHeader"&gt;
             &lt;h4&gt;
                 {accountName}
                 &lt;br /&gt;
-                { accountBalance !== '' ? ` ${accountBalance}` : ''}
+                { accountBalance !== '' ? <span class="branch-0 cbranch-no" title="branch not covered" >` ${accountBalance}` </span>: ''}
             &lt;/h4&gt;
             {accountStats}
         &lt;/div&gt;
@@ -199,7 +199,7 @@ export default Header
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:14:09 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:16:19 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

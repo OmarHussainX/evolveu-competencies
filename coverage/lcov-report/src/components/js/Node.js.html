@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/14</span>
+        <span class='fraction'>14/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/14</span>
+        <span class='fraction'>14/14</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -95,8 +95,8 @@
 50
 51</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">73x</span>
+<span class="cline-any cline-yes">73x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -109,33 +109,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,9 +144,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class Node {
-<span class="fstat-no" title="function not covered" >    constructor</span>(nodeData = <span class="branch-0 cbranch-no" title="branch not covered" >null, nextNode = <span class="branch-0 cbranch-no" title="branch not covered" >null) {</span></span>
-<span class="cstat-no" title="statement not covered" >        this.data = nodeData</span>
-<span class="cstat-no" title="statement not covered" >        this.next = nextNode</span>
+    constructor(nodeData = null, nextNode = null) {
+        this.data = nodeData
+        this.next = nextNode
     }
 &nbsp;
     // Displays Object data stored in the Node, in the following format:
@@ -154,38 +154,38 @@
     //
     // Displays primitve data stored in the Node, in the following format:
     // {value}
-<span class="fstat-no" title="function not covered" >    show</span>() {
+    show() {
 &nbsp;
         // Need to determine type of Node's data in order to display it:
         // Primitive data types can be console.log()'ed directly
         // In order to display Objects, need to obtain their keys &amp; values
-<span class="cstat-no" title="statement not covered" >        switch(typeof this.data) {</span>
+        switch(typeof this.data) {
 &nbsp;
             case 'object':
             // null has a typeof 'object', so it must be accounted for
-<span class="cstat-no" title="statement not covered" >            if (this.data === null) {</span>
-<span class="cstat-no" title="statement not covered" >                console.log(`{${this.data}}`)</span>
-<span class="cstat-no" title="statement not covered" >                return</span>
+            if (this.data === null) {
+                console.log(`{${this.data}}`)
+                return
             }
             // Don't know what Object data might be stored in the node, so
             // obtain an array of the Object's keys/property names
-            const dataKeys = <span class="cstat-no" title="statement not covered" >Object.keys(this.data)</span>
+            const dataKeys = Object.keys(this.data)
 &nbsp;
             // initialize the String representation for the Object's key:value pairs
-            let dataString = <span class="cstat-no" title="statement not covered" >'{'</span>
+            let dataString = '{'
 &nbsp;
             // for each key, obtain the corresponding value and add it to the String
-<span class="cstat-no" title="statement not covered" >            dataKeys.forEach(<span class="fstat-no" title="function not covered" >key</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >                dataString += `${key}: ${this.data[key]}, `</span>
+            dataKeys.forEach(key =&gt; {
+                dataString += `${key}: ${this.data[key]}, `
             })
 &nbsp;
             // remove the last ', ' from the String, and add the closing bracket
-<span class="cstat-no" title="statement not covered" >            dataString = dataString.slice(0, -2) + '}'</span>
-<span class="cstat-no" title="statement not covered" >            console.log(dataString)</span>
-<span class="cstat-no" title="statement not covered" >            break</span>
+            dataString = dataString.slice(0, -2) + '}'
+            console.log(dataString)
+            break
 &nbsp;
             default:
-<span class="cstat-no" title="statement not covered" >            console.log(`{${this.data}}`)</span>
+            console.log(`{${this.data}}`)
 &nbsp;
         }
 &nbsp;
@@ -199,7 +199,7 @@ export { Node }
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:14:09 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:16:19 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

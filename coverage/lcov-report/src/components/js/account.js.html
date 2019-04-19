@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/7</span>
+        <span class='fraction'>7/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>10/10</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -80,25 +80,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">118x</span>
+<span class="cline-any cline-yes">132x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -113,25 +113,25 @@
 &nbsp;
     #name = ''
     #balance = 0
-<span class="fstat-no" title="function not covered" >    constructor</span>(startingBalance, accountName) <span class="cstat-no" title="statement not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >        this.#balance = +(parseFloat(startingBalance).toFixed(2))</span>
-<span class="cstat-no" title="statement not covered" >        this.#name = accountName</span>
+    constructor(startingBalance, accountName) {
+        this.#balance = +(parseFloat(startingBalance).toFixed(2))
+        this.#name = accountName
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    get </span>name() { <span class="cstat-no" title="statement not covered" >return this.#name }</span>
-<span class="fstat-no" title="function not covered" >    get </span>balance() { <span class="cstat-no" title="statement not covered" >return this.#balance }</span>
+    get name() { return this.#name }
+    get balance() { return this.#balance }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    setBalance</span>(amount) { <span class="cstat-no" title="statement not covered" >this.#balance = +amount.toFixed(2) }</span>
-<span class="fstat-no" title="function not covered" >    setName</span>(accountName) { <span class="cstat-no" title="statement not covered" >this.#name = accountName}</span>
+    setBalance(amount) { this.#balance = +amount.toFixed(2) }
+    setName(accountName) { this.#name = accountName}
 &nbsp;
-<span class="fstat-no" title="function not covered" >    deposit</span>(amount) { 
-<span class="cstat-no" title="statement not covered" >        this.#balance += parseFloat(amount)</span>
-<span class="cstat-no" title="statement not covered" >        this.#balance = +this.#balance.toFixed(2)</span>
+    deposit(amount) { 
+        this.#balance += parseFloat(amount)
+        this.#balance = +this.#balance.toFixed(2)
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    withdraw</span>(amount) { 
-<span class="cstat-no" title="statement not covered" >        this.#balance -= parseFloat(amount)</span>
-<span class="cstat-no" title="statement not covered" >        this.#balance = +this.#balance.toFixed(2)</span>
+    withdraw(amount) { 
+        this.#balance -= parseFloat(amount)
+        this.#balance = +this.#balance.toFixed(2)
     }
 }
 &nbsp;
@@ -148,7 +148,7 @@ export default Account
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:14:09 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:16:19 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

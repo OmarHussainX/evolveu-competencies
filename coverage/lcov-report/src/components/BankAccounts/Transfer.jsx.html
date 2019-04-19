@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/9</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/9</span>
+        <span class='fraction'>0/7</span>
       </div>
     </div>
   </div>
@@ -133,19 +133,7 @@
 88
 89
 90
-91</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+91</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -156,6 +144,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -223,16 +223,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, {Component} from 'react'</span>
-<span class="cstat-no" title="statement not covered" >import '../css/BankAccounts.css';</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {Component} from 'react'
+import '../css/BankAccounts.css';
 &nbsp;
 class Transfer extends Component {
-<span class="fstat-no" title="function not covered" >    render</span>(props) {
+<span class="fstat-no" title="function not covered" >    re</span>nder(props) {
 &nbsp;
     // Create an array of option entries for the 'From' dropdown
     // Make the current account selected by default
     // Remember: account names are guaranteed to be unique!
-    const fromDropdownOpts = <span class="cstat-no" title="statement not covered" >this.props.accountsArray.map((<span class="fstat-no" title="function not covered" >account) =&gt; {</span></span>
+    const fromDropdownOpts = <span class="cstat-no" title="statement not covered" >this.props.accountsArray.map(<span class="fstat-no" title="function not covered" >(a</span>ccount) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        return &lt;option</span>
                 key={account.name} 
                 value={account.name} 
@@ -244,7 +244,7 @@ class Transfer extends Component {
     // Create an array of option entries for the 'From' dropdown
     // Exclude the current account from the list
     // Remember: account names are guaranteed to be unique!
-    const toDropdownOpts = <span class="cstat-no" title="statement not covered" >this.props.accountsArray.map((<span class="fstat-no" title="function not covered" >account) =&gt; {</span></span>
+    const toDropdownOpts = <span class="cstat-no" title="statement not covered" >this.props.accountsArray.map(<span class="fstat-no" title="function not covered" >(a</span>ccount) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        if (account.name !== this.props.currentAccount) {</span>
 <span class="cstat-no" title="statement not covered" >            return &lt;option</span>
                     key={account.name} 
@@ -319,7 +319,7 @@ export default Transfer</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:14:09 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:16:19 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
