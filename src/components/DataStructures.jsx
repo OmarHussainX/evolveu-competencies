@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import './css/DataStructures.css'
 import MoviesListDisplay from './DataStructures/MoviesListDisplay'
+import MoviesQueueDisplay from './DataStructures/MoviesQueueDisplay'
 
 // Data set to use if a pre-filled data structure is selected
 import movieData from './DataStructures/movies.json'
@@ -41,13 +42,9 @@ class DataStructures extends Component {
         let selectedData = []
         switch(value) {
             case 'llist':
-            selectedData = movieData
-            break
-
             case 'queue':
-            break
-
             case 'stack':
+            selectedData = movieData
             break
 
             case 'llist-empty':
@@ -92,6 +89,8 @@ class DataStructures extends Component {
                     {/* See NOTE below on why these condtional rendering checks should not be combined! */}
                     {dataStructureChoice === 'llist' && <MoviesListDisplay dataSet={dataSet}/>}
                     {dataStructureChoice === 'llist-empty' && <MoviesListDisplay dataSet={dataSet}/>}
+                    {dataStructureChoice === 'queue' && <MoviesQueueDisplay dataSet={dataSet}/>}
+                    {dataStructureChoice === 'queue-empty' && <MoviesQueueDisplay dataSet={dataSet}/>}
             </div>
         )
     }

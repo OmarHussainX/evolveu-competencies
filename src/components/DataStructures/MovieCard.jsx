@@ -3,18 +3,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 // Displays a Node's Movie data (title, gross) on a 'card'
-// - the card for the current Node receives a CSs class to distinguish it
+//
+// When the data source is a linked list:
+// - the card for the current Node receives a CSS class to distinguish it
 // - the cards for all Nodes BUT the tail receive right-linking arrows
+//
+// When the data source is a queue or stack:
+// - the card for the front of the queue/top of the stack receives
+//   a CSS class to distinguish it
+
 class MovieCard extends Component {
 
     render() {
-        const { nodeFlag, movieNode, clickHandler } = this.props
+        const { nodeFlag, dataSource, movieNode, clickHandler } = this.props
+
+        let cardClass = ''
+
+        if (dataSource === 'linked list') cardClass += 'default'
+        if (dataSource === 'queue' || dataSource === 'stack') cardClass += 'nohover'
+
+        if (dataSource === 'linked list' && nodeFlag.includes('CURRENT')) {
+            cardClass += ' currentnode'
+        }
+        else if ((dataSource === 'queue' || dataSource === 'stack') && nodeFlag.includes('FIRSTOUT')) {
+            cardClass += ' currentnode'
+        }
+
         return (
             <div className='dataCard' onClick={clickHandler(movieNode)}>
-                <div className={'default' + (nodeFlag.includes('CURRENT') ? '  currentnode' : '')}>
+                <div className={cardClass}>
                     <h5>{movieNode.data.title}</h5>
                     <p>{movieNode.data.gross.toFixed(2)}M</p>
-                    {!nodeFlag.includes('TAIL') && <div
+                    {dataSource === 'linked list' && !nodeFlag.includes('TAIL') && <div
                     className={'rightarrow'}>
                         <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
                     </div>}

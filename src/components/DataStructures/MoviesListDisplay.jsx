@@ -180,6 +180,7 @@ class MoviesListDisplay extends Component {
             nodeFlag += (movieNode === moviesList.tail) ? ' TAIL' : ''
             movieCards.push(<MovieCard
                 key={i}
+                dataSource='linked list'
                 nodeFlag={nodeFlag}
                 movieNode={movieNode}
                 clickHandler={this.setCurrentNode}/>)
@@ -232,13 +233,13 @@ class MoviesListDisplay extends Component {
                     </button>
                 </div>
                 {moviesList.length ? <div className='totalgross'>
-                    <strong>Total Gross: </strong> {moviesList.totalGross().toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}M for {moviesList.length} movies
+                    <strong>Total Gross: </strong> {moviesList.totalGross().toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}M for {moviesList.length} {moviesList.length > 1 ? 'movies' : 'movie'}
                 </div> : ''}
                 {moviesList.length ? <div className='currenttitle'>
                     Current node: {moviesList.position.data.title}
                 </div> : ''}
                 {/* <Scrollable> */}
-                <div id='dataDisplayArea'>
+                <div id='linkedListDataArea'>
                     {movieCards}
                 </div>
                 {/* </Scrollable> */}
