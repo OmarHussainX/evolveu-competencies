@@ -44,8 +44,32 @@ describe('Population adjustment:', () => {
     })
 })
 
-// describe('Testing city classification based on population:', () => {
-//     it('should be classified as a \'City\' for population over 100,000', () => {
-//         expect(testCity.howBig()).toMatch(/City/)
-//     })
-// })
+describe('City classification based on population:', () => {
+    const testCity = new City('Calgary', 51.0486, -114.0708, 1239000)
+
+    it('should be classified as a \'City\' for population > 100,000', () => {
+        expect(testCity.howBig()).toMatch(/City/)
+    })
+
+    it('should be classified as a \'Large town\' for 100,000 > population > 20,000', () => {
+        testCity.population = 50000
+        expect(testCity.howBig()).toMatch(/Large town/)
+    })
+
+    it('should be classified as a \'Town\' for 20,000 > population > 1,000', () => {
+        testCity.population = 10000
+        expect(testCity.howBig()).toMatch(/Town/)
+    })
+
+    it('should be classified as a \'Village\' for 1,000 > population > 100', () => {
+        testCity.population = 500
+        expect(testCity.howBig()).toMatch(/Village/)
+    })
+
+    it('should be classified as a \'Hamlet\' for 100 > population > 1', () => {
+        testCity.population = 50
+        expect(testCity.howBig()).toMatch(/Hamlet/)
+    })
+
+
+})
