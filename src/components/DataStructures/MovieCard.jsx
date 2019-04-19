@@ -38,6 +38,10 @@ class MovieCard extends Component {
                     className={'rightarrow'}>
                         <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
                     </div>}
+                    {(dataSource === 'queue' || dataSource === 'stack') && nodeFlag.includes('FIRSTOUT') && <div
+                    className={'firstoutarrow'}>
+                        <FontAwesomeIcon icon='long-arrow-alt-right' size="lg"></FontAwesomeIcon>
+                    </div>}
                 </div>
             </div>
         )

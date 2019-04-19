@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import './css/DataStructures.css'
 import MoviesListDisplay from './DataStructures/MoviesListDisplay'
 import MoviesQueueDisplay from './DataStructures/MoviesQueueDisplay'
+import MoviesStackDisplay from './DataStructures/MoviesStackDisplay'
 
 // Data set to use if a pre-filled data structure is selected
 import movieData from './DataStructures/movies.json'
@@ -79,6 +80,8 @@ class DataStructures extends Component {
                     {dataStructureChoice === 'llist-empty' && <MoviesListDisplay dataSet={dataSet}/>}
                     {dataStructureChoice === 'queue' && <MoviesQueueDisplay dataSet={dataSet}/>}
                     {dataStructureChoice === 'queue-empty' && <MoviesQueueDisplay dataSet={dataSet}/>}
+                    {dataStructureChoice === 'stack' && <MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/>}
+                    {dataStructureChoice === 'stack-empty' && <MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/>}
             </div>
         )
     }
