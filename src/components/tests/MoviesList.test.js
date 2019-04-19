@@ -1,13 +1,9 @@
-<<<<<<< HEAD:src/components/js/MoviesList.test.js
-import { Movie, MoviesList } from './MoviesList'
+import { Movie, MoviesList } from '../js/MoviesList'
 import movieData from '../DataStructures/movies.json'
 
 /* 
 https://www.boxofficemojo.com/franchises/chart/?view=main&id=marvelcomics.htm&sort=date&order=DESC&p=.htm
  */
-=======
-import { Movie, MoviesList } from '../js/MoviesList'
->>>>>>> comp150-js:src/components/tests/MoviesList.test.js
 
 describe('The MoviesList class', () => {
     

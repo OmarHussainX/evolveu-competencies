@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">31.25% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/16</span>
+        <span class='fraction'>5/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">15.38% </span>
+        <span class="strong">37.5% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/13</span>
+        <span class='fraction'>6/16</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">66.67% </span>
@@ -35,13 +35,13 @@
         <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">55.56% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/15</span>
+        <span class='fraction'>5/9</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -157,17 +157,9 @@
 112
 113
 114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+115</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -176,7 +168,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,24 +198,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -237,6 +213,10 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -294,6 +274,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from "react"
 import './css/DataStructures.css'
 import MoviesListDisplay from './DataStructures/MoviesListDisplay'
+import MoviesQueueDisplay from './DataStructures/MoviesQueueDisplay'
+import MoviesStackDisplay from './DataStructures/MoviesStackDisplay'
 &nbsp;
 // Data set to use if a pre-filled data structure is selected
 import movieData from './DataStructures/movies.json'
@@ -305,7 +287,6 @@ const DEBUG_MSG = false
 &nbsp;
 &nbsp;
 class DataStructures extends Component {
-&nbsp;
 &nbsp;
     // State contains:
     // a) The user's selected data structure (which may optionally
@@ -331,25 +312,10 @@ class DataStructures extends Component {
         const { name, value } = <span class="cstat-no" title="statement not covered" >event.currentTarget</span>
 <span class="cstat-no" title="statement not covered" >        if (DEBUG_MSG) <span class="cstat-no" title="statement not covered" >console.log(`----- DataStructures changeHandler()\n${name}: ${value}`)</span></span>
 &nbsp;
-        let selectedData = <span class="cstat-no" title="statement not covered" >[]</span>
-<span class="cstat-no" title="statement not covered" >        switch(value) {</span>
-            case 'llist':
-<span class="cstat-no" title="statement not covered" >            selectedData = movieData</span>
-<span class="cstat-no" title="statement not covered" >            break</span>
+        // If an 'empty' data structure has been selected, save reference
+        // to an empty array in state, otherwise save reference to test data
+        const selectedData = <span class="cstat-no" title="statement not covered" >value.includes('-empty') ? [] : movieData</span>
 &nbsp;
-            case 'queue':
-<span class="cstat-no" title="statement not covered" >            break</span>
-&nbsp;
-            case 'stack':
-<span class="cstat-no" title="statement not covered" >            break</span>
-&nbsp;
-            case 'llist-empty':
-            case 'queue-empty':
-            case 'stack-empty':
-<span class="cstat-no" title="statement not covered" >            break</span>
-&nbsp;
-            default:
-        }
 <span class="cstat-no" title="statement not covered" >        this.setState({</span>
             dataSet: selectedData,
             [name]: value
@@ -385,6 +351,10 @@ class DataStructures extends Component {
                     {/* See NOTE below on why these condtional rendering checks should not be combined! */}
                     {dataStructureChoice === 'llist' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesListDisplay dataSet={dataSet}/&gt;}</span>
                     {dataStructureChoice === 'llist-empty' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesListDisplay dataSet={dataSet}/&gt;}</span>
+                    {dataStructureChoice === 'queue' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesQueueDisplay dataSet={dataSet}/&gt;}</span>
+                    {dataStructureChoice === 'queue-empty' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesQueueDisplay dataSet={dataSet}/&gt;}</span>
+                    {dataStructureChoice === 'stack' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/&gt;}</span>
+                    {dataStructureChoice === 'stack-empty' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/&gt;}</span>
             &lt;/div&gt;
         )
     }
@@ -421,7 +391,7 @@ The solution is simple: keep the conditional checks separate, so that A and B ca
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 18 2019 17:18:41 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 18 2019 23:09:40 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>
