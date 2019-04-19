@@ -1,7 +1,7 @@
 import { City } from '../js/City'
 
 
-describe('Testing the City class constructor\'s default assignment', () => {
+describe('The City class constructor\'s default assignment', () => {
     let testCity = null
     testCity = new City()
 
@@ -17,7 +17,7 @@ describe('Testing the City class constructor\'s default assignment', () => {
     console.log(testCity.show())
 })
 
-describe('Testing the City class constructor with parameters', () => {
+describe('The City class constructor with parameters', () => {
     let testCity = null
     beforeEach(() => {
         testCity = new City('Calgary', 51.0486, -114.0708, 1239000)
@@ -30,7 +30,7 @@ describe('Testing the City class constructor with parameters', () => {
         expect(testCity.population).toEqual(1239000)
     })
 
-    describe('Testing population adjustment', () => {
+    describe('Testing population adjustment:', () => {
         it('should be possible to grow the population', () => {
             testCity.movedIn(1000000)
             expect(testCity.population).toEqual(1239000 + 1000000)
@@ -42,9 +42,9 @@ describe('Testing the City class constructor with parameters', () => {
         })
     })
 
-    describe('Testing city classification based on population', () => {
-        it('should be classified as a \'City\' for populayion over 100,000', () => {
-            expect(testCity.hoBig()).toMatch(/City/)
+    describe('Testing city classification based on population:', () => {
+        it('should be classified as a \'City\' for population over 100,000', () => {
+            expect(testCity.howBig()).toMatch(/City/)
         })
 
     })

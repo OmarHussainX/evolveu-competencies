@@ -9,7 +9,7 @@ class City {
 
     // Creates a String representation of the City
     show() {
-        //return `this.name [this.latitude, this.longtiude] (pop. ${this.population})`
+        return `this.name [this.latitude, this.longtiude] (pop. ${this.population})`
     }
 
 
