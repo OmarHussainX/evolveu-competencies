@@ -1,4 +1,4 @@
-import { Queue } from '../js/Queue'
+import { Stack } from '../js/Stack'
 import { Movie } from '../js/MoviesList'
 
 
@@ -25,32 +25,32 @@ const movieData = [
     new Movie('Guardians of the Galaxy', 333.18),
 ]
 
-describe('An empty Queue', () => {
+describe('An empty Stack', () => {
     
-    const movieQueue = new Queue()
+    const movieStack = new Stack()
     
     it('should have a size of zero', () => {
-        expect(movieQueue.size()).toEqual(0)
+        expect(movieStack.size()).toEqual(0)
     })
 })
 
 
-describe('A non-empty Queue', () => {
+describe('A non-empty Stack', () => {
     
-    const movieQueue = new Queue()
+    const movieStack = new Stack()
     
-    movieData.forEach(film => movieQueue.add(film))
+    movieData.forEach(film => movieStack.add(film))
 
     it('should contain the expected data', () => {
-        expect(movieQueue).not.toBeNull()
-        expect(movieQueue.data[5].title).toEqual(movieData[5].title)
-        expect(movieQueue.data[7].gross).toEqual(movieData[7].gross)
+        expect(movieStack).not.toBeNull()
+        expect(movieStack.data[3].title).toEqual(movieData[3].title)
+        expect(movieStack.data[9].gross).toEqual(movieData[9].gross)
     })
     it('the size should match the number of elements added', () => {
-        expect(movieQueue.size()).toEqual(movieData.length)
+        expect(movieStack.size()).toEqual(movieData.length)
     })
-    it('deleting should remove the first element and reduce the length of the queue by 1', () => {
-        expect(movieQueue.delete().title).toMatch(movieData[0].title)
-        expect(movieQueue.size()).toEqual(movieData.length-1)
+    it('deleting should remove the last element and reduce the length of the queue by 1', () => {
+        expect(movieStack.delete().title).toMatch(movieData[movieData.length-1].title)
+        expect(movieStack.size()).toEqual(movieData.length-1)
     })
 })
