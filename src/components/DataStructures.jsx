@@ -14,7 +14,6 @@ const DEBUG_MSG = false
 
 class DataStructures extends Component {
 
-
     // State contains:
     // a) The user's selected data structure (which may optionally
     //     be pre-filled with test data), one of:
@@ -39,21 +38,10 @@ class DataStructures extends Component {
         const { name, value } = event.currentTarget
         if (DEBUG_MSG) console.log(`----- DataStructures changeHandler()\n${name}: ${value}`)
 
-        let selectedData = []
-        switch(value) {
-            case 'llist':
-            case 'queue':
-            case 'stack':
-            selectedData = movieData
-            break
+        // If an 'empty' data structure has been selected, save reference
+        // to an empty array in state, otherwise save reference to test data
+        const selectedData = value.includes('-empty') ? [] : movieData
 
-            case 'llist-empty':
-            case 'queue-empty':
-            case 'stack-empty':
-            break
-
-            default:
-        }
         this.setState({
             dataSet: selectedData,
             [name]: value
