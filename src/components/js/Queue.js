@@ -7,14 +7,10 @@ Same as Array
 --- METHODS ---
 Same as Array, plus
 
-add()       - Adds an element to the back of the Queue
+add()       - Adds an element to the end of the Queue
 delete()    - Removes the first element from the Queue
 size()      - Returns the size of the Queue
 */
-
-// Set to 'true' to enable output of debug messages from methods
-const DEBUG_MSG = false
-
 
 
 class Queue {
@@ -23,7 +19,7 @@ class Queue {
         this.data = []
     }
 
-    // Adds an element to the back of the Queue
+    // Adds an element to the end of the Queue
     add(data) {
         return this.data.push(data)
     }
