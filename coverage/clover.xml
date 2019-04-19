@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1555629521679" clover="3.2.0">
   <project timestamp="1555629521679" name="All files">
     <metrics statements="535" coveredstatements="167" conditionals="338" coveredconditionals="77" methods="127" coveredmethods="56" elements="1000" coveredelements="300" complexity="0" loc="535" ncloc="535" packages="5" files="26" classes="26">
+=======
+<coverage generated="1555636260719" clover="3.2.0">
+  <project timestamp="1555636260720" name="All files">
+    <metrics statements="462" coveredstatements="166" conditionals="282" coveredconditionals="73" methods="116" coveredmethods="58" elements="860" coveredelements="297" complexity="0" loc="462" ncloc="462" packages="4" files="23" classes="23">
+>>>>>>> comp150-js
       <package name="src">
         <metrics statements="50" coveredstatements="5" conditionals="42" coveredconditionals="6" methods="18" coveredmethods="2"/>
         <file name="App.js" path="/home/omar/Documents/evolveu/objects/src/App.js">
@@ -65,7 +71,11 @@
         </file>
       </package>
       <package name="src.components">
+<<<<<<< HEAD
         <metrics statements="238" coveredstatements="15" conditionals="151" coveredconditionals="7" methods="40" coveredmethods="9"/>
+=======
+        <metrics statements="222" coveredstatements="10" conditionals="134" coveredconditionals="4" methods="37" coveredmethods="7"/>
+>>>>>>> comp150-js
         <file name="AppNavBar.jsx" path="/home/omar/Documents/evolveu/objects/src/components/AppNavBar.jsx">
           <metrics statements="1" coveredstatements="1" conditionals="10" coveredconditionals="5" methods="1" coveredmethods="1"/>
           <line num="10" count="1" type="stmt"/>
@@ -279,6 +289,7 @@
           <line num="64" count="0" type="stmt"/>
           <line num="66" count="0" type="stmt"/>
           <line num="70" count="1" type="stmt"/>
+<<<<<<< HEAD
         </file>
         <file name="DataStructures.jsx" path="/home/omar/Documents/evolveu/objects/src/components/DataStructures.jsx">
           <metrics statements="15" coveredstatements="5" conditionals="13" coveredconditionals="2" methods="3" coveredmethods="2"/>
@@ -300,10 +311,16 @@
         </file>
         <file name="OneAccount.jsx" path="/home/omar/Documents/evolveu/objects/src/components/OneAccount.jsx">
           <metrics statements="17" coveredstatements="3" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="2"/>
+=======
+        </file>
+        <file name="OneAccount.jsx" path="/home/omar/Documents/evolveu/objects/src/components/OneAccount.jsx">
+          <metrics statements="16" coveredstatements="3" conditionals="5" coveredconditionals="0" methods="6" coveredmethods="2"/>
+>>>>>>> comp150-js
           <line num="8" count="1" type="stmt"/>
           <line num="9" count="1" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
           <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+<<<<<<< HEAD
           <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="40" count="0" type="stmt"/>
           <line num="42" count="0" type="cond" truecount="0" falsecount="3"/>
@@ -317,6 +334,20 @@
           <line num="61" count="0" type="stmt"/>
           <line num="64" count="0" type="stmt"/>
           <line num="71" count="1" type="stmt"/>
+=======
+          <line num="37" count="0" type="stmt"/>
+          <line num="39" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="68" count="1" type="stmt"/>
+>>>>>>> comp150-js
         </file>
         <file name="ReactGreeter.jsx" path="/home/omar/Documents/evolveu/objects/src/components/ReactGreeter.jsx">
           <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -478,7 +509,7 @@
         </file>
       </package>
       <package name="src.components.js">
-        <metrics statements="132" coveredstatements="132" conditionals="50" coveredconditionals="50" methods="42" coveredmethods="42"/>
+        <metrics statements="137" coveredstatements="137" conditionals="50" coveredconditionals="50" methods="46" coveredmethods="46"/>
         <file name="LinkedList.js" path="/home/omar/Documents/evolveu/objects/src/components/js/LinkedList.js">
           <metrics statements="56" coveredstatements="56" conditionals="19" coveredconditionals="19" methods="8" coveredmethods="8"/>
           <line num="49" count="3" type="stmt"/>
@@ -540,10 +571,17 @@
         </file>
         <file name="MoviesList.js" path="/home/omar/Documents/evolveu/objects/src/components/js/MoviesList.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+<<<<<<< HEAD
           <line num="6" count="1" type="stmt"/>
           <line num="7" count="1" type="stmt"/>
           <line num="27" count="42" type="stmt"/>
           <line num="28" count="42" type="stmt"/>
+=======
+          <line num="6" count="41" type="stmt"/>
+          <line num="7" count="41" type="stmt"/>
+          <line num="27" count="21" type="stmt"/>
+          <line num="28" count="20" type="stmt"/>
+>>>>>>> comp150-js
         </file>
         <file name="Node.js" path="/home/omar/Documents/evolveu/objects/src/components/js/Node.js">
           <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
@@ -561,6 +599,14 @@
           <line num="39" count="1" type="stmt"/>
           <line num="40" count="1" type="stmt"/>
           <line num="43" count="4" type="stmt"/>
+        </file>
+        <file name="Queue.js" path="/home/omar/Documents/evolveu/objects/src/components/js/Queue.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="28" count="20" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="38" count="4" type="stmt"/>
         </file>
         <file name="account.js" path="/home/omar/Documents/evolveu/objects/src/components/js/account.js">
           <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>

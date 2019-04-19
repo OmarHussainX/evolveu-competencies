@@ -1,4 +1,4 @@
-import { Node } from './Node'
+import { Node } from '../js/Node'
 
 
 describe('Testing the Node class', () => {

@@ -1,4 +1,4 @@
-import {sum, difference, multiply, divide} from "./math"
+import {sum, difference, multiply, divide} from "../js/math"
 
 test('Test the math functions', () => {
 	console.log('Hello World')

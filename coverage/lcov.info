@@ -624,9 +624,15 @@ SF:/home/omar/Documents/evolveu/objects/src/components/OneAccount.jsx
 FN:7,(anonymous_0)
 FN:18,(anonymous_1)
 FN:35,(anonymous_2)
+<<<<<<< HEAD
 FN:44,(anonymous_3)
 FN:54,(anonymous_4)
 FN:68,(anonymous_5)
+=======
+FN:41,(anonymous_3)
+FN:51,(anonymous_4)
+FN:65,(anonymous_5)
+>>>>>>> comp150-js
 FNF:6
 FNH:2
 FNDA:1,(anonymous_0)
@@ -639,6 +645,7 @@ DA:8,1
 DA:9,1
 DA:19,0
 DA:22,0
+<<<<<<< HEAD
 DA:38,0
 DA:40,0
 DA:42,0
@@ -662,6 +669,28 @@ BRDA:42,2,0,0
 BRDA:42,2,1,0
 BRDA:42,2,2,0
 BRF:7
+=======
+DA:37,0
+DA:39,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:48,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:58,0
+DA:61,0
+DA:68,1
+LF:16
+LH:3
+BRDA:22,0,0,0
+BRDA:22,0,1,0
+BRDA:39,1,0,0
+BRDA:39,1,1,0
+BRDA:39,1,2,0
+BRF:5
+>>>>>>> comp150-js
 BRH:0
 end_of_record
 TN:
@@ -1058,7 +1087,11 @@ FNDA:3,(anonymous_3)
 FNDA:2,(anonymous_4)
 FNDA:4,(anonymous_5)
 FNDA:9,(anonymous_6)
+<<<<<<< HEAD
 FNDA:3,(anonymous_7)
+=======
+FNDA:2,(anonymous_7)
+>>>>>>> comp150-js
 DA:49,3
 DA:56,7
 DA:57,7
@@ -1147,6 +1180,7 @@ FN:27,(anonymous_2)
 FN:28,(anonymous_3)
 FNF:4
 FNH:4
+<<<<<<< HEAD
 FNDA:1,(anonymous_0)
 FNDA:2,(anonymous_1)
 FNDA:42,(anonymous_2)
@@ -1155,6 +1189,16 @@ DA:6,1
 DA:7,1
 DA:27,42
 DA:28,42
+=======
+FNDA:41,(anonymous_0)
+FNDA:1,(anonymous_1)
+FNDA:21,(anonymous_2)
+FNDA:20,(anonymous_3)
+DA:6,41
+DA:7,41
+DA:27,21
+DA:28,20
+>>>>>>> comp150-js
 LF:4
 LH:4
 BRDA:5,0,0,1
@@ -1196,6 +1240,28 @@ BRDA:21,3,0,1
 BRDA:21,3,1,1
 BRF:6
 BRH:6
+end_of_record
+TN:
+SF:/home/omar/Documents/evolveu/objects/src/components/js/Queue.js
+FN:22,(anonymous_0)
+FN:27,(anonymous_1)
+FN:32,(anonymous_2)
+FN:37,(anonymous_3)
+FNF:4
+FNH:4
+FNDA:2,(anonymous_0)
+FNDA:20,(anonymous_1)
+FNDA:1,(anonymous_2)
+FNDA:4,(anonymous_3)
+DA:16,1
+DA:23,2
+DA:28,20
+DA:33,1
+DA:38,4
+LF:5
+LH:5
+BRF:0
+BRH:0
 end_of_record
 TN:
 SF:/home/omar/Documents/evolveu/objects/src/components/js/account.js
