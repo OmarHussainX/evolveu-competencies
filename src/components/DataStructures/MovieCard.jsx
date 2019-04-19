@@ -17,15 +17,12 @@ class MovieCard extends Component {
     render() {
         const { nodeFlag, dataSource, movieNode, clickHandler } = this.props
 
-        let cardClass = ''
+        // Set the base CSS class depending on the source data structure
+        let cardClass = (dataSource === 'linked list') ? 'linkedlist' : 'stackorqueue'
 
-        if (dataSource === 'linked list') cardClass += 'default'
-        if (dataSource === 'queue' || dataSource === 'stack') cardClass += 'nohover'
-
-        if (dataSource === 'linked list' && nodeFlag.includes('CURRENT')) {
-            cardClass += ' currentnode'
-        }
-        else if ((dataSource === 'queue' || dataSource === 'stack') && nodeFlag.includes('FIRSTOUT')) {
+        // Apply additional CSS class for the current Node in a linked list, and
+        // the first item out from a stack or queue
+        if (nodeFlag.includes('CURRENT') || nodeFlag.includes('FIRSTOUT')) {
             cardClass += ' currentnode'
         }
 
