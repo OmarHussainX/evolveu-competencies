@@ -49,7 +49,7 @@ describe('A non-empty Queue', () => {
     it('the size should match the number of elements added', () => {
         expect(movieQueue.size()).toEqual(movieData.length)
     })
-    it('deleting should remove the first element and reduce the length of the queue by 1', () => {
+    it('deleting should remove the first element and reduce the size of the queue by 1', () => {
         expect(movieQueue.delete().title).toMatch(movieData[0].title)
         expect(movieQueue.size()).toEqual(movieData.length-1)
     })

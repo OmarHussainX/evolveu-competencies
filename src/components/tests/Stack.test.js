@@ -43,13 +43,13 @@ describe('A non-empty Stack', () => {
 
     it('should contain the expected data', () => {
         expect(movieStack).not.toBeNull()
-        expect(movieStack.data[3].title).toEqual(movieData[3].title)
-        expect(movieStack.data[9].gross).toEqual(movieData[9].gross)
+        expect(movieStack.data[0].title).toEqual(movieData[movieData.length-1].title)
+        expect(movieStack.data[movieStack.size()-1].gross).toEqual(movieData[0].gross)
     })
     it('the size should match the number of elements added', () => {
         expect(movieStack.size()).toEqual(movieData.length)
     })
-    it('deleting should remove the last element and reduce the length of the queue by 1', () => {
+    it('deleting should remove the top element and reduce the size of the stack by 1', () => {
         expect(movieStack.delete().title).toMatch(movieData[movieData.length-1].title)
         expect(movieStack.size()).toEqual(movieData.length-1)
     })

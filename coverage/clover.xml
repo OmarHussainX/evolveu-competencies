@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1555636260719" clover="3.2.0">
-  <project timestamp="1555636260720" name="All files">
-    <metrics statements="462" coveredstatements="166" conditionals="282" coveredconditionals="73" methods="116" coveredmethods="58" elements="860" coveredelements="297" complexity="0" loc="462" ncloc="462" packages="4" files="23" classes="23">
+<coverage generated="1555638381770" clover="3.2.0">
+  <project timestamp="1555638381770" name="All files">
+    <metrics statements="465" coveredstatements="169" conditionals="282" coveredconditionals="73" methods="120" coveredmethods="62" elements="867" coveredelements="304" complexity="0" loc="465" ncloc="465" packages="4" files="24" classes="24">
       <package name="src">
         <metrics statements="50" coveredstatements="5" conditionals="40" coveredconditionals="5" methods="18" coveredmethods="2"/>
         <file name="App.js" path="/home/omar/Documents/evolveu/objects/src/App.js">
@@ -385,10 +385,10 @@
         </file>
       </package>
       <package name="src.components.js">
-        <metrics statements="137" coveredstatements="137" conditionals="50" coveredconditionals="50" methods="46" coveredmethods="46"/>
+        <metrics statements="140" coveredstatements="140" conditionals="50" coveredconditionals="50" methods="50" coveredmethods="50"/>
         <file name="LinkedList.js" path="/home/omar/Documents/evolveu/objects/src/components/js/LinkedList.js">
           <metrics statements="56" coveredstatements="56" conditionals="19" coveredconditionals="19" methods="8" coveredmethods="8"/>
-          <line num="49" count="3" type="stmt"/>
+          <line num="49" count="4" type="stmt"/>
           <line num="56" count="7" type="stmt"/>
           <line num="57" count="7" type="stmt"/>
           <line num="58" count="7" type="stmt"/>
@@ -447,8 +447,8 @@
         </file>
         <file name="MoviesList.js" path="/home/omar/Documents/evolveu/objects/src/components/js/MoviesList.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-          <line num="6" count="41" type="stmt"/>
-          <line num="7" count="41" type="stmt"/>
+          <line num="6" count="61" type="stmt"/>
+          <line num="7" count="61" type="stmt"/>
           <line num="27" count="21" type="stmt"/>
           <line num="28" count="20" type="stmt"/>
         </file>
@@ -470,12 +470,18 @@
           <line num="43" count="4" type="stmt"/>
         </file>
         <file name="Queue.js" path="/home/omar/Documents/evolveu/objects/src/components/js/Queue.js">
-          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-          <line num="16" count="1" type="stmt"/>
-          <line num="23" count="2" type="stmt"/>
-          <line num="28" count="20" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="38" count="4" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="24" count="20" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+        </file>
+        <file name="Stack.js" path="/home/omar/Documents/evolveu/objects/src/components/js/Stack.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="24" count="20" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="34" count="4" type="stmt"/>
         </file>
         <file name="account.js" path="/home/omar/Documents/evolveu/objects/src/components/js/account.js">
           <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
