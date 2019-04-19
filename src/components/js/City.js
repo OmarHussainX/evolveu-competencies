@@ -27,7 +27,11 @@ class City {
 
     //  Returns a String representing the scale of the city based on its population
     howBig() {
-
+        if (this.population > 100000) return 'City'
+        if (this.population > 20000) return 'Large town'
+        if (this.population > 1000) return 'Town'
+        if (this.population > 100) return 'Village'
+        if (this.population > 1) return 'Hamlet'
     }
 }
 
