@@ -42,6 +42,14 @@ describe('Population adjustment:', () => {
         testCity.movedOut(2000000)
         expect(testCity.population).toEqual(1239000 + 1000000 - 2000000)
     })
+    it('should not be possible to shrink by an amount that exceeds the population', () => {
+        testCity.movedOut(200000000)
+        expect(testCity.population).toEqual(1239000 + 1000000 - 2000000)
+    })
+    it('should not be possible to shrink population by a negative amount', () => {
+        testCity.movedOut(-2)
+        expect(testCity.population).toEqual(1239000 + 1000000 - 2000000)
+    })
 })
 
 describe('City classification based on population:', () => {
@@ -69,6 +77,11 @@ describe('City classification based on population:', () => {
     it('should be classified as a \'Hamlet\' for 100 > population > 1', () => {
         testCity.population = 50
         expect(testCity.howBig()).toMatch(/Hamlet/)
+    })
+
+    it('should be classified as undefined for 1 > population', () => {
+        testCity.population = 0
+        expect(testCity.howBig()).toBeUndefined()
     })
 
 

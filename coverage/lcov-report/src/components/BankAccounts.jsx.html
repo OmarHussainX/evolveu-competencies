@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">1.64% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/183</span>
+        <span class='fraction'>0/191</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/108</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">7.69% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/26</span>
+        <span class='fraction'>0/26</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">1.64% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/183</span>
+        <span class='fraction'>0/191</span>
       </div>
     </div>
   </div>
@@ -760,18 +760,17 @@
 715
 716
 717
-718</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+718</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -830,6 +829,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1450,7 +1450,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1477,17 +1477,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {Component} from 'react'
-import './css/BankAccounts.css'
-import Account from './js/account'
-import AccountsController from './js/accountsController'
-import Header from "./BankAccounts/Header"
-import Body from "./BankAccounts/Body"
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, {Component} from 'react'</span>
+<span class="cstat-no" title="statement not covered" >import './css/BankAccounts.css'</span>
+<span class="cstat-no" title="statement not covered" >import Account from './js/account'</span>
+<span class="cstat-no" title="statement not covered" >import AccountsController from './js/accountsController'</span>
+<span class="cstat-no" title="statement not covered" >import Header from "./BankAccounts/Header"</span>
+<span class="cstat-no" title="statement not covered" >import Body from "./BankAccounts/Body"</span>
 &nbsp;
 class BankAccounts extends Component {
-constructor() {
-    super();
-    this.state = {
+<span class="fstat-no" title="function not covered" >constructor</span>() <span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    super();</span>
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
         // Contains an array of Account objects, provides methods for dealing with multiple accounts
         accountsController: new AccountsController(),
         
@@ -1545,7 +1545,7 @@ constructor() {
 // Ensures state always contains the latest input for:
 // - account name &amp; balance when account creation is actve
 // - deposit/withdrawal amount when deposit/withdrawal is active
-changeHandler = <span class="fstat-no" title="function not covered" >ev</span>ent =&gt; {
+changeHandler = <span class="fstat-no" title="function not covered" >event</span> =&gt; <span class="cstat-no" title="statement not covered" >{</span>
     const {name, value} = <span class="cstat-no" title="statement not covered" >event.target</span>
 &nbsp;
     // If a 'From' account was selected in the Transfer card, need to
@@ -1573,7 +1573,7 @@ changeHandler = <span class="fstat-no" title="function not covered" >ev</span>en
 // - account renaming &amp; deletion
 // - account deposits &amp; withdrawals
 // - account sorting (by balance or name)
-clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent =&gt; {
+clickHandler = <span class="fstat-no" title="function not covered" >event</span> =&gt; {
     
     // === Create account button in CreateAccount card was clicked
     // Ensure that account name and balance are sensible,
@@ -1590,7 +1590,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
         const accountsArray = <span class="cstat-no" title="statement not covered" >this.state.accountsController.getArrayRef()</span>
         let duplicateAccountName = <span class="cstat-no" title="statement not covered" >false</span>
         
-<span class="cstat-no" title="statement not covered" >        accountsArray.forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        accountsArray.forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >            if (newAccountName === account.name) {</span>
 <span class="cstat-no" title="statement not covered" >                duplicateAccountName = true</span>
             }
@@ -1609,11 +1609,11 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
         // - set the new account as the 'current account' for 'dashboard' view,
         // - clear duplicate account name error message (in case it had been set)
         } else {
-<span class="cstat-no" title="statement not covered" >            this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            this.setState(<span class="fstat-no" title="function not covered" >prevState</span> =&gt; {</span>
                 const newAccount = <span class="cstat-no" title="statement not covered" >new Account(newAccountBalance, newAccountName)</span>
                 let newAccountsController = <span class="cstat-no" title="statement not covered" >new AccountsController()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                    newAccountsController.addAccount(account)</span>
                 })
 <span class="cstat-no" title="statement not covered" >                newAccountsController.addAccount(newAccount)</span>
@@ -1800,7 +1800,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
 <span class="cstat-no" title="statement not covered" >    if (newAccountName !== null &amp;&amp; newAccountName !== '' ) {</span>
         // The new name is not null or empty, make sure it's unique...
         let duplicateAccountName = <span class="cstat-no" title="statement not covered" >false</span>
-<span class="cstat-no" title="statement not covered" >        accountsArray.forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        accountsArray.forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >            if (newAccountName === account.name) {</span>
 <span class="cstat-no" title="statement not covered" >                duplicateAccountName = true</span>
             }
@@ -1813,7 +1813,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
             })
 <span class="cstat-no" title="statement not covered" >            return</span>
         } else {
-<span class="cstat-no" title="statement not covered" >            this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            this.setState(<span class="fstat-no" title="function not covered" >prevState</span> =&gt; {</span>
                 // - make a copy of the AccountsController object referenced in state.accountsController, 
                 // - rename the account in the copy,
                 // - re-sort the copy,
@@ -1821,7 +1821,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
                 // Update the state
                 let newAccountsController = <span class="cstat-no" title="statement not covered" >new AccountsController()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                    newAccountsController.addAccount(account)</span>
                 })
 &nbsp;
@@ -1850,13 +1850,13 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
         const accountsArray = <span class="cstat-no" title="statement not covered" >this.state.accountsController.getArrayRef()</span>
         const currentAccountName = <span class="cstat-no" title="statement not covered" >this.state.currentAccount</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >prevState</span> =&gt; {</span>
             // - make a copy of the AccountsController object referenced in state.accountsController, 
             // - delete the account from the AccountsController copy,
             // - assign the modified copy to state.accountsController via setState()
             let newAccountsController = <span class="cstat-no" title="statement not covered" >new AccountsController()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            accountsArray.forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            accountsArray.forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                newAccountsController.addAccount(account)</span>
             })
 &nbsp;
@@ -1890,7 +1890,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
 <span class="cstat-no" title="statement not covered" >            return</span>
         }
         
-<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >prevState</span> =&gt; {</span>
             // - make a copy of the AccountsController object in state, 
             // - make the deposit in the appropriate account of the copy,
             // - re-sort the copy based on the flags in state
@@ -1899,11 +1899,11 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
             // - deactivate the DepositWithdraw card
             let newAccountsController = <span class="cstat-no" title="statement not covered" >new AccountsController()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                newAccountsController.addAccount(account)</span>
             })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            newAccountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            newAccountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                if (account.name === prevState.currentAccount) {</span>
 <span class="cstat-no" title="statement not covered" >                    account.deposit(amount)</span>
                 }
@@ -1933,7 +1933,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
 <span class="cstat-no" title="statement not covered" >                return</span>
         }
     
-<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >prevState</span> =&gt; {</span>
             // - make a copy of the AccountsController object in state, 
             // - make the withdrawal from the appropriate account of the copy
             //   *if* sufficient funds exist
@@ -1943,13 +1943,13 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
             // - deactivate the DepositWithdraw card
             let newAccountsController = <span class="cstat-no" title="statement not covered" >new AccountsController()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                newAccountsController.addAccount(account)</span>
             })
 &nbsp;
             let errorMessageNSF = <span class="cstat-no" title="statement not covered" >&lt;span&gt;&amp;nbsp;&lt;/span&gt;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            newAccountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            newAccountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                if (account.name === prevState.currentAccount) {</span>
 <span class="cstat-no" title="statement not covered" >                    if (amount &lt;= account.balance) {</span>
 <span class="cstat-no" title="statement not covered" >                        account.withdraw(amount)</span>
@@ -1986,7 +1986,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
 <span class="cstat-no" title="statement not covered" >                return</span>
         }
     
-<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >prevState</span> =&gt; {</span>
             // - make a copy of the AccountsController object in state,
             // - make a withdrawal from the appropriate 'From' account of the copy
             //   *if* sufficient funds exist
@@ -1997,13 +1997,13 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
             // - deactivate the Transfer card
             let newAccountsController = <span class="cstat-no" title="statement not covered" >new AccountsController()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                newAccountsController.addAccount(account)</span>
             })
 &nbsp;
             let errorMessageNSF = <span class="cstat-no" title="statement not covered" >&lt;span&gt;&amp;nbsp;&lt;/span&gt;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            newAccountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            newAccountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
                 // Locate the account 'From' which the transfer is to be done
 <span class="cstat-no" title="statement not covered" >                if (account.name === prevState.transferFrom) {</span>
 &nbsp;
@@ -2012,7 +2012,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
 <span class="cstat-no" title="statement not covered" >                        account.withdraw(amount)</span>
                         
                         //make the deposit in the 'To' account
-<span class="cstat-no" title="statement not covered" >                        newAccountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                        newAccountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
                             // Locate the acount 'To' which the transfer is to be done
 <span class="cstat-no" title="statement not covered" >                            if (account.name === prevState.transferTo)</span>
 <span class="cstat-no" title="statement not covered" >                                    account.deposit(amount)</span>
@@ -2081,7 +2081,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
     // NOTE: 'event.currentTarget' is needed when dealing with click events on svg/images!!
     } else <span class="cstat-no" title="statement not covered" >if (event.currentTarget.id === 'sortByBalance') {</span>
         
-<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >prevState</span> =&gt; {</span>
            
             let newBalanceSortDirection
 &nbsp;
@@ -2100,7 +2100,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
             // Sort the accounts
             let newAccountsController = <span class="cstat-no" title="statement not covered" >new AccountsController()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                newAccountsController.addAccount(account)</span>
             })
 &nbsp;
@@ -2125,7 +2125,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
     } else <span class="cstat-no" title="statement not covered" >if (event.currentTarget.id === 'sortByName') {</span>
 <span class="cstat-no" title="statement not covered" >        console.log('OK, we want to sort by name')</span>
         
-<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >prevState</span> =&gt; {</span>
        
             let newNameSortDirection
 &nbsp;
@@ -2144,7 +2144,7 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
             // Sort the accounts
             let newAccountsController = <span class="cstat-no" title="statement not covered" >new AccountsController()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >ac</span>count =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            prevState.accountsController.getArrayRef().forEach(<span class="fstat-no" title="function not covered" >account</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                newAccountsController.addAccount(account)</span>
             })
 &nbsp;
@@ -2166,8 +2166,8 @@ clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent
 }
 &nbsp;
             
-    render() {
-        return (
+<span class="fstat-no" title="function not covered" >    render</span>() {
+<span class="cstat-no" title="statement not covered" >        return (</span>
             &lt;div id='BankAccountsWrapper'&gt;
                 &lt;Header
                     currentAccount={this.state.currentAccount} 
@@ -2200,7 +2200,7 @@ export default BankAccounts</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 18 2019 23:09:40 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 17:14:09 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>
