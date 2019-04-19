@@ -1,4 +1,4 @@
-import { Movie, MoviesList } from './MoviesList'
+import { Movie, MoviesList } from '../js/MoviesList'
 
 describe('The MoviesList class', () => {
     const movieData = [

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/js/account.js</title>
+    <title>Code coverage report for src/components/js/Queue.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/js</a> account.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/js</a> Queue.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>5/5</span>
       </div>
     </div>
   </div>
@@ -76,73 +76,100 @@
 31
 32
 33
-34</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">35x</span>
-<span class="cline-any cline-yes">35x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">118x</span>
-<span class="cline-any cline-yes">132x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class Account {
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+This class uses an Array to implement a Queue (FIFO)
 &nbsp;
-    #name = ''
-    #balance = 0
-    constructor(startingBalance, accountName) {
-        this.#balance = +(parseFloat(startingBalance).toFixed(2))
-        this.#name = accountName
+--- PROPERTIES ---
+Same as Array
+&nbsp;
+--- METHODS ---
+Same as Array, plus
+&nbsp;
+add()       - Adds an element to the back of the Queue
+delete()    - Removes the first element from the Queue
+size()      - Returns the size of the Queue
+*/
+&nbsp;
+// Set to 'true' to enable output of debug messages from methods
+const DEBUG_MSG = false
+&nbsp;
+&nbsp;
+&nbsp;
+class Queue {
+&nbsp;
+    constructor() {
+        this.data = []
     }
 &nbsp;
-    get name() { return this.#name }
-    get balance() { return this.#balance }
-&nbsp;
-    setBalance(amount) { this.#balance = +amount.toFixed(2) }
-    setName(accountName) { this.#name = accountName}
-&nbsp;
-    deposit(amount) { 
-        this.#balance += parseFloat(amount)
-        this.#balance = +this.#balance.toFixed(2)
+    // Adds an element to the back of the Queue
+    add(data) {
+        return this.data.push(data)
     }
 &nbsp;
-    withdraw(amount) { 
-        this.#balance -= parseFloat(amount)
-        this.#balance = +this.#balance.toFixed(2)
+    // Removes the first element from the Queue
+    delete() {
+        return this.data.shift()
+    }
+&nbsp;
+    // Returns the size of the Queue
+    size() {
+        return this.data.length
     }
 }
 &nbsp;
-export default Account
-&nbsp;
-&nbsp;
-// Conversion of input to a floating point number with two decimal places:
-// parse 'amount' to a float _number_, toFixed returns a _string_ equivalent
-// with 2 decimal places, which is converted to a number via the + unary operator
-//
-// +(parseFloat(amount).toFixed(2))</pre></td></tr>
+export { Queue }
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->

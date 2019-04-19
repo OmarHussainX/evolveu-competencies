@@ -20,7 +20,7 @@ Testing class 'Account' - expect this class to have the following:
 
 */
 
-import Account from './account'
+import Account from '../js/account'
 
 let checkingAccount = null
 

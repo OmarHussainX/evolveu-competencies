@@ -1,5 +1,5 @@
-import AccountsController from './accountsController'
-import Account from './account';
+import AccountsController from '../js/accountsController'
+import Account from '../js/account';
 
 
 test('Checking AccountsController constructor (object instantiation)', () => {

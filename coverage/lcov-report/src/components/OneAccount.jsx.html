@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">14.81% </span>
+        <span class="strong">17.65% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/27</span>
+        <span class='fraction'>3/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>0/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">33.33% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">14.81% </span>
+        <span class="strong">18.75% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/27</span>
+        <span class='fraction'>3/16</span>
       </div>
     </div>
   </div>
@@ -131,10 +131,7 @@
 86
 87
 88
-89
-90
-91
-92</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+89</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -147,41 +144,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,13 +184,12 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -236,60 +230,57 @@ class OneAccount extends Component {
         this.state = {
             userAccount: new Account(1000000, 'Heisenberg'),
             userinput: 0
-&nbsp;
         }
-        this.clickHandler = this.clickHandler.bind(this)
     }
     
+&nbsp;
+    // Update state with the user's input amount for deposit/withdrawal anytime
+    // there is a change in the input field
     changeHandler = <span class="fstat-no" title="function not covered" >ev</span>ent =&gt; {
         const {name, value} = <span class="cstat-no" title="statement not covered" >event.target</span>
-<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+&nbsp;
+        // Only update state for valid input (disallow blank input, basically)
+<span class="cstat-no" title="statement not covered" >        if (value) <span class="cstat-no" title="statement not covered" >this.setState({</span></span>
             [name]: value
         })
-        // console.log(`NAME: ${name}`)
-        // console.log(`VALUE: ${value}`)
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    cl</span>ickHandler(event) {
-        // console.log(`event.target.id: ${event.target.id}`)
-        // console.log(`event.currentTarget.id: ${event.currentTarget.id}`)
-<span class="cstat-no" title="statement not covered" >        console.log(`this.state...name: ${this.state.userAccount.name}`)</span>
-<span class="cstat-no" title="statement not covered" >        console.log(`this.state...balance: ${this.state.userAccount.balance}`)</span>
-        //read input
-        // - if deposit, make deposit
-        // - if withdrawal, make withdrawal
-        //update state
-        //clear input
-        const input = <span class="cstat-no" title="statement not covered" >event.target.value</span>
-<span class="cstat-no" title="statement not covered" >        console.log(`input: ${input}`)</span>
-        const action = <span class="cstat-no" title="statement not covered" >event.target.id</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        switch(action) {</span>
+    // When a button has been clicked:
+    // - user's input amount for deposit/withdrawal is in state
+    // - current bank balance is in Account Object in state
+    // - calculate new balance based on which button was clicked (deposit/withdrawal)
+    // - create a new Account Object using account name from state, and new balance
+    // - update state with new Account Object
+    // - clear user's input (preventing it from being re-used)
+    clickHandler = <span class="fstat-no" title="function not covered" >ev</span>ent =&gt; {
+&nbsp;
+        const accountAction = <span class="cstat-no" title="statement not covered" >event.target.id</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        switch(accountAction) {</span>
             case 'depositBtn':
-                
 <span class="cstat-no" title="statement not covered" >                this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
-                    const accountName = <span class="cstat-no" title="statement not covered" >prevState.userAccount.name</span>
-                    const accountBalance = <span class="cstat-no" title="statement not covered" >(prevState.userAccount.balance) + parseFloat(prevState.userinput)</span>
-                    let updatedAccount = <span class="cstat-no" title="statement not covered" >new Account(accountBalance, accountName)</span>
-<span class="cstat-no" title="statement not covered" >                    updatedAccount.setName('Lydia')</span>
-<span class="cstat-no" title="statement not covered" >                    return { userAccount: updatedAccount }</span>
+                    const newBalance = <span class="cstat-no" title="statement not covered" >(prevState.userAccount.balance) + parseFloat(prevState.userinput)</span>
+<span class="cstat-no" title="statement not covered" >                    return {</span>
+                        userAccount: new Account(newBalance, prevState.userAccount.name),
+                        userinput: 0
+                    }
                 })
 <span class="cstat-no" title="statement not covered" >                break</span>
 &nbsp;
             case 'withdrawBtn':
 <span class="cstat-no" title="statement not covered" >                this.setState(<span class="fstat-no" title="function not covered" >pr</span>evState =&gt; {</span>
-                    const accountName = <span class="cstat-no" title="statement not covered" >prevState.userAccount.name</span>
-                    const accountBalance = <span class="cstat-no" title="statement not covered" >(prevState.userAccount.balance) - parseFloat(prevState.userinput)</span>
-                    let updatedAccount = <span class="cstat-no" title="statement not covered" >new Account(accountBalance, accountName)</span>
-<span class="cstat-no" title="statement not covered" >                    return { userAccount: updatedAccount }</span>
+                    const newBalance = <span class="cstat-no" title="statement not covered" >(prevState.userAccount.balance) - parseFloat(prevState.userinput)</span>
+<span class="cstat-no" title="statement not covered" >                    return {</span>
+                        userAccount: new Account(newBalance, prevState.userAccount.name),
+                        userinput: 0
+                    }
                 })            
 <span class="cstat-no" title="statement not covered" >                break</span>
 &nbsp;
             default:
 <span class="cstat-no" title="statement not covered" >                break</span>
         }
-<span class="cstat-no" title="statement not covered" >        this.setState({ userinput: 0})</span>
-&nbsp;
     }
 &nbsp;
     render() {
@@ -322,7 +313,7 @@ export default OneAccount</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Apr 14 2019 16:40:44 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 18 2019 19:11:00 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>
