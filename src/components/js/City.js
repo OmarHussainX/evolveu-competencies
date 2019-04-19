@@ -1,21 +1,21 @@
 class City {
     constructor(name = null, latitude = 0, longtitude = 0, population = 0) {
         this.name = name
-        this.latitude = latitude
-        this.longtitude = longtitude
-        this.population = population
+        this.latitude = parseFloat(latitude)
+        this.longtitude = parseFloat(longtitude)
+        this.population = parseInt(population)
     }
 
 
     // Creates a String representation of the City
     show() {
-        return `this.name [this.latitude, this.longtiude] (pop. ${this.population})`
+        return `${this.name} [${this.latitude}, ${this.longtitude}] (pop. ${this.population.toLocaleString(undefined)})`
     }
 
 
     //  Receives a number that will be added to the city’s population
-    movedIn() {
-
+    movedIn(num) {
+        this.population += parseInt(num)
     }
 
 
