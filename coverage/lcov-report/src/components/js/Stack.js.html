@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/js/Queue.js</title>
+    <title>Code coverage report for src/components/js/Stack.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/js</a> Queue.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/js</a> Stack.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -114,13 +114,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
-This class uses an Array to implement a Queue (FIFO)
+This class uses an Array to implement a Stack (FIFO)
 &nbsp;
 --- PROPERTIES ---
 Same as Array
@@ -128,35 +128,35 @@ Same as Array
 --- METHODS ---
 Same as Array, plus
 &nbsp;
-add()       - Adds an element to the end of the Queue
-delete()    - Removes the first element from the Queue
-size()      - Returns the size of the Queue
+add()       - Adds an element to the top of the Stack
+delete()    - Removes the last element from the Stack
+size()      - Returns the size of the Stack
 */
 &nbsp;
 &nbsp;
-class Queue {
+class Stack {
 &nbsp;
     constructor() {
         this.data = []
     }
 &nbsp;
-    // Adds an element to the end of the Queue
+    // Adds an element to the top of the Stack
     add(data) {
-        return this.data.push(data)
+        return this.data.unshift(data)
     }
 &nbsp;
-    // Removes the first element from the Queue
+    // Removes the top element from the Stack
     delete() {
         return this.data.shift()
     }
 &nbsp;
-    // Returns the size of the Queue
+    // Returns the size of the Stack
     size() {
         return this.data.length
     }
 }
 &nbsp;
-export { Queue }
+export { Stack }
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
