@@ -5,7 +5,7 @@ import MoviesQueueDisplay from './DataStructures/MoviesQueueDisplay'
 import MoviesStackDisplay from './DataStructures/MoviesStackDisplay'
 
 // Data set to use if a pre-filled data structure is selected
-import movieData from './DataStructures/movies.json'
+import movieData from './js/movies.json'
 
 // Set to 'true' to enable output of debug messages in console
 const DEBUG_MSG = false

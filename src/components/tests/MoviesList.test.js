@@ -1,5 +1,5 @@
 import { Movie, MoviesList } from '../js/MoviesList'
-import movieData from '../DataStructures/movies.json'
+import movieData from '../js/movies.json'
 
 /* 
 https://www.boxofficemojo.com/franchises/chart/?view=main&id=marvelcomics.htm&sort=date&order=DESC&p=.htm

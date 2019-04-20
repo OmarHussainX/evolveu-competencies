@@ -1,3 +1,15 @@
+/*
+NOTE:
+No input validation will be done!!
+Assuming that valid latitude & longitude values (x,y) will be provided:
+
+Valid latitude:      -90 <= x <= 90
+Valid longtitude:   -180 <= y <= 180
+
+Cities with latitude > 0 will be considered to be in the Northern hemisphere
+*/
+
+
 class City {
     constructor(name = null, latitude = 0, longtitude = 0, population = 0) {
         this.name = name
