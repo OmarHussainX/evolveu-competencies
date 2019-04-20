@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">95.74% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>25/25</span>
+        <span class='fraction'>45/47</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">92% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>11/11</span>
+        <span class='fraction'>23/25</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>12/12</span>
+        <span class='fraction'>15/15</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">94.59% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>19/19</span>
+        <span class='fraction'>35/37</span>
       </div>
     </div>
   </div>
@@ -115,7 +115,40 @@
 70
 71
 72
-73</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -185,6 +218,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">344x</span>
+<span class="cline-any cline-yes">344x</span>
+<span class="cline-any cline-yes">344x</span>
+<span class="cline-any cline-yes">244x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">798x</span>
+<span class="cline-any cline-yes">498x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">300x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { City } from "./City";
@@ -250,12 +316,45 @@ class Community {
 &nbsp;
 &nbsp;
 &nbsp;
-    // Takes two parameters and sorts the array of City Objects accordingly:
+    // Takes two parameters and sorts the Cities array in place according to:
     // criterion:  property (name, latitude, longitude, population) on which to sort
     // order:      sort order (ascending/descending)
-    // sort(criterion, order) {
+    //
+    // Returns a reference to the sorted Community
+    sort(criterion, order) {
 &nbsp;
-    // }
+        switch (criterion) {
+&nbsp;
+            // lowercase string sort
+            case 'name':
+            this.cities.sort((a, b) =&gt; {
+                a = a.name.toLowerCase()
+                b = b.name.toLowerCase()
+                if (order === 'ascending') {
+                    if (a &gt; b) return 1
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (a &lt; b) return -1
+<span class="cstat-no" title="statement not covered" >                    return 0</span>
+                }
+                else {
+                    if (a &gt; b) return -1
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (a &lt; b) return 1
+<span class="cstat-no" title="statement not covered" >                    return 0</span>
+                }
+            })
+            break
+&nbsp;
+            // numeric sort
+            default:
+            this.cities.sort((a, b) =&gt; {
+                if (order === 'ascending')
+                    return a[criterion] - b[criterion]
+                else
+                    return b[criterion] - a[criterion]
+            })
+            break
+        }
+        return this
+    }
 }
 &nbsp;
 export { Community }
@@ -265,7 +364,7 @@ export { Community }
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 19 2019 23:58:42 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 20 2019 00:14:27 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

@@ -42,23 +42,25 @@ describe('The Community class\' methods...', () => {
         expect(testCommunity.getPopulation()).toEqual(39936069)
     })
 
-    // it('Should be able to sort by name, ascending & descending', () => {
-    //     expect(testCommunity.sort('name', 'ascending')[0].name).toMatch(/Alberobello/)
-    //     expect(testCommunity.sort('name', 'descending')[0].name).toMatch(/Yellowknife/)
-    // })
+    it('Should be able to sort by name, ascending & descending', () => {
+        expect(testCommunity.sort('name', 'ascending').cities[0].name).toMatch(/Alberobello/)
+        expect(testCommunity.sort('name', 'ascending').cities[1].name).toMatch(/Calgary/)
+        expect(testCommunity.sort('name', 'descending').cities[0].name).toMatch(/Yellowknife/)
+    })
 
-    // it('Should be able to sort by population, ascending & descending', () => {
-    //     expect(testCommunity.sort('population', 'ascending')[0].name).toMatch(/Gross/)
-    //     expect(testCommunity.sort('population', 'descending')[0].name).toMatch(/Sao Paulo/)
-    // })
+    it('Should be able to sort by population, ascending & descending', () => {
+        expect(testCommunity.sort('population', 'ascending').cities[0].name).toMatch(/Gross/)
+        expect(testCommunity.sort('population', 'ascending').cities[22].population).toEqual(18233)
+        expect(testCommunity.sort('population', 'descending').cities[0].name).toMatch(/Sao Paulo/)
+    })
 
-    // it('Should be able to sort by latitude, ascending & descending', () => {
-    //     expect(testCommunity.sort('latitude', 'ascending')[0].name).toMatch(/Lago Escondido/)
-    //     expect(testCommunity.sort('latitude', 'descending')[0].name).toMatch(/Yellowknife/)
-    // })
+    it('Should be able to sort by latitude, ascending & descending', () => {
+        expect(testCommunity.sort('latitude', 'ascending').cities[0].name).toMatch(/Lago Escondido/)
+        expect(testCommunity.sort('latitude', 'descending').cities[0].name).toMatch(/Yellowknife/)
+    })
 
-    // it('Should be able to sort by longitude, ascending & descending', () => {
-    //     expect(testCommunity.sort('longitude', 'ascending')[0].name).toMatch(/Yellowknife/)
-    //     expect(testCommunity.sort('longitude', 'descending')[0].name).toMatch(/Wanaka/)
-    // })
+    it('Should be able to sort by longitude, ascending & descending', () => {
+        expect(testCommunity.sort('longitude', 'ascending').cities[0].name).toMatch(/Yellowknife/)
+        expect(testCommunity.sort('longitude', 'descending').cities[0].name).toMatch(/Wanaka/)
+    })
 })

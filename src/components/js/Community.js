@@ -61,12 +61,45 @@ class Community {
 
 
 
-    // Takes two parameters and sorts the array of City Objects accordingly:
+    // Takes two parameters and sorts the Cities array in place according to:
     // criterion:  property (name, latitude, longitude, population) on which to sort
     // order:      sort order (ascending/descending)
-    // sort(criterion, order) {
+    //
+    // Returns a reference to the sorted Community
+    sort(criterion, order) {
 
-    // }
+        switch (criterion) {
+
+            // lowercase string sort
+            case 'name':
+            this.cities.sort((a, b) => {
+                a = a.name.toLowerCase()
+                b = b.name.toLowerCase()
+                if (order === 'ascending') {
+                    if (a > b) return 1
+                    if (a < b) return -1
+                    return 0
+                }
+                else {
+                    if (a > b) return -1
+                    if (a < b) return 1
+                    return 0
+                }
+            })
+            break
+
+            // numeric sort
+            default:
+            this.cities.sort((a, b) => {
+                if (order === 'ascending')
+                    return a[criterion] - b[criterion]
+                else
+                    return b[criterion] - a[criterion]
+            })
+            break
+        }
+        return this
+    }
 }
 
 export { Community }
