@@ -1,8 +1,6 @@
 import React, { Component } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './css/Cities.css'
-import MoviesListDisplay from './DataStructures/MoviesListDisplay'
-import MoviesQueueDisplay from './DataStructures/MoviesQueueDisplay'
-import MoviesStackDisplay from './DataStructures/MoviesStackDisplay'
 
 // Data set to use if a pre-filled data structure is selected
 import movieData from './js/movies.json'
@@ -51,7 +49,7 @@ class Cities extends Component {
 
         return (
             <div id='Cities'>
-                <div className='dataControlsArea'>
+                <div className='citiesControlsArea'>
                     <h2>Cities</h2>
                     <select
                         className='select-style'
@@ -66,27 +64,50 @@ class Cities extends Component {
                 <table className='overview'>
                     <tbody>
                         <tr>
-                            <td>Northern-most:</td>
+                            <td>Northern-most</td>
                             <td>Some city.....</td>
                         </tr>
                         <tr>
-                            <td>Southern-most:</td>
+                            <td>Southern-most</td>
                             <td>Some other city....</td>
                         </tr>
                         <tr>
-                            <td>Total pop.:</td>
+                            <td>Total pop.</td>
                             <td>{(134567245).toLocaleString(undefined)}</td>
                         </tr>
                     </tbody>
                 </table>
-
-                    {/* See NOTE below on why these condtional rendering checks should not be combined! */}
-                    {hemisphereChoice === 'llist' && <MoviesListDisplay dataSet={dataSet}/>}
-                    {hemisphereChoice === 'llist-empty' && <MoviesListDisplay dataSet={dataSet}/>}
-                    {hemisphereChoice === 'queue' && <MoviesQueueDisplay dataSet={dataSet}/>}
-                    {hemisphereChoice === 'queue-empty' && <MoviesQueueDisplay dataSet={dataSet}/>}
-                    {hemisphereChoice === 'stack' && <MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/>}
-                    {hemisphereChoice === 'stack-empty' && <MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/>}
+                <div className='citieslistCard'>
+                <table className='citieslist'>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th colSpan='2'>Population</th>
+                            <th>latitude, longitude</th>
+                        </tr>
+                        <tr>
+                            <td>Calgary</td>
+                            <td>1.3M</td>
+                            <td>
+                                <FontAwesomeIcon icon='plus-circle' size="sm" style={{ }}></FontAwesomeIcon>
+                                &nbsp;
+                                <FontAwesomeIcon icon='minus-circle' size="sm" style={{ }}></FontAwesomeIcon>
+                            </td>
+                            <td>45.34, -52.45</td>
+                        </tr>
+                        <tr>
+                            <td>Yellowknife</td>
+                            <td>500k</td>
+                            <td>
+                                <FontAwesomeIcon icon='plus-circle' size="sm" style={{ }}></FontAwesomeIcon>
+                                &nbsp;
+                                <FontAwesomeIcon icon='minus-circle' size="sm" style={{ }}></FontAwesomeIcon>
+                            </td>
+                            <td>72.81, -122.36</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
             </div>
         )
     }
