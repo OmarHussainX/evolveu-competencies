@@ -67,15 +67,15 @@ class Cities extends Component {
                     <tbody>
                         <tr>
                             <td>Northern-most:</td>
-                            <td></td>
+                            <td>Some city.....</td>
                         </tr>
                         <tr>
                             <td>Southern-most:</td>
-                            <td></td>
+                            <td>Some other city....</td>
                         </tr>
                         <tr>
-                            <td>Total population:</td>
-                            <td></td>
+                            <td>Total pop.:</td>
+                            <td>{(134567245).toLocaleString(undefined)}</td>
                         </tr>
                     </tbody>
                 </table>

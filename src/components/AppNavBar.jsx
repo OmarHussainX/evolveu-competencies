@@ -44,7 +44,7 @@ class AppNavBar extends Component {
                         <FontAwesomeIcon
                             className={'button grow' +
                                 (this.props.activeApp === 'cities' ? ' selected' : '')}
-                            icon='server'
+                            icon='city'
                             size="2x" />
                     </button>
                     <button onClick={this.props.clickHandler} name="datastructures">
