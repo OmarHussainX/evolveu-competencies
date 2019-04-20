@@ -32,6 +32,7 @@ class City {
         if (this.population > 1000) return 'Town'
         if (this.population > 100) return 'Village'
         if (this.population > 1) return 'Hamlet'
+        return undefined
     }
 }
 
