@@ -56,6 +56,7 @@ class DataStructures extends Component {
         return (
             <div id='DataStructures'>
                 <div className='dataControlsArea'>
+                    <h2>Data structures</h2>
                     <select
                         className='select-style'
                         value={dataStructureChoice}

@@ -21,6 +21,7 @@ import ReactGreeter from './components/ReactGreeter'
 import Calculator from './components/Calculator'
 import OneAccount from './components/OneAccount'
 import BankAccounts from './components/BankAccounts'
+import Cities from './components/Cities'
 import DataStructures from './components/DataStructures'
 
 
@@ -40,7 +41,7 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            activeApp: 'datastructures'
+            activeApp: 'cities'
         }
     }
 
@@ -78,6 +79,7 @@ class App extends Component {
                     {activeApp === 'calc' && <Calculator />}
                     {activeApp === 'oneaccount' && <OneAccount />}
                     {activeApp === 'bankaccounts' && <BankAccounts />}
+                    {activeApp === 'cities' && <Cities />}
                     {activeApp === 'datastructures' && <DataStructures />}
                 </div>
             </div>

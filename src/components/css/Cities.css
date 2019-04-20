@@ -4,60 +4,74 @@
    - Position/current node controls (for linked list only)
    - 'Delete' button
 */
-#DataStructures .dataControlsArea {
+#Cities .dataControlsArea {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+#Cities table.overview {
+    font-size: 0.7em;
+}
+
+@media only screen and (min-width: 768px) {
+    #Cities table.overview {
+        font-size: 1em;
+    }
+}
+
+
+
 
 /* Define a 3 column grid for displaying the data contained
    in a Linked List
    (Drop to 2 columns on smaller screens)
 */
-#DataStructures #linkedListDataArea {
+#Cities #linkedListDataArea {
     display: grid;
     margin: 1em;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     /* border: 1px dotted red; */
 }
-@media only screen and (max-width: 768px) {
-    #DataStructures #linkedListDataArea {
+
+/* @media only screen and (max-width: 768px) {
+    #Cities #linkedListDataArea {
         grid-template-columns: 1fr 1fr;
     }
-    #DataStructures #linkedListDataArea .dataCard h5 {
+    #Cities #linkedListDataArea .dataCard h5 {
         font-size: 0.65em !important;
         height: 3.5em !important;
     }
-    #DataStructures .totalgross {
+    #Cities .totalgross {
         font-size: 0.75em !important;
         margin-top: 0.5em !important;
     }
-    #DataStructures .currenttitle {
+    #Cities .currenttitle {
         font-size: 0.6em !important;
     }
-}
+} */
+
 /* Define a 1 column grid for displaying the data contained
    in a Queue or Stack
 */
-#DataStructures #queueDataArea,
-#DataStructures #stackDataArea {
+#Cities #queueDataArea,
+#Cities #stackDataArea {
     display: grid;
     margin: 1em;
     grid-template-columns: 1fr;
     grid-gap: 10px;
 }
 
-#DataStructures h2 {
+#Cities h2 {
     /* margin-top: 5em; */
     margin-bottom: 0.5em;
 }
 
 
 /* Select dropdown */
-#DataStructures .select-style {
+#Cities .select-style {
     display: block;
     font-size: 0.65em;
     font-family: inherit;
@@ -68,7 +82,7 @@
     margin-bottom: 2em;
 }
 
-#DataStructures .select-style select {
+#Cities .select-style select {
     padding: 5px 8px;
     width: 130%;
     border: none;
@@ -80,14 +94,14 @@
             appearance: none;
 }
 
-#DataStructures .select-style select:focus {
+#Cities .select-style select:focus {
     outline: none;
 }
 
 
 /* Input fields */
-#DataStructures input[type=text],
-#DataStructures input[type=number] {
+#Cities input[type=text],
+#Cities input[type=number] {
     border-radius: 3px;
     border: 1px solid #ccc;
     /* color: grey; */
@@ -100,19 +114,19 @@
     transition: border-color 80ms ease-in-out;
 }
 
-#DataStructures input[type=text]:hover, 
-#DataStructures input[type=number]:hover {
+#Cities input[type=text]:hover, 
+#Cities input[type=number]:hover {
     border-color: darkgrey;
 }
 
-#DataStructures input[type=text]:focus, 
-#DataStructures input[type=number]:focus {
+#Cities input[type=text]:focus, 
+#Cities input[type=number]:focus {
     border-color: darkgrey;
 }
 
 
 /* 'Regular' buttons that actually look like buttons... */
-#DataStructures button {
+#Cities button {
     background: rgb(50, 120, 200);
     border-radius: 4px;
     border: none;
@@ -133,28 +147,28 @@
     -moz-appearance: none;
 }
 
-#DataStructures button:hover,
-#DataStructures button:focus {
+#Cities button:hover,
+#Cities button:focus {
     background: rgb(50, 90, 170);
 }
 
-#DataStructures button:active {
+#Cities button:active {
     transform: scale(0.95);
 }
 
-#DataStructures button.severe {
+#Cities button.severe {
     background: rgb(230, 90, 90);
 }
 
-#DataStructures button.severe:hover,
-#DataStructures button.severe:focus {
+#Cities button.severe:hover,
+#Cities button.severe:focus {
     background: rgb(210, 70, 70);
 }
 
 
 /* Buttons containing FontAwesome SVG, which do not look like
 'regular' buttons - just flat glyphs */
-#DataStructures #positionControlsWrapper button {
+#Cities #positionControlsWrapper button {
     background: none;
     box-shadow: none;
     min-width: 3em;
@@ -162,20 +176,20 @@
 	outline: none;
 }
 
-#DataStructures #positionControlsWrapper button:hover {
+#Cities #positionControlsWrapper button:hover {
     color: #61dafb;
     cursor: pointer;
 }
 
-#DataStructures #positionControlsWrapper button:active {
+#Cities #positionControlsWrapper button:active {
     color: #fbad60;
 }
 
-#DataStructures .totalgross {
+#Cities .totalgross {
     margin-top: 1em;
     margin-bottom: 0.3em;
 }
-#DataStructures .currenttitle {
+#Cities .currenttitle {
     font-size: 0.75em;
     color: #61dafb;
 }
@@ -185,8 +199,8 @@
    Allows for absolute (or other) positioning of child elements
 */
 
-#DataStructures .dataCard .linkedlist,
-#DataStructures .dataCard .stackorqueue {
+#Cities .dataCard .linkedlist,
+#Cities .dataCard .stackorqueue {
     background: white;
     border-radius: 5px;
     padding: 0.5em;
@@ -195,37 +209,37 @@
 	position: relative;
     transition: all 0.2s cubic-bezier(.25,.8,.25,1);
 }
-#DataStructures .dataCard .linkedlist:hover {
+#Cities .dataCard .linkedlist:hover {
     cursor: pointer;
     box-shadow: inset 0 0px 30px rgba(97, 218, 251, 0.25), inset 0 0px 40px rgba(97, 218, 251, 0.45);
 }
 
-#DataStructures .dataCard .currentnode {
+#Cities .dataCard .currentnode {
     box-shadow: inset 0 0px 30px rgba(97, 218, 251, 0.25), inset 0 0px 40px rgba(97, 218, 251, 0.45);
 }
 
-#DataStructures #linkedListDataArea .dataCard h5 {
+#Cities #linkedListDataArea .dataCard h5 {
     font-size: 0.7em;
     margin: 0;
     height: 3em;
     overflow: hidden;
 }
-#DataStructures #queueDataArea .dataCard h5,
-#DataStructures #stackDataArea .dataCard h5 {
+#Cities #queueDataArea .dataCard h5,
+#Cities #stackDataArea .dataCard h5 {
     font-size: 0.7em;
     margin: 0;
     height: 1.35em;
     overflow: hidden;
 }
 
-#DataStructures .dataCard p {
+#Cities .dataCard p {
     font-size: 0.7em;
     margin: 0;
     margin-top: 10px;
 }
 
 /* Right-linking arrow shown for linked list nodes */
-#DataStructures .dataCard .rightarrow {
+#Cities .dataCard .rightarrow {
     color:rgba(255, 255, 255, 0.8);
 	position: absolute;
 	right: -20px;
@@ -234,7 +248,7 @@
 
 
 /* Arrow indicating the first element out of a queue/top of a stack */
-#DataStructures .dataCard .firstoutarrow {
+#Cities .dataCard .firstoutarrow {
     color:rgba(255, 255, 255, 0.8);
 	position: absolute;
 	left: -30px;
