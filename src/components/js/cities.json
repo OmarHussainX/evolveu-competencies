@@ -2,181 +2,181 @@
     {
       "name": "Gross",
       "latitude": 42.9460903,
-      "longtitude": "-98.5784422",
+      "longitude": -98.5784422,
       "population": "2"
     },
     {
       "name": "Swett",
       "latitude": 43.1727493,
-      "longtitude": "-101.9676174",
-      "population": "2"
+      "longitude": -101.9676174,
+      "population": "3"
     },
     {
       "name": "Cooladdi",
       "latitude": -26.6394906,
-      "longtitude": "145.0008725,",
-      "population": "3"
+      "longitude": 145.0008725,
+      "population": "4"
     },
     {
       "name": "Tilt Cove",
       "latitude": 49.886698,
-      "longtitude": "-55.6556833",
-      "population": "4"
+      "longitude": -55.6556833,
+      "population": "5"
     },
     {
       "name": "Lago Escondido",
       "latitude": -54.5301219,
-      "longtitude": "-67.2056772",
+      "longitude": -67.2056772,
       "population": "71"
     },
     {
       "name": "Santa Maddalena",
       "latitude": 46.6404482,
-      "longtitude": "11.7034214",
+      "longitude": 11.7034214,
       "population": "334"
     },
     {
       "name": "Simiane-la-Rotonde",
       "latitude": 44.0047791,
-      "longtitude": "5.4958784",
+      "longitude": 5.4958784,
       "population": "568"
     },
     {
       "name": "Hallstatt",
       "latitude": 47.5345646,
-      "longtitude": "13.5405905",
+      "longitude": 13.5405905,
       "population": "860"
     },
     {
       "name": "Furnas",
       "latitude": 37.7736643,
-      "longtitude": "-25.3277781",
+      "longitude": -25.3277781,
       "population": "1439"
     },
     {
       "name": "Riomaggiore in Cinque Terre",
       "latitude": 44.0995263,
-      "longtitude": "9.7310168",
+      "longitude": 9.7310168,
       "population": "1500"
     },
     {
       "name": "Shirakawago Village",
       "latitude": 36.2298556,
-      "longtitude": "136.7300219",
+      "longitude": 136.7300219,
       "population": "1734"
     },
     {
       "name": "Stepantsminda",
       "latitude": 42.6570438,
-      "longtitude": "44.6220499",
+      "longitude": 44.6220499,
       "population": "2000"
     },
     {
       "name": "Ko Phi Phi",
       "latitude": 7.7377891,
-      "longtitude": "98.706876",
+      "longitude": 98.706876,
       "population": "2500"
     },
     {
       "name": "Eze",
       "latitude": 43.7299517,
-      "longtitude": "7.3215441",
+      "longitude": 7.3215441,
       "population": "3000"
     },
     {
       "name": "Port Douglas",
       "latitude": -16.4988207,
-      "longtitude": "145.4277453",
+      "longitude": 145.4277453,
       "population": "3200"
     },
     {
       "name": "Wanaka",
       "latitude": -44.7161078,
-      "longtitude": "168.9702688",
+      "longitude": 168.9702688,
       "population": "6471"
     },
     {
       "name": "Suzdal",
       "latitude": 56.4255675,
-      "longtitude": "40.4098853",
+      "longitude": 40.4098853,
       "population": "10500"
     },
     {
       "name": "Rothenburg ob der Tauber",
       "latitude": 49.365905,
-      "longtitude": "10.0924697",
+      "longitude": 10.0924697,
       "population": "10930"
     },
     {
       "name": "Alberobello",
       "latitude": 40.7917259,
-      "longtitude": "17.1773213",
+      "longitude": 17.1773213,
       "population": "11000"
     },
     {
       "name": "St. Ives",
       "latitude": 52.3340318,
-      "longtitude": "-0.094133",
+      "longitude": -0.094133,
       "population": "11000"
     },
     {
       "name": "Cefalù",
       "latitude": 38.0327965,
-      "longtitude": "13.9728774",
+      "longitude": 13.9728774,
       "population": "13000"
     },
     {
       "name": "Cesky Krumlov",
       "latitude": 48.8123743,
-      "longtitude": "14.2771679",
+      "longitude": 14.2771679,
       "population": "14146"
     },
     {
       "name": "Tulum",
       "latitude": 20.2096971,
-      "longtitude": "-87.5068954",
+      "longitude": -87.5068954,
       "population": "18233"
     },
     {
       "name": "Yellowknife",
       "latitude": 62.4749504,
-      "longtitude": "-114.5490754",
+      "longitude": -114.5490754,
       "population": "19,569"
     },
     {
       "name": "Jajce",
       "latitude": 44.3396737,
-      "longtitude": "17.2284165",
+      "longitude": 17.2284165,
       "population": "30000"
     },
     {
       "name": "Paraty",
       "latitude": -23.1406637,
-      "longtitude": "-44.9762804",
+      "longitude": -44.9762804,
       "population": "35000"
     },
     {
       "name": "Calgary",
       "latitude": 51.0486,
-      "longtitude": "-114.0708",
+      "longitude": -114.0708,
       "population": "1239000"
     },
     {
       "name": "Kinshasa",
       "latitude": -4.4009483,
-      "longtitude": "15.18266",
+      "longitude": 15.18266,
       "population": "9500000"
     },
     {
       "name": "Jakarta",
       "latitude": -6.2293867,
-      "longtitude": "106.6894334",
+      "longitude": 106.6894334,
       "population": "11000000"
     },
     {
       "name": "Sao Paulo",
       "latitude": -23.6815315,
-      "longtitude": "-46.8754826",
+      "longitude": -46.8754826,
       "population": "18000000"
     }
    ]

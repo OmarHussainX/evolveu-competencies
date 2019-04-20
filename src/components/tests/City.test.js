@@ -9,7 +9,7 @@ describe('The City class constructor\'s default assignment', () => {
         expect(testCity).not.toBeNull()
         expect(testCity.name).toBeNull()
         expect(testCity.latitude).toEqual(0)
-        expect(testCity.longtitude).toEqual(0)
+        expect(testCity.longitude).toEqual(0)
         expect(testCity.population).toEqual(0)
     })
 
@@ -23,7 +23,7 @@ describe('The City class constructor with parameters', () => {
     it('should create a new City with verifiable properties', () => {
         expect(testCity.name).toMatch(/Calgary/)
         expect(testCity.latitude).toBeCloseTo(51.0486)
-        expect(testCity.longtitude).toBeCloseTo(-114.0708)
+        expect(testCity.longitude).toBeCloseTo(-114.0708)
         expect(testCity.population).toEqual(1239000)
 
         // display the City

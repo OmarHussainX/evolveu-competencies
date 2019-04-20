@@ -151,24 +151,24 @@ No input validation will be done!!
 Assuming that valid latitude &amp; longitude values (x,y) will be provided:
 &nbsp;
 Valid latitude:      -90 &lt;= x &lt;= 90
-Valid longtitude:   -180 &lt;= y &lt;= 180
+Valid longitude:   -180 &lt;= y &lt;= 180
 &nbsp;
 Cities with latitude &gt; 0 will be considered to be in the Northern hemisphere
 */
 &nbsp;
 &nbsp;
 class City {
-    constructor(name = null, latitude = 0, longtitude = 0, population = 0) {
+    constructor(name = null, latitude = 0, longitude = 0, population = 0) {
         this.name = name
         this.latitude = parseFloat(latitude)
-        this.longtitude = parseFloat(longtitude)
+        this.longitude = parseFloat(longitude)
         this.population = parseInt(population)
     }
 &nbsp;
 &nbsp;
     // Creates a String representation of the City
     show() {
-        return `${this.name} [${this.latitude}, ${this.longtitude}] (pop. ${this.population.toLocaleString(undefined)})`
+        return `${this.name} [${this.latitude}, ${this.longitude}] (pop. ${this.population.toLocaleString(undefined)})`
     }
 &nbsp;
 &nbsp;
