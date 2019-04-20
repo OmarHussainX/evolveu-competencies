@@ -27,13 +27,13 @@ class City {
 
     //  Receives a number that will be added to the city’s population
     movedIn(num) {
-        this.population += parseInt(num)
+        if (num > 0) this.population += parseInt(num)
     }
 
 
     //  Receives a number that will be subtracted from the city’s population
     movedOut(num) {
-        if (num > 0 && num < this.population) this.population -= parseInt(num)
+        if (num > 0 && num <= this.population) this.population -= parseInt(num)
     }
 
 

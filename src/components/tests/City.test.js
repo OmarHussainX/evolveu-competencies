@@ -38,6 +38,10 @@ describe('Population adjustment:', () => {
         testCity.movedIn(1000000)
         expect(testCity.population).toEqual(1239000 + 1000000)
     })
+    it('should not be possible to grow the population by a negative amount', () => {
+        testCity.movedIn(-1000000)
+        expect(testCity.population).toEqual(1239000 + 1000000)
+    })
     it('should be possible to shrink the population', () => {
         testCity.movedOut(2000000)
         expect(testCity.population).toEqual(1239000 + 1000000 - 2000000)
