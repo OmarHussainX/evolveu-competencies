@@ -63,4 +63,13 @@ describe('The Community class\' methods...', () => {
         expect(testCommunity.sort('longitude', 'ascending').cities[0].name).toMatch(/Yellowknife/)
         expect(testCommunity.sort('longitude', 'descending').cities[0].name).toMatch(/Wanaka/)
     })
+
+    const testCommunity2 = new Community(cities)
+    testCommunity2.cities[3].name = testCommunity2.cities[4].name
+    it('Should be able to sort by name, ascending & descending, even when duplicate names are present', () => {
+        expect(testCommunity2.sort('name', 'ascending').cities[0].name).toMatch(/Alberobello/)
+        expect(testCommunity2.sort('name', 'ascending').cities[1].name).toMatch(/Calgary/)
+        expect(testCommunity2.sort('name', 'descending').cities[0].name).toMatch(/Yellowknife/)
+    })
+
 })
