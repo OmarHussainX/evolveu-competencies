@@ -1,5 +1,5 @@
 /* Establishes one centered column for the 'cities controls area':
-   - hemisphere selection dropdown
+   - Hemisphere selection dropdown
    - Overview table
 */
 #Cities .citiesControlsArea {
@@ -9,88 +9,11 @@
     justify-content: center;
 }
 
-#Cities table.overview,
-#Cities table.citieslist {
-    font-size: 0.7em;
-    text-align: left;
-}
-
-#Cities tr {
-    vertical-align: bottom;
-
-}
-
-#Cities .overview td:first-child {
-    color: #61dafb;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    padding-right: 0.5em;
-}
-
-#Cities table.citieslist {
-    font-size: 0.6em;
-}
-
-#Cities table.citieslist tr {
-    vertical-align: top;
-}
-
-#Cities table.citieslist th:first-child,
-#Cities table.citieslist td:first-child {
-    padding-right: 0.5em;
-}
-
-#Cities table.citieslist th:last-child,
-#Cities table.citieslist td:last-child {
-    /* font-family: 'Courier New', Courier, monospace; */
-    /* font-weight: 600; */
-    /* font-size: 0.9em; */
-    /* vertical-align: bottom; */
-    padding-left: 0.5em;
-    text-align: center;
-}
-
-#Cities table.citieslist span {
-    font-style: italic;
-    font-size: 0.85em;
-}
-
-@media only screen and (min-width: 768px) {
-    #Cities table.overview {
-        font-size: 1em;
-    }
-    #Cities table.citieslist {
-        font-size: 0.8em;
-    }
-    #Cities .overview td:first-child {
-        font-size: 0.75em;
-    }
-}
-
-/* Main/root container for 'card' containing tabular list of Cities
-*/
-#Cities .citieslistCard {
-    background: white;
-    border-radius: 5px;
-    padding: 0.5em;
-    margin-top: 1em;
-    color: rgb(90, 90, 90);
-    text-align: center;
-	position: relative;
-}
-#Cities #queueDataArea,
-#Cities #stackDataArea {
-    display: grid;
-    margin: 1em;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-}
-
+/* Main title */
 #Cities h2 {
     /* margin-top: 5em; */
     margin-bottom: 0.5em;
 }
-
 
 /* Select dropdown */
 #Cities .select-style {
@@ -103,7 +26,6 @@
     background-color: #fff;
     margin-bottom: 2em;
 }
-
 #Cities .select-style select {
     padding: 5px 8px;
     width: 130%;
@@ -115,11 +37,9 @@
        -moz-appearance: none;
             appearance: none;
 }
-
 #Cities .select-style select:focus {
     outline: none;
 }
-
 
 /* Input fields */
 #Cities input[type=text],
@@ -135,17 +55,82 @@
     padding: 5px;
     transition: border-color 80ms ease-in-out;
 }
-
 #Cities input[type=text]:hover, 
 #Cities input[type=number]:hover {
     border-color: darkgrey;
 }
-
 #Cities input[type=text]:focus, 
 #Cities input[type=number]:focus {
     border-color: darkgrey;
 }
 
+/* Base table style */
+#Cities table.overview {
+    font-size: 0.7em;
+    text-align: left;
+}
+
+/* First column of the overview table */
+#Cities table.overview td:first-child {
+    color: #61dafb;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    padding-right: 0.5em;
+}
+
+/* For alignment since first column has a smaller font */
+#Cities table.overview tr {
+    vertical-align: bottom;
+}
+
+/* Base table style */
+#Cities table.citieslist {
+    font-size: 0.65em;
+    text-align: left;
+}
+
+/* For alignment since some rows span multiple lines */
+#Cities table.citieslist tr {
+    vertical-align: top;
+}
+
+/* Space out the columns, center lat.,long. */
+#Cities table.citieslist th:first-child,
+#Cities table.citieslist td:first-child {
+    padding-right: 0.5em;
+}
+#Cities table.citieslist th:last-child,
+#Cities table.citieslist td:last-child {
+    padding-left: 0.5em;
+    text-align: center;
+}
+
+/* For howBig() output */
+#Cities table.citieslist span {
+    font-style: italic;
+    font-size: 0.85em;
+}
+
+/* For larger-than-mobile screens */
+@media only screen and (min-width: 768px) {
+    #Cities table.overview {
+        font-size: 0.9em;
+    }
+    #Cities table.citieslist {
+        font-size: 0.8em;
+    }
+}
+
+/* Main/root container for 'card' containing tabular list of Cities */
+#Cities .citieslistCard {
+    background: white;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-top: 1em;
+    color: rgb(90, 90, 90);
+    text-align: center;
+	position: relative;
+}
 
 /* Buttons containing FontAwesome SVG, which do not look like
 'regular' buttons - just flat glyphs */
@@ -158,12 +143,10 @@
     font-size: 1em;
     color: silver;
 }
-
 #Cities .citieslist button:hover {
     color: rgb(90, 90, 90);
     cursor: pointer;
 }
-
 #Cities .citieslist button:active {
     color: black;
     transform: scale(1.1);
