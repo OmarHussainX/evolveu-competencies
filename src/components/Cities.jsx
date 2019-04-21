@@ -59,13 +59,13 @@ class Cities extends Component {
                 population = `${(population/1000.0).toFixed(1)}k`
             
             return (
-                <tr key={i}>
+                <tr key={i} className={(i%2 ? 'altrow' : '' )}>
                     <td>
                         {city.name}<br/>
-                        <span>{city.howBig()}</span>
+                        <span>({city.howBig()})</span>
                     </td>
                     <td>{population}</td>
-                    <td>
+                    <td className='popcontrols'>
                         <button>
                             <FontAwesomeIcon icon='plus-circle' size="sm"></FontAwesomeIcon>
                         </button>
@@ -74,7 +74,9 @@ class Cities extends Component {
                             <FontAwesomeIcon icon='minus-circle' size="sm"></FontAwesomeIcon>
                         </button>
                     </td>
-                    <td>{`${city.latitude.toFixed(2)},${city.latitude.toFixed(2)}`}</td>
+                    <td className='latlong'>
+                        {`${city.latitude.toFixed(2)}, ${city.latitude.toFixed(2)}`}
+                    </td>
                 </tr>
             )
         })
@@ -116,7 +118,7 @@ class Cities extends Component {
                         <tr>
                             <th>Name</th>
                             <th colSpan='2'>Population</th>
-                            <th>latitude, longitude</th>
+                            <th></th>
                         </tr>
                         {citiesList}
                     </tbody>

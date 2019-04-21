@@ -9,12 +9,15 @@
     justify-content: center;
 }
 
+/* ---------------------------------------------- */
 /* Main title */
 #Cities h2 {
     /* margin-top: 5em; */
     margin-bottom: 0.5em;
 }
 
+
+/* ---------------------------------------------- */
 /* Select dropdown */
 #Cities .select-style {
     display: block;
@@ -41,6 +44,7 @@
     outline: none;
 }
 
+/* ---------------------------------------------- */
 /* Input fields */
 #Cities input[type=text],
 #Cities input[type=number] {
@@ -64,7 +68,9 @@
     border-color: darkgrey;
 }
 
-/* Base table style */
+
+/* ---------------------------------------------- */
+/* Base 'overview' table style */
 #Cities table.overview {
     font-size: 0.7em;
     text-align: left;
@@ -83,44 +89,8 @@
     vertical-align: bottom;
 }
 
-/* Base table style */
-#Cities table.citieslist {
-    font-size: 0.65em;
-    text-align: left;
-}
 
-/* For alignment since some rows span multiple lines */
-#Cities table.citieslist tr {
-    vertical-align: top;
-}
-
-/* Space out the columns, center lat.,long. */
-#Cities table.citieslist th:first-child,
-#Cities table.citieslist td:first-child {
-    padding-right: 0.5em;
-}
-#Cities table.citieslist th:last-child,
-#Cities table.citieslist td:last-child {
-    padding-left: 0.5em;
-    text-align: center;
-}
-
-/* For howBig() output */
-#Cities table.citieslist span {
-    font-style: italic;
-    font-size: 0.85em;
-}
-
-/* For larger-than-mobile screens */
-@media only screen and (min-width: 768px) {
-    #Cities table.overview {
-        font-size: 0.9em;
-    }
-    #Cities table.citieslist {
-        font-size: 0.8em;
-    }
-}
-
+/* ---------------------------------------------- */
 /* Main/root container for 'card' containing tabular list of Cities */
 #Cities .citieslistCard {
     background: white;
@@ -129,9 +99,81 @@
     margin: 1em 0;
     color: rgb(90, 90, 90);
     text-align: center;
-	position: relative;
+    position: relative;
 }
 
+/* Base 'citieslist' table style */
+#Cities table.citieslist {
+    font-size: 0.65em;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+/* For alignment since some rows span multiple lines */
+#Cities table.citieslist tr {
+    vertical-align: top;
+}
+
+/* Shade alternate rows */
+#Cities table.citieslist tr.altrow {
+    background: rgba(240, 240, 240, 0.7);
+}
+
+/* Space after first column, limit width */
+#Cities table.citieslist td:first-child {
+    padding-right: 0.5em;
+    max-width: 7em;
+}
+
+/* Center lat.,long. */
+#Cities table.citieslist th:last-child,
+#Cities table.citieslist td:last-child {
+    text-align: center;
+}
+
+/* Insert small 'lat, long' header for last column */
+#Cities table.citieslist th:last-child::after {
+    content: 'lat, long';
+}
+
+/* Space after second-last column, prevent wrapping */
+#Cities table.citieslist td.popcontrols {
+    padding-right: 0.5em;
+    white-space: nowrap;
+}
+
+/* Shrink lat/long text, prevent wrapping */
+#Cities table.citieslist td.latlong {
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
+/* For city's size classification (howBig() output) */
+#Cities table.citieslist span {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+
+/* ---------------------------------------------- */
+/* For larger-than-mobile screens */
+@media only screen and (min-width: 768px) {
+    #Cities table.overview {
+        font-size: 0.9em;
+    }
+    #Cities table.citieslist {
+        font-size: 0.8em;
+    }
+    #Cities table.citieslist th:last-child::after {
+        content: 'latitude, longitude';
+    }
+    #Cities table.citieslist td:first-child {
+            max-width: initial;
+    }
+}
+
+
+/* ---------------------------------------------- */
 /* Buttons containing FontAwesome SVG, which do not look like
 'regular' buttons - just flat glyphs */
 #Cities .citieslist button {
