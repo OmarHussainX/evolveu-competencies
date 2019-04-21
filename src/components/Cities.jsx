@@ -86,22 +86,36 @@ class Cities extends Component {
                             <th>latitude, longitude</th>
                         </tr>
                         <tr>
-                            <td>Calgary</td>
+                            <td>
+                                Calgary<br/>
+                                <span>(City)</span>
+                            </td>
                             <td>1.3M</td>
                             <td>
-                                <FontAwesomeIcon icon='plus-circle' size="sm" style={{ }}></FontAwesomeIcon>
+                                <button>
+                                    <FontAwesomeIcon icon='plus-circle' size="sm"></FontAwesomeIcon>
+                                </button>
                                 &nbsp;
-                                <FontAwesomeIcon icon='minus-circle' size="sm" style={{ }}></FontAwesomeIcon>
+                                <button>
+                                    <FontAwesomeIcon icon='minus-circle' size="sm"></FontAwesomeIcon>
+                                </button>
                             </td>
                             <td>45.34, -52.45</td>
                         </tr>
                         <tr>
-                            <td>Yellowknife</td>
+                            <td>
+                                Yellowknife<br/>
+                                <span>(Large town)</span>
+                            </td>
                             <td>500k</td>
                             <td>
-                                <FontAwesomeIcon icon='plus-circle' size="sm" style={{ }}></FontAwesomeIcon>
+                                <button>
+                                    <FontAwesomeIcon icon='plus-circle' size="sm"></FontAwesomeIcon>
+                                </button>
                                 &nbsp;
-                                <FontAwesomeIcon icon='minus-circle' size="sm" style={{ }}></FontAwesomeIcon>
+                                <button>
+                                    <FontAwesomeIcon icon='minus-circle' size="sm"></FontAwesomeIcon>
+                                </button>
                             </td>
                             <td>72.81, -122.36</td>
                         </tr>
