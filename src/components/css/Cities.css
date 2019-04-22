@@ -44,30 +44,6 @@
     outline: none;
 }
 
-/* ---------------------------------------------- */
-/* Input fields */
-#Cities input[type=text],
-#Cities input[type=number] {
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    /* color: grey; */
-    background: white;
-    font-size: 0.65em; /* if not 'inherit'ed/set, is calculated as a small value */
-    font-family: inherit; /* if not 'inherit'ed/set, is set to some boring font */
-    /* font-weight: bold; */
-    text-align: center;
-    padding: 5px;
-    transition: border-color 80ms ease-in-out;
-}
-#Cities input[type=text]:hover, 
-#Cities input[type=number]:hover {
-    border-color: darkgrey;
-}
-#Cities input[type=text]:focus, 
-#Cities input[type=number]:focus {
-    border-color: darkgrey;
-}
-
 
 /* ---------------------------------------------- */
 /* Base 'overview' table style */
@@ -193,3 +169,125 @@
     color: black;
     transform: scale(1.1);
 }
+
+
+#modalbackdrop {
+    position: fixed;
+    /* Not needed if the modal is last, i.e. it comes after all
+    <element>s that are meant to be underneath it  */
+    /* z-index: 1; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+#modalcontent {
+    background: white;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 30% auto;
+    color: rgb(90, 90, 90);
+    min-height: 3em;
+    width: 75%;
+}
+
+#modalcontent p {
+    font-size: 0.8em;
+}
+
+/* 'Regular' buttons that actually look like buttons... */
+#modalcontent button {
+    background: rgb(50, 120, 200);
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight:bold;
+    line-height: 0.5em;
+    margin: 1em 1em;
+    padding: 0.65em;
+    text-align: center;
+    text-decoration: none;
+    transition: background 100ms ease-in-out, 
+                transform 100ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#modalcontent button:hover,
+#modalcontent button:focus {
+    background: rgb(50, 90, 170);
+}
+
+#modalcontent button:active {
+    transform: scale(0.95);
+}
+
+#modalcontent button.severe {
+    background: rgb(230, 90, 90);
+}
+
+#modalcontent button.severe:hover,
+#modalcontent button.severe:focus {
+    background: rgb(210, 70, 70);
+}
+
+/* Cancel button */
+#modalcontent button:first-child {
+    background: silver;
+    float: right;
+    padding: 0.4em;
+    margin-top: -0.5em;
+    margin-right: -0.5em;
+}
+#modalcontent button:first-child:hover,
+#modalcontent button:first-child:focus {
+    background: grey;
+}
+
+
+/* ---------------------------------------------- */
+/* For larger-than-mobile screens */
+@media only screen and (min-width: 768px) {
+    #modalcontent {
+        width: 20em;
+    }
+    #modalcontent input {
+        display: block;
+        margin: auto;
+    }
+}
+
+
+/* ---------------------------------------------- */
+/* Input fields */
+#modalcontent input[type=text],
+#modalcontent input[type=number] {
+    display: block;
+    margin: auto;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    /* color: grey; */
+    background: white;
+    font-size: 0.65em; /* if not 'inherit'ed/set, is calculated as a small value */
+    font-family: inherit; /* if not 'inherit'ed/set, is set to some boring font */
+    /* font-weight: bold; */
+    text-align: center;
+    transition: border-color 80ms ease-in-out;
+}
+#modalcontent input[type=text]:hover, 
+#modalcontent input[type=number]:hover {
+    border-color: darkgrey;
+}
+#modalcontent input[type=text]:focus, 
+#modalcontent input[type=number]:focus {
+    border-color: darkgrey;
+}
+
+
