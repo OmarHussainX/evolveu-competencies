@@ -7,9 +7,6 @@ import './css/Cities.css'
 import citiesData from './js/cities.json'
 import { Community } from "./js/Community";
 
-// Set to 'true' to enable output of debug messages in console
-const DEBUG_MSG = true
-
 
 
 
@@ -28,18 +25,17 @@ class Cities extends Component {
             community: new Community(citiesData),
             hemisphereChoice: 'both',
             modalOpen: false,
-            populationInput:'',
+            populationInput: '',
             cityIndex: ''
         }
     }
 
 
-    // Toggles the modal's visibility
-    // If a button to to add to or subtract from a City's population was
-    // clicked, save the index for that City to state so that this exact
-    // City's population can be modified
+    // - Toggles the modal's visibility
+    // - If a button to to add to or subtract from a City's population was
+    //   clicked, save the index for that City to state so that this exact
+    //   City's population can be modified
     toggleModal = (e) => {
-        
         this.setState({
             cityIndex: (e.currentTarget.id.includes('addPop') || e.currentTarget.id.includes('subPop')) ? e.currentTarget.id.slice(6) : '',
             modalOpen: !this.state.modalOpen
@@ -63,17 +59,18 @@ class Cities extends Component {
     //
     // When user inputs an amount (via modal) for population change:
     // - ensures state contains the latest user input
-
-
     changeHandler = event => {
-        const { name, value } = event.currentTarget
-        if (DEBUG_MSG) console.log(`----- Cities changeHandler()\n${name}: ${value}`)
+        let { name, value } = event.currentTarget
 
         // Create a new Community containing all cities, and
         // filter out Southern or Northern cities if needed
         let newCommunity = new Community(citiesData)
         if (value === 'north' || value === 'south')
             newCommunity = newCommunity.whichSphere(value)
+
+        // Discard any floating point input for population change
+        if (name === 'populationInput') 
+            value = parseInt(value)
 
         this.setState({
             community: newCommunity,
@@ -82,8 +79,50 @@ class Cities extends Component {
     }
 
 
+    // Adds to or subtracts from, the population of the City whose index
+    // is saved in state
+    updatePopulation = event => {
+        const { community, populationInput, cityIndex } = this.state
+
+        // Make a copy of the Community in state
+        const newCommunity = new Community(community.cities)
+
+        // Update the copy depending on which button was pressed
+        if (event.currentTarget.id.includes('grow'))
+            newCommunity.cities[cityIndex].movedIn(populationInput)
+        else
+            newCommunity.cities[cityIndex].movedOut(populationInput)
+
+        // Assign updated Community to state, clear user input, close modal
+        this.setState({
+            community: newCommunity,
+            populationInput: '',
+            modalOpen: false,
+        })
+        /*
+           This does NOT work!!
+           Initially population appears to update, but then it reverts to 
+           its original (pre-update) value...
+
+        const buttonID = event.currentTarget.id
+        this.setState(prevState => {
+            if (buttonId.includes('grow'))
+                prevState.community.cities[cityIndex].movedIn(populationInput)
+            else
+                prevState.community.cities[cityIndex].movedOut(populationInput)
+
+            return {
+                community: prevState.community,
+                populationInput: '',
+                modalOpen: false,
+            }
+        })
+        */
+    }
+
+
     render() {
-        const { community, hemisphereChoice, modalOpen } = this.state
+        const { community, hemisphereChoice, modalOpen, populationInput, cityIndex } = this.state
 
         // Generate an array of table rows - each row contains the data to 
         // be displayed for one City, along with controls to add to
@@ -172,7 +211,8 @@ class Cities extends Component {
                         <button id='closeModal' onClick={this.toggleModal}>
                             x
                         </button>
-                        <h4>Change population</h4>
+                        <h4><em>{community.cities[cityIndex].name}</em><br/>
+                        Current population: {community.cities[cityIndex].population.toLocaleString(undefined)}</h4>
                         <p>Enter amount by which population will change</p>
                         <label>
                             <input
@@ -180,13 +220,13 @@ class Cities extends Component {
                                 placeholder='enter amount'
                                 min="0"
                                 name='populationInput'
-                                value={this.state.populationInput}
+                                value={populationInput}
                                 onChange={this.changeHandler} />
                         </label>
-                        <button id='grow' onClick={this.clickHandler}>
+                        <button id='grow' onClick={this.updatePopulation}>
                             Grow
                             </button>
-                        <button id='shrink' onClick={this.clickHandler}>
+                        <button id='shrink' onClick={this.updatePopulation}>
                             Shrink
                         </button>
                 </Modal>}
