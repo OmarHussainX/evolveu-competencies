@@ -1,11 +1,11 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Modal from './Modal'
 import './css/Cities.css'
 
 // Data set to use
 import citiesData from './js/cities.json'
-import { Community } from "./js/Community";
+import { Community } from './js/Community';
 
 
 
@@ -53,29 +53,33 @@ class Cities extends Component {
     }
 
 
-    // When a selection is made, updates state with:
+    // Handle user input:
+    // a) If a city-hemisphere selection was made, update state with:
     // - choice of hemisphere to show: both, Northern, or Southern
     // - reference to the Community to be displayed
     //
-    // When user inputs an amount (via modal) for population change:
+    // b) If an amount for population change has been entered (via modal):
     // - ensures state contains the latest user input
     changeHandler = event => {
         let { name, value } = event.currentTarget
 
-        // Create a new Community containing all cities, and
-        // filter out Southern or Northern cities if needed
-        let newCommunity = new Community(citiesData)
-        if (value === 'north' || value === 'south')
-            newCommunity = newCommunity.whichSphere(value)
-
-        // Discard any floating point input for population change
-        if (name === 'populationInput') 
+        if (name === 'hemisphereChoice') {
+            // Create a new Community containing all cities, and
+            // filter out Southern or Northern cities if needed
+            let newCommunity = new Community(citiesData)
+            if (value === 'north' || value === 'south')
+                newCommunity = newCommunity.whichSphere(value)
+            this.setState({
+                community: newCommunity,
+                [name]: value
+            })
+        } else {
+            // Discard any floating point input for population change
             value = parseInt(value)
-
-        this.setState({
-            community: newCommunity,
-            [name]: value
-        })
+            this.setState({
+                [name]: value
+            })
+        }
     }
 
 
@@ -144,11 +148,11 @@ class Cities extends Component {
                     <td>{population}</td>
                     <td className='popcontrols'>
                         <button id={`addPop${i}`} onClick={this.toggleModal}>
-                            <FontAwesomeIcon icon='plus-circle' size="sm"></FontAwesomeIcon>
+                            <FontAwesomeIcon icon='plus-circle' size='sm'></FontAwesomeIcon>
                         </button>
                         &nbsp;
                         <button id={`subPop${i}`} onClick={this.toggleModal}>
-                            <FontAwesomeIcon icon='minus-circle' size="sm"></FontAwesomeIcon>
+                            <FontAwesomeIcon icon='minus-circle' size='sm'></FontAwesomeIcon>
                         </button>
                     </td>
                     <td className='latlong'>
@@ -166,10 +170,10 @@ class Cities extends Component {
                         className='select-style'
                         value={hemisphereChoice}
                         onChange={this.changeHandler}
-                        name="hemisphereChoice">
-                        <option value="both">Show cities in both hemispheres</option>
-                        <option value="north">Northern hemisphere only</option>
-                        <option value="south">Southern hemisphere only</option>
+                        name='hemisphereChoice'>
+                        <option value='both'>Show cities in both hemispheres</option>
+                        <option value='north'>Northern hemisphere only</option>
+                        <option value='south'>Southern hemisphere only</option>
                     </select>
                 </div>
                 <table className='overview'>
@@ -216,9 +220,9 @@ class Cities extends Component {
                         <p>Enter amount by which population will change</p>
                         <label>
                             <input
-                                type="number"
+                                type='number'
                                 placeholder='enter amount'
-                                min="0"
+                                min='0'
                                 name='populationInput'
                                 value={populationInput}
                                 onChange={this.changeHandler} />
