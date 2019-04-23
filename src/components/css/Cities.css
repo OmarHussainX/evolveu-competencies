@@ -193,6 +193,14 @@
     width: 75%;
 }
 
+#modalcontent h4 {
+    margin-bottom: 0;
+}
+
+#modalcontent h4+h5 {
+    margin: 0.5em;
+}
+
 #modalcontent p {
     font-size: 0.8em;
 }

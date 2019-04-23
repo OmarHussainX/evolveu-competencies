@@ -64,15 +64,18 @@ class Cities extends Component {
         let { name, value } = event.currentTarget
 
         if (name === 'hemisphereChoice') {
-            // Create a new Community containing all cities, and
-            // filter out Southern or Northern cities if needed
+            // Create a new Community containing all cities and then...
             let newCommunity = new Community(citiesData)
+            
+            // ...filter out Southern or Northern cities if needed
             if (value === 'north' || value === 'south')
                 newCommunity = newCommunity.whichSphere(value)
+
             this.setState({
                 community: newCommunity,
                 [name]: value
             })
+
         } else {
             // Discard any floating point input for population change
             value = parseInt(value)
@@ -86,29 +89,33 @@ class Cities extends Component {
     // Adds to or subtracts from, the population of the City whose index
     // is saved in state
     updatePopulation = event => {
-        const { community, populationInput, cityIndex } = this.state
+        const { populationInput, cityIndex } = this.state
 
+/*  TWO APPROACHES TO UPDATING OBJECT IN STATE (both work!):
+
+        // ---------- FIRST APPROACH ----------
         // Make a copy of the Community in state
-        const newCommunity = new Community(community.cities)
-
         // Update the copy depending on which button was pressed
+        // Assign updated Community to state, clear user input, close modal
+        const newCommunity = new Community(this.state.community.cities)
+
         if (event.currentTarget.id.includes('grow'))
             newCommunity.cities[cityIndex].movedIn(populationInput)
         else
             newCommunity.cities[cityIndex].movedOut(populationInput)
 
-        // Assign updated Community to state, clear user input, close modal
         this.setState({
             community: newCommunity,
             populationInput: '',
             modalOpen: false,
         })
-        /*
-           This does NOT work!!
-           Initially population appears to update, but then it reverts to 
-           its original (pre-update) value...
 
-        const buttonID = event.currentTarget.id
+ */
+
+        // ---------- SECOND APPROACH ----------
+        // Using setState, make changes to prevState, then assign those
+        // changes to state...
+        const buttonId = event.currentTarget.id
         this.setState(prevState => {
             if (buttonId.includes('grow'))
                 prevState.community.cities[cityIndex].movedIn(populationInput)
@@ -121,7 +128,6 @@ class Cities extends Component {
                 modalOpen: false,
             }
         })
-        */
     }
 
 
@@ -210,26 +216,22 @@ class Cities extends Component {
                     have to have a higher z-index specified. */}
                 {modalOpen &&
                     <Modal
-                        onClose={this.toggleModal}
-                        onModalContentclick={this.onModalContentclick}>
-                        <button id='closeModal' onClick={this.toggleModal}>
-                            x
-                        </button>
-                        <h4><em>{community.cities[cityIndex].name}</em><br/>
-                        Current population: {community.cities[cityIndex].population.toLocaleString(undefined)}</h4>
+                        toggleModal={this.toggleModal}
+                        onModalContentclick={this.onModalContentclick} >
+                        <h4><em>{community.cities[cityIndex].name}</em></h4>
+                        <h5>Current population: {community.cities[cityIndex].population.toLocaleString(undefined)}</h5>
                         <p>Enter amount by which population will change</p>
-                        <label>
-                            <input
-                                type='number'
-                                placeholder='enter amount'
-                                min='0'
-                                name='populationInput'
-                                value={populationInput}
-                                onChange={this.changeHandler} />
-                        </label>
+                        <input
+                            autoFocus
+                            type='number'
+                            // placeholder='enter amount'
+                            min='0'
+                            name='populationInput'
+                            value={populationInput}
+                            onChange={this.changeHandler} />
                         <button id='grow' onClick={this.updatePopulation}>
                             Grow
-                            </button>
+                        </button>
                         <button id='shrink' onClick={this.updatePopulation}>
                             Shrink
                         </button>
