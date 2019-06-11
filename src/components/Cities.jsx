@@ -162,7 +162,7 @@ class Cities extends Component {
                         </button>
                     </td>
                     <td className='latlong'>
-                        {`${city.latitude.toFixed(2)}, ${city.latitude.toFixed(2)}`}
+                        {`${city.latitude.toFixed(2)}, ${city.longitude.toFixed(2)}`}
                     </td>
                 </tr>
             )
