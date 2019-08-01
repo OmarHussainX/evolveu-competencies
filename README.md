@@ -30,7 +30,7 @@ $ npm start
 
 
 ## Usage
-<img src="src/home.png" width="675" />
+<p align="center"><img src="src/home.png"/></p>
 
 Use the icons at the top to navigate to different areas of the app. From left to right, these are:
 
@@ -51,7 +51,7 @@ Displays the React logo.
 
 
 ### Calculator
-<img src="src/calculator.png" width="675" />
+<p align="center"><img src="src/calculator.png" /></p>
 _[Solution for Comp 130 - JavaScript TDD](src/assignments/Comp 130 - JavaScript TDD.pdf)_
 
 Displays the React logo.
