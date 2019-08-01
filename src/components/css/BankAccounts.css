@@ -151,7 +151,7 @@ NOTE:
 /* ---- 'New account' button ---- */
 #BankAccountsBody #addAccBtn {
     background: rgb(0, 160, 0);
-    float: right;
+    /* float: right; */
 }
 #BankAccountsBody #addAccBtn:hover,
 #BankAccountsBody #addAccBtn:focus {

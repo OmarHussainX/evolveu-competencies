@@ -10,7 +10,7 @@
 
 
 
-## How To Use
+## Installation instructions
 
 You'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [npm](http://npmjs.com) installed ([Node.js](https://nodejs.org/en/download/) includes [npm](http://npmjs.com))
 
