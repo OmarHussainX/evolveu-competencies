@@ -3,8 +3,8 @@
 <!-- <img src="src/screenshot.gif" alt="EvolveU Projects" /> -->
 </p>
 
-# EvolveU Competencies
- [React](https://reactjs.org/) app showcasing solutions for some of the competencies assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program).
+# Single Page App (SPA) using React
+ A [React](https://reactjs.org/) app showcasing solutions for the[JavaScript &amp; React competencies](src/assignments) assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program).
 
 
 
