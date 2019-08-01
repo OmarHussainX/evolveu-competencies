@@ -54,17 +54,19 @@ Displays the React logo.
 _[Solution for Comp 130 - JavaScript TDD](src/assignments/Comp%20130%20-%20JavaScript%20TDD.pdf)_
 <p align="center"><img src="src/calculator.png" /></p>
 
-An exercise in TDD using jest.
+__An exercise in TDD using jest.__
 1. Write tests for basic mathematical functions (addition, subtraction, multiplication, division)
 2. Write stubs for the mathematical functions
 3. Run tests, which _will_ fail
 4. Select _one_ function stub and write its code
 5. Run tests
-..* If tests for the updated function pass, go to step 4
-..* Otherwise, revise the code for the function under development and go step 5
+   * If tests for the updated function pass, go to step 4
+   * Otherwise, revise the code for the function under development and go step 5
 6. Repeat steps 4-5 until all code has been written and all tests pass
 7. Check for opportunities to refactor/optimise code
 8. If a change is made to code, re-run tests - if any fail, resolve them one by one until all tests pass
+
+[View test coverage](coverage/lcov-report/src/components/js/math.js.html)
 ---
 
 > LinkedIn [omar.codes](http://omar.codes/) &nbsp;&middot;&nbsp;
