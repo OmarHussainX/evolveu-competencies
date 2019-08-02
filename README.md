@@ -56,7 +56,7 @@ Use the icons at the top to navigate to different areas of the app. From left to
 
 
 ### Home
-_[Solution for Comp 120 - ReactJS](src/img/assignments/Comp%20120%20-%20ReactJS.pdf)_
+_[Solution for Comp 120 - ReactJS](src/assignments/Comp%20120%20-%20ReactJS.pdf)_
 
 Displays the React logo.
 
@@ -66,7 +66,7 @@ Displays the React logo.
 
 
 ### Calculator
-_[Solution for Comp 130 - JavaScript TDD](src/img/assignments/Comp%20130%20-%20JavaScript%20TDD.pdf)_
+_[Solution for Comp 130 - JavaScript TDD](src/assignments/Comp%20130%20-%20JavaScript%20TDD.pdf)_
 <p align="center"><img src="src/img/calculator.png" /></p>
 
 __An exercise in test driven development (TDD) using jest.__
@@ -91,7 +91,7 @@ The tested &amp; verified math functions were then used to build a simple calcul
 
 
 ### One bank account
-_[Solution for Comp 140 - JavaScript Objects and State](src/img/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
+_[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
 <p align="center"><img src="src/img/account.png" /></p>
 
 Test driven development of a simple bank `Account` class in JS, to handle management of a single bank account: creation, renaming, deposit/withdrawal, etc.
@@ -108,7 +108,7 @@ The tested &amp; verified bank `Account` class was used to build a solitary acco
 
 
 ### Bank accounts manager
-_[Solution for Comp 140 - JavaScript Objects and State](src/img/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
+_[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
 <p align="center"><img src="src/img/accounts.png" /></p>
 
 Test driven development of an `AccountsController` class, allowing for the management of a collection of bank `Account` objects. The `AccountsController` class stores bank `Account` objects in a [private array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations), and provides several methods for managing the collection of bank `Account` objects, e.g.
@@ -203,7 +203,7 @@ __After deleting an account:__
 
 
 ### Cities
-_[Solution for Comp 140 - JavaScript Objects and State](src/img/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
+_[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
 <p align="center"><img src="src/img/cities.png" /></p>
 
 Test driven development of `City` and `Community` classes, where a `City` object has properties:
@@ -249,7 +249,7 @@ In this case, Jajce went from being a 'Large town' to a 'Village'
 
 
 ### Data structures
-_[Solution for Comp 150 - JavaScript Algorithms](src/img/assignments/Comp%20150%20-%20JavaScript%20Algorithms.pdf)_
+_[Solution for Comp 150 - JavaScript Algorithms](src/assignments/Comp%20150%20-%20JavaScript%20Algorithms.pdf)_
 <p align="center"><img src="src/img/data_structures.png" /></p>
 
 Test driven development of an `AccountsController` class, allowing for the management of a collection of bank `Account` objects. The `AccountsController` class stores bank `Account` objects in a [private array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations), and provides several methods for managing the collection of bank `Account` objects, e.g.
