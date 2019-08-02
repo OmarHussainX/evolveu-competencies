@@ -48,7 +48,7 @@ Use the icons at the top to navigate to different areas of the app. From left to
 * [Manage a single bank account](#one-bank-account)
 * [Manage multiple bank accounts (belonging to one user)](#bank-accounts-manager)
 * [View/manage a collection of cities](#cities)
-* View/manage box office gross data in three different data structures
+* [View/manage box office gross data in a linked list, queue, and stack](#data-structures)
 
 
 &nbsp;
@@ -242,6 +242,32 @@ __Adjusting a city's population affects the community's total population, and ca
 
 In this case, Jajce went from being a 'Large town' to a 'Village'
 <p align="center"><img src="src/cities3.png" /></p>
+
+
+&nbsp;
+&nbsp;
+
+
+### Data structires
+_[Solution for Comp 150 - JavaScript Algorithms](src/assignments/Comp%20150%20-%20JavaScript%20Algorithms.pdf)_
+<p align="center"><img src="src/accounts.png" /></p>
+
+Test driven development of an `AccountsController` class, allowing for the management of a collection of bank `Account` objects. The `AccountsController` class stores bank `Account` objects in a [private array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations), and provides several methods for managing the collection of bank `Account` objects, e.g.
+* adding, deleting, renaming accounts
+* getting the account with highest/lowest balance
+* getting the total balance of all accounts
+* sorting all accounts in ascending/descending order by name or balance
+
+_NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/index.html' after cloning the repo._
+
+The tested &amp; verified `AccountsController` class was used to build a sophisticated bank account manager in React.
+
+&nbsp;
+
+__Creating the first account:__
+
+Until the first bank account is created, the user is presented with a very prominent 'New Account' button, seen above and here, during creation of the initial account.
+<p align="center"><img src="src/accounts1.png" /></p>
 
 
 
