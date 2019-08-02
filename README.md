@@ -34,6 +34,8 @@ $ npm start
 ```
 
 
+&nbsp;
+&nbsp;
 
 
 ## Usage
@@ -49,12 +51,18 @@ Use the icons at the top to navigate to different areas of the app. From left to
 * View/manage box office gross data in three different data structures
 
 
+&nbsp;
+&nbsp;
+
 
 ### Home
 _[Solution for Comp 120 - ReactJS](src/assignments/Comp%20120%20-%20ReactJS.pdf)_
 
 Displays the React logo.
 
+
+&nbsp;
+&nbsp;
 
 
 ### Calculator
@@ -78,6 +86,9 @@ _NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/inde
 The tested &amp; verified math functions were then used to build a simple calculator in React.
 
 
+&nbsp;
+&nbsp;
+
 
 ### One bank account
 _[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
@@ -91,6 +102,9 @@ _NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/inde
 
 The tested &amp; verified bank `Account` class was used to build a solitary account manager in React. _(NOTE: The UI does not allow for the account to be renamed, and the starting balance is pre-determined. These features - and more - will be exposed in the UI of the next section of this SPA.)_
 
+
+&nbsp;
+&nbsp;
 
 
 ### Bank accounts manager
@@ -180,6 +194,32 @@ __Accounts can be sorted by name, in ascending/descending order:__
 
 __After deleting an account:__
 <p align="center"><img src="src/accounts12.png" /></p>
+
+
+&nbsp;
+&nbsp;
+
+
+### Cities
+_[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
+<p align="center"><img src="src/cities.png" /></p>
+
+&nbsp;
+
+__sfd:__
+<p align="center"><img src="src/cities1.png" /></p>
+
+&nbsp;
+
+__dfg:__
+<p align="center"><img src="src/cities2.png" /></p>
+
+&nbsp;
+
+__hjk:__
+<p align="center"><img src="src/cities3.png" /></p>
+
+
 
 
 
