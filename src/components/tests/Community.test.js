@@ -6,8 +6,8 @@ describe('The Community class\' methods...', () => {
 
     it('Should be able to create a new Communty Object with verifiable data', () => {
         expect(testCommunity.cities.length).toEqual(30)
-        expect(testCommunity.cities[0].name).toMatch(/Gross/)
-        expect(testCommunity.cities[11].name).toMatch(/Stepantsminda/)
+        expect(testCommunity.cities[0].name).toMatch(/Sao Paulo/)
+        expect(testCommunity.cities[11].name).toMatch(/St. Ives/)
     })
 
     const northernCommunity = testCommunity.whichSphere('north')
@@ -65,10 +65,10 @@ describe('The Community class\' methods...', () => {
     })
 
     const testCommunity2 = new Community(cities)
-    testCommunity2.cities[3].name = testCommunity2.cities[4].name
+    testCommunity2.cities[7].name = testCommunity2.cities[8].name
     it('Should be able to sort by name, ascending & descending, even when duplicate names are present', () => {
         expect(testCommunity2.sort('name', 'ascending').cities[0].name).toMatch(/Alberobello/)
-        expect(testCommunity2.sort('name', 'ascending').cities[1].name).toMatch(/Calgary/)
+        expect(testCommunity2.cities[1].name).toMatch(/Calgary/)
         expect(testCommunity2.sort('name', 'descending').cities[0].name).toMatch(/Yellowknife/)
     })
 

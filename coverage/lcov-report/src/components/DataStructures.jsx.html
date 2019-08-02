@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">10% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/10</span>
+        <span class='fraction'>1/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.5% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>6/16</span>
+        <span class='fraction'>0/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/3</span>
+        <span class='fraction'>0/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">55.56% </span>
+        <span class="strong">11.11% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/9</span>
+        <span class='fraction'>1/9</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -157,7 +157,8 @@
 112
 113
 114
-115</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+115
+116</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -183,8 +184,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -210,9 +211,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -296,9 +298,9 @@ class DataStructures extends Component {
     //    - Stack (LIFO)
     // b) A reference to the data set to be stored in the
     //    selected data structure (if any)
-    constructor() {
-        super()
-        this.state = {
+<span class="fstat-no" title="function not covered" >    co</span>nstructor() {
+<span class="cstat-no" title="statement not covered" >        super()</span>
+<span class="cstat-no" title="statement not covered" >        this.state = {</span>
             dataSet: null,
             dataStructureChoice: '',
         }
@@ -323,12 +325,13 @@ class DataStructures extends Component {
     }
 &nbsp;
     
-    render() {
-        const { dataSet, dataStructureChoice } = this.state
+<span class="fstat-no" title="function not covered" >    re</span>nder() {
+        const { dataSet, dataStructureChoice } = <span class="cstat-no" title="statement not covered" >this.state</span>
 &nbsp;
-        return (
+<span class="cstat-no" title="statement not covered" >        return (</span>
             &lt;div id='DataStructures'&gt;
                 &lt;div className='dataControlsArea'&gt;
+                    &lt;h2&gt;Data structures&lt;/h2&gt;
                     &lt;select
                         className='select-style'
                         value={dataStructureChoice}
@@ -349,12 +352,12 @@ class DataStructures extends Component {
                 &lt;/div&gt;
 &nbsp;
                     {/* See NOTE below on why these condtional rendering checks should not be combined! */}
-                    {dataStructureChoice === 'llist' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesListDisplay dataSet={dataSet}/&gt;}</span>
-                    {dataStructureChoice === 'llist-empty' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesListDisplay dataSet={dataSet}/&gt;}</span>
-                    {dataStructureChoice === 'queue' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesQueueDisplay dataSet={dataSet}/&gt;}</span>
-                    {dataStructureChoice === 'queue-empty' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesQueueDisplay dataSet={dataSet}/&gt;}</span>
-                    {dataStructureChoice === 'stack' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/&gt;}</span>
-                    {dataStructureChoice === 'stack-empty' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/&gt;}</span>
+                    {dataStructureChoice === 'llist' &amp;&amp; &lt;MoviesListDisplay dataSet={dataSet}/&gt;}
+                    {dataStructureChoice === 'llist-empty' &amp;&amp; &lt;MoviesListDisplay dataSet={dataSet}/&gt;}
+                    {dataStructureChoice === 'queue' &amp;&amp; &lt;MoviesQueueDisplay dataSet={dataSet}/&gt;}
+                    {dataStructureChoice === 'queue-empty' &amp;&amp; &lt;MoviesQueueDisplay dataSet={dataSet}/&gt;}
+                    {dataStructureChoice === 'stack' &amp;&amp; &lt;MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/&gt;}
+                    {dataStructureChoice === 'stack-empty' &amp;&amp; &lt;MoviesStackDisplay dataSet={dataSet} dataStructure='stack'/&gt;}
             &lt;/div&gt;
         )
     }
@@ -391,7 +394,7 @@ The solution is simple: keep the conditional checks separate, so that A and B ca
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Apr 20 2019 00:25:59 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Aug 01 2019 21:45:39 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

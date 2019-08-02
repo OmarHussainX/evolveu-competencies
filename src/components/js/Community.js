@@ -22,7 +22,6 @@ class Community {
 
         if (hemisphere.toLowerCase() !== 'north' && hemisphere.toLowerCase() !== 'south') return
 
-        const filteredCommunity = new Community()
         let filteredCities = []
 
         if (hemisphere.toLowerCase() === 'north') 
@@ -30,10 +29,7 @@ class Community {
         else
             filteredCities = this.cities.filter(city => city.latitude <= 0)
 
-        filteredCities.forEach(city => {
-            filteredCommunity.cities.push(new City(city.name, city.latitude, city.longitude, city.population))
-        })
-        return filteredCommunity
+        return new Community(filteredCities)
     }
 
 
