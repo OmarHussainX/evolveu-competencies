@@ -82,7 +82,7 @@ Although JS classes do not officially have private members, I _was_ able to use 
 
 _NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/index.html' after cloning the repo._
 
-The tested &amp; verified bank `Account` class was then used to build a solitary account manager' in React. _(NOTE: The UI does not allow for the account to be renamed, and the starting balance is also pre-determined. These features - and more - will be exposed in the UI of the next section of the app.)_
+The tested &amp; verified bank `Account` class was used to build a solitary account manager' in React. _(NOTE: The UI does not allow for the account to be renamed, and the starting balance is also pre-determined. These features - and more - will be exposed in the UI of the next section of the app.)_
 
 
 
@@ -98,9 +98,10 @@ Test driven development of an `AccountsController` class, allowing for the manag
 
 _NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/index.html' after cloning the repo._
 
-The tested &amp; verified `AccountsController` class was then used to build a sophisticated bank account manager in React. Until the first bank account is created, the user is presented with a very prominent 'New Account' button.
+The tested &amp; verified `AccountsController` class was used to build a sophisticated bank account manager in React.
 
 __Creating the first account:__
+Until the first bank account is created, the user is presented with a very prominent 'New Account' button.
 <p align="center"><img src="src/accounts1.png" /></p>
 
 __First account created:__
