@@ -3,7 +3,7 @@
 </p>
 
 #  React SPA
-A single page app (SPA) built with [React](https://reactjs.org/), showcasing solutions for the [JavaScript &amp; React competencies](src/assignments) assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program).
+A single page app (SPA) built with [React](https://reactjs.org/), showcasing solutions for the [JavaScript &amp; React competencies](src/img/assignments) assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program).
 
 
 
@@ -39,7 +39,7 @@ $ npm start
 
 
 ## Usage
-<p align="center"><img src="src/home.png"/></p>
+<p align="center"><img src="src/img/home.png"/></p>
 
 Use the icons at the top to navigate to different areas of the app. From left to right, these are:
 
@@ -56,7 +56,7 @@ Use the icons at the top to navigate to different areas of the app. From left to
 
 
 ### Home
-_[Solution for Comp 120 - ReactJS](src/assignments/Comp%20120%20-%20ReactJS.pdf)_
+_[Solution for Comp 120 - ReactJS](src/img/assignments/Comp%20120%20-%20ReactJS.pdf)_
 
 Displays the React logo.
 
@@ -66,8 +66,8 @@ Displays the React logo.
 
 
 ### Calculator
-_[Solution for Comp 130 - JavaScript TDD](src/assignments/Comp%20130%20-%20JavaScript%20TDD.pdf)_
-<p align="center"><img src="src/calculator.png" /></p>
+_[Solution for Comp 130 - JavaScript TDD](src/img/assignments/Comp%20130%20-%20JavaScript%20TDD.pdf)_
+<p align="center"><img src="src/img/calculator.png" /></p>
 
 __An exercise in test driven development (TDD) using jest.__
 1. Write tests for basic mathematical functions (addition, subtraction, multiplication, division)
@@ -81,7 +81,7 @@ __An exercise in test driven development (TDD) using jest.__
 7. Check for opportunities to refactor/optimise code
 8. If a change is made to code, re-run tests - if any fail, resolve them one by one until all tests pass
 
-_NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/index.html' after cloning the repo)_
+_NOTE: View test coverage report at 'coverage/lcov-report/src/img/components/js/index.html' after cloning the repo)_
 
 The tested &amp; verified math functions were then used to build a simple calculator in React.
 
@@ -91,14 +91,14 @@ The tested &amp; verified math functions were then used to build a simple calcul
 
 
 ### One bank account
-_[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
-<p align="center"><img src="src/account.png" /></p>
+_[Solution for Comp 140 - JavaScript Objects and State](src/img/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
+<p align="center"><img src="src/img/account.png" /></p>
 
 Test driven development of a simple bank `Account` class in JS, to handle management of a single bank account: creation, renaming, deposit/withdrawal, etc.
 
 Although JS classes do not officially have private members, I _was_ able to use private members in my `Account` class by taking advantage of an [experimental private field declaration feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations). (Note that this is only possible since Babel takes care of transpiling the code into common JS suitable for all browsers.)
 
-_NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/index.html' after cloning the repo._
+_NOTE: View test coverage report at 'coverage/lcov-report/src/img/components/js/index.html' after cloning the repo._
 
 The tested &amp; verified bank `Account` class was used to build a solitary account manager in React. _(NOTE: The UI does not allow for the account to be renamed, and the starting balance is pre-determined. These features - and more - will be exposed in the UI of the next section of this SPA.)_
 
@@ -108,8 +108,8 @@ The tested &amp; verified bank `Account` class was used to build a solitary acco
 
 
 ### Bank accounts manager
-_[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
-<p align="center"><img src="src/accounts.png" /></p>
+_[Solution for Comp 140 - JavaScript Objects and State](src/img/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
+<p align="center"><img src="src/img/accounts.png" /></p>
 
 Test driven development of an `AccountsController` class, allowing for the management of a collection of bank `Account` objects. The `AccountsController` class stores bank `Account` objects in a [private array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations), and provides several methods for managing the collection of bank `Account` objects, e.g.
 * adding, deleting, renaming accounts
@@ -117,7 +117,7 @@ Test driven development of an `AccountsController` class, allowing for the manag
 * getting the total balance of all accounts
 * sorting all accounts in ascending/descending order by name or balance
 
-_NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/index.html' after cloning the repo._
+_NOTE: View test coverage report at 'coverage/lcov-report/src/img/components/js/index.html' after cloning the repo._
 
 The tested &amp; verified `AccountsController` class was used to build a sophisticated bank account manager in React.
 
@@ -126,31 +126,31 @@ The tested &amp; verified `AccountsController` class was used to build a sophist
 __Creating the first account:__
 
 Until the first bank account is created, the user is presented with a very prominent 'New Account' button, seen above and here, during creation of the initial account.
-<p align="center"><img src="src/accounts1.png" /></p>
+<p align="center"><img src="src/img/accounts1.png" /></p>
 
 &nbsp;
 
 __Initial account created:__
 
 Now that one account has been created, the 'New Account' button becomes less prominent, but remains easily accessible and highly visible.
-<p align="center"><img src="src/accounts2.png" /></p>
+<p align="center"><img src="src/img/accounts2.png" /></p>
 
 &nbsp;
 
 __Adding a second account:__
-<p align="center"><img src="src/accounts3.png" /></p>
+<p align="center"><img src="src/img/accounts3.png" /></p>
 
 &nbsp;
 
 __After adding several accounts:__
 
 From left to right, the four icons next to the right of each account allow for: deposit/withdrawal, transfer between accounts, account renaming, and account deletion.
-<p align="center"><img src="src/accounts4.png" /></p>
+<p align="center"><img src="src/img/accounts4.png" /></p>
 
 &nbsp;
 
 __Attempting to overdraw an account:__
-<p align="center"><img src="src/accounts5.png" /></p>
+<p align="center"><img src="src/img/accounts5.png" /></p>
 
 &nbsp;
 
@@ -161,41 +161,41 @@ The following operations are not allowed, and cause descriptive error messages t
 * making a transfer when only one account exists
 * overdrawing an account when withdrawing funds
 * overdrawing an account when transferring funds between accounts
-<p align="center"><img src="src/accounts6.png" /></p>
+<p align="center"><img src="src/img/accounts6.png" /></p>
 
 &nbsp;
 
 __Transferring funds between accounts:__
 
 The account selected in the 'From' dropdown is not available in the 'To' dropdown, and vice versa. Whenever the account selected in one dropdown is changed, the other dropdown is updated appropriately. 
-<p align="center"><img src="src/accounts7.png" /></p>
+<p align="center"><img src="src/img/accounts7.png" /></p>
 
 &nbsp;
 
 __Renaming an account:__
-<p align="center"><img src="src/accounts8.png" /></p>
+<p align="center"><img src="src/img/accounts8.png" /></p>
 
 &nbsp;
 
 __Attempting to delete an account:__
-<p align="center"><img src="src/accounts9.png" /></p>
+<p align="center"><img src="src/img/accounts9.png" /></p>
 
 &nbsp;
 
 __Accounts can be sorted by balance, in ascending/descending order:__
-<p align="center"><img src="src/accounts10.png" /></p>
+<p align="center"><img src="src/img/accounts10.png" /></p>
 
 &nbsp;
 
 __Accounts can be sorted by name, in ascending/descending order:__
 
 Note that the active sorting criteria (name or balance) is highlighted in blue, and there is visual indication (via arrow glyphs) of ascending/descending order.
-<p align="center"><img src="src/accounts11.png" /></p>
+<p align="center"><img src="src/img/accounts11.png" /></p>
 
 &nbsp;
 
 __After deleting an account:__
-<p align="center"><img src="src/accounts12.png" /></p>
+<p align="center"><img src="src/img/accounts12.png" /></p>
 
 
 &nbsp;
@@ -203,8 +203,8 @@ __After deleting an account:__
 
 
 ### Cities
-_[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
-<p align="center"><img src="src/cities.png" /></p>
+_[Solution for Comp 140 - JavaScript Objects and State](src/img/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
+<p align="center"><img src="src/img/cities.png" /></p>
 
 Test driven development of `City` and `Community` classes, where a `City` object has properties:
 * name
@@ -229,19 +229,19 @@ The user can choose (via the dropdown) to display cities in a particular hemisph
 &nbsp;
 
 __Showing cities in the Northern hemisphere only:__
-<p align="center"><img src="src/cities1.png" /></p>
+<p align="center"><img src="src/img/cities1.png" /></p>
 
 &nbsp;
 
 __Clicking a +/- button opens a modal where a city's population can be adjusted:__
-<p align="center"><img src="src/cities2.png" /></p>
+<p align="center"><img src="src/img/cities2.png" /></p>
 
 &nbsp;
 
 __Adjusting a city's population affects the community's total population, and can cause a change in the city's status:__
 
 In this case, Jajce went from being a 'Large town' to a 'Village'
-<p align="center"><img src="src/cities3.png" /></p>
+<p align="center"><img src="src/img/cities3.png" /></p>
 
 
 &nbsp;
@@ -249,8 +249,8 @@ In this case, Jajce went from being a 'Large town' to a 'Village'
 
 
 ### Data structures
-_[Solution for Comp 150 - JavaScript Algorithms](src/assignments/Comp%20150%20-%20JavaScript%20Algorithms.pdf)_
-<p align="center"><img src="src/data_structures.png" /></p>
+_[Solution for Comp 150 - JavaScript Algorithms](src/img/assignments/Comp%20150%20-%20JavaScript%20Algorithms.pdf)_
+<p align="center"><img src="src/img/data_structures.png" /></p>
 
 Test driven development of an `AccountsController` class, allowing for the management of a collection of bank `Account` objects. The `AccountsController` class stores bank `Account` objects in a [private array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations), and provides several methods for managing the collection of bank `Account` objects, e.g.
 * adding, deleting, renaming accounts
@@ -258,7 +258,7 @@ Test driven development of an `AccountsController` class, allowing for the manag
 * getting the total balance of all accounts
 * sorting all accounts in ascending/descending order by name or balance
 
-_NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/index.html' after cloning the repo._
+_NOTE: View test coverage report at 'coverage/lcov-report/src/img/components/js/index.html' after cloning the repo._
 
 The tested &amp; verified `AccountsController` class was used to build a sophisticated bank account manager in React.
 
@@ -267,35 +267,35 @@ The tested &amp; verified `AccountsController` class was used to build a sophist
 __sddfgf:__
 
 fsdfsdfsdfsdfsdf.
-<p align="center"><img src="src/data_structures1.png" /></p>
+<p align="center"><img src="src/img/data_structures1.png" /></p>
 
 &nbsp;
 
 __sddfgf:__
 
 fsdfsdfsdfsdfsdf.
-<p align="center"><img src="src/data_structures2.png" /></p>
+<p align="center"><img src="src/img/data_structures2.png" /></p>
 
 &nbsp;
 
 __sddfgf:__
 
 fsdfsdfsdfsdfsdf.
-<p align="center"><img src="src/data_structures3.png" /></p>
+<p align="center"><img src="src/img/data_structures3.png" /></p>
 
 &nbsp;
 
 __sddfgf:__
 
 fsdfsdfsdfsdfsdf.
-<p align="center"><img src="src/data_structures4.png" /></p>
+<p align="center"><img src="src/img/data_structures4.png" /></p>
 
 &nbsp;
 
 __sddfgf:__
 
 fsdfsdfsdfsdfsdf.
-<p align="center"><img src="src/data_structures5.png" /></p>
+<p align="center"><img src="src/img/data_structures5.png" /></p>
 
 
 
