@@ -96,7 +96,7 @@ _[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%201
 
 Test driven development of a simple bank `Account` class in JS, to handle management of a single bank account: creation, renaming, deposit/withdrawal, etc.
 
-Although JS classes do not officially have private members, I _was_ able to use private members in my `Account` class by taking advantage of an [experimental private field declaration feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations). (Note that this is only possible since Babel takes care of transpiling the code into common JS suitable for all browsers.)
+Although JS classes do not officially have private members, I _was_ able to use private members in my `Account` class by taking advantage of an [experimental private field declaration feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations). (Note that this is only possible since [Babel](https://babeljs.io/) takes care of transpiling the code into common JS suitable for all browsers.)
 
 _NOTE: View test coverage report at 'coverage/lcov-report/src/img/components/js/index.html' after cloning the repo._
 
