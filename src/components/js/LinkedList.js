@@ -30,19 +30,19 @@ last()      - makes the tail the current Node
 next()      - makes the next Node the current Node
 previous()  - makes the previous Node the current Node
 
-map()       - returns an Array of (references to) all Node Objects in the list
-              in sequence, from head to tail
+map()       - returns an Array containing the results of calling the provided
+              callback function on every Node in the in sequence, from head to tail
 
 
 --- NOTES ---
-- All methods allow call chaining, including map()
+- All methods allow call chaining
 
 - Empty list:
     'head', 'tail', 'position' are null and 'length' is 0
 
-- The way this list has been defined, the only way to change the 'head', or 'tail'
-or any Node in the list, really, is to move 'position' to the target Node, making it
-the current Node, deleting it, and then inserting new Node(s) if desired.
+- The way this list has been defined, the only way to change the 'head', 'tail'
+or any Node in the list, is to move 'position' to the target Node (making it
+the current Node), delete it, and then insert new Node(s) if desired.
 */
 
 // Set to 'true' to enable output of debug messages from methods

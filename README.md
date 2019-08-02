@@ -252,52 +252,118 @@ In this case, Jajce went from being a 'Large town' to a 'Village'
 _[Solution for Comp 150 - JavaScript Algorithms](src/assignments/Comp%20150%20-%20JavaScript%20Algorithms.pdf)_
 <p align="center"><img src="src/img/data_structures.png" /></p>
 
-Test driven development of an `AccountsController` class, allowing for the management of a collection of bank `Account` objects. The `AccountsController` class stores bank `Account` objects in a [private array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations), and provides several methods for managing the collection of bank `Account` objects, e.g.
-* adding, deleting, renaming accounts
-* getting the account with highest/lowest balance
-* getting the total balance of all accounts
-* sorting all accounts in ascending/descending order by name or balance
+&nbsp;
+
+#### Development notes
+The first portion of [this assignment](src/assignments/Comp%20150%20-%20JavaScript%20Algorithms.pdf) involved development of a linked list, using two classes: `Node` and `LinkedList`. The assignment specified that the `Node` class should have these attributes:
+
+* `subject` : stores a string
+* `amount` : stores a numeric value
+* `forwardNode` : stores a reference to another `Node`
+* `show()` : displays the `subject` and `amount`.
+
+The `LinkedList` was specified to be a collection of Nodes, with the current position in the list stored in state. Insertion in the list was required to be _after_ the current position. Deletion would remove the `Node` at the current position. A set of methods (`first`, `last`, `next`, `previous`) would allow for movement of position through the list. Finally, a `total` function was required, which would display the total of the amounts of the Nodes in the list.
+
+I disliked the idea of having `Node` and `LinkedList` classes that could only handle one sort of data (`subject` &amp; `amount`) - my preference was to develop these classes in a logical, compartmentalised, data-agnostic manner. A `Node` should not care or know what kind of data is stored inside of it, and a `LinkedList` should only know that it contains Nodes - not the structure of the data inside those Nodes!
+
+After some thought, I managed to come up with a solution that satisfied both the assignment's requirements, and my desire to develop generic, reusable `Node` and `LinkedList` classes.
+
+Using TDD, I developed a [`Node` class](src/components/js/Node.js) with attributes:
+* `data` : stores any Object or primitive data type
+* `next` : stores a reference to another `Node`
+* `show()` : checks the type of `data` - if it's a primitive, it can easily be printed, and if it's an Object it's keys & values are enumerated and then printed.
+
+This approach allows the `Node` class to handle any kind of data. Once the `Node` class was complete, I used TDD to develop a positional [`LinkedList` class](src/components/js/LinkedList.js):
+
+__PROPERTIES__
+* `head`        - points (i.e. stores a reference) to the first Node of the list
+* `tail`        - points to the last Node of the list
+* `position`    - points to the 'current Node'. The current Node is the last Node in
+              the list (i.e. the 'tail'), until 'position' is moved via one of
+              the positional methods (`first, last, next, previous`) to
+              point to another Node
+   - `position` determines the behaviour of `insert` and `delete` (see below for details)
+* `length`      - the number of Nodes in the list
+
+
+__METHODS__
+* `insert()`    - inserts a new Node after the current Node, and makes the
+              new Node the current Node
+* `delete()`    - removes the current Node, and makes the previous Node the
+              the current Node
+* `first()`     - makes the head the current Node
+* `last()`      - makes the tail the current Node
+* `next()`      - makes the next Node the current Node
+* `previous()`  - makes the previous Node the current Node
+* `map(callback)` - returns an Array containing the results of calling the provided `callback` function on every Node in the in sequence, from head to tail
+
+
+__NOTES__
+- All methods allow call chaining
+- Empty list : `head`, `tail`, `position` are null and `length` is 0
+- The only way to replace the `head`, `tail`, or any Node in the list, is to move `position` to the target Node (thus making it the current Node), delete it, and then insert new Node(s) if desired.
+
+Once TDD of the `LinkedList` class was complete, I could finally proceed.
+
+---
+
+In order to satisfy the assignment's requirement of `subject` &amp; `amount` data stored in Nodes, I decided to create a `Movie` class, with a `title` property corresponding to the `subject`, and a `gross` property corresponding to the `amount`. `Movie` objects could then be stored in the nodes of a linked list.
+
+One outstanding issue however, was that the linked list was required to have a `total` function, which would display the total of the amounts of the Nodes in the list. This was not possible with my generic `LinkedList` class.
+
+I therefore developed a [`MoviesList` class](src/components/js/MoviesList.js) which extended my LinkedList class, and only added one method: `totalGross`, which would return the total gross of all movies stored in the list.
 
 _NOTE: View test coverage report at 'coverage/lcov-report/src/img/components/js/index.html' after cloning the repo._
 
-The tested &amp; verified `AccountsController` class was used to build a sophisticated bank account manager in React.
+Test driven development of the [Queue](src/components/js/Queue.js) and [Stack](src/components/js/Stack.js) classes was done using JS' native Array and its methods (as required by the assignment) and was trivial. 
+
+The tested &amp; verified classes were then used in React.
 
 &nbsp;
 
-__sddfgf:__
+__Data structure selection:__
 
-fsdfsdfsdfsdfsdf.
+The user can choose between a linked list, queue, and stack which have been populated with movie gross data, or begin with an empty data structure.
+<p align="center"><img src="src/img/data_structures.png" /></p>
+
+&nbsp;
+
+__Linked List:__
+
+By default, the current Node is the tail until position is adjusted. The current node/position can be adjusted using the chevron glyph controls, or by clicking on a node.
 <p align="center"><img src="src/img/data_structures1.png" /></p>
 
 &nbsp;
 
-__sddfgf:__
+__Position set to 'head':__
 
-fsdfsdfsdfsdfsdf.
+Using a chevron control, position in the list has been set to the first node.
 <p align="center"><img src="src/img/data_structures2.png" /></p>
 
 &nbsp;
 
-__sddfgf:__
-
-fsdfsdfsdfsdfsdf.
+__Clicking on a node to set position in the list:__
 <p align="center"><img src="src/img/data_structures3.png" /></p>
 
 &nbsp;
 
-__sddfgf:__
-
-fsdfsdfsdfsdfsdf.
+__Deleting the current node makes the previous Node the current Node:__
 <p align="center"><img src="src/img/data_structures4.png" /></p>
 
 &nbsp;
 
-__sddfgf:__
-
-fsdfsdfsdfsdfsdf.
+__Queue - the first movie in the queue (marked/highlighted) is the first one out:__
 <p align="center"><img src="src/img/data_structures5.png" /></p>
 
+&nbsp;
 
+__Queue - the last movie in the stack (marked/highlighted) is the first one out:__
+<p align="center"><img src="src/img/data_structures6.png" /></p>
+
+&nbsp;
+
+
+## [&uarr; TOP](#react-spa)
 
 
 
