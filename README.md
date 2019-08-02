@@ -54,7 +54,7 @@ Displays the React logo.
 _[Solution for Comp 130 - JavaScript TDD](src/assignments/Comp%20130%20-%20JavaScript%20TDD.pdf)_
 <p align="center"><img src="src/calculator.png" /></p>
 
-__An exercise in TDD using jest.__
+__An exercise in test driven development (TDD) using jest.__
 1. Write tests for basic mathematical functions (addition, subtraction, multiplication, division)
 2. Write stubs for the mathematical functions
 3. Run tests, which _will_ fail
@@ -78,11 +78,11 @@ _[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%201
 
 Test driven development of a simple bank `Account` class in JS, to handle management of a single bank account: creation, renaming, deposit/withdraw, etc.
 
-Although JS classes do not officially have private members, I _was_ able to use private members in my `Account` class by taking advantage of an [experimental private field declaration feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations). (Note that this is only possible since Babel takes care of transpiling my code into common JS suitable for all browsers.)
+Although JS classes do not officially have private members, I _was_ able to use private members in my `Account` class by taking advantage of an [experimental private field declaration feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations). (Note that this is only possible since Babel takes care of transpiling the code into common JS suitable for all browsers.)
 
 _NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/index.html' after cloning the repo._
 
-The tested &amp; verified bank `Account` class was used to build a solitary account manager' in React. _(NOTE: The UI does not allow for the account to be renamed, and the starting balance is also pre-determined. These features - and more - will be exposed in the UI of the next section of the app.)_
+The tested &amp; verified bank `Account` class was used to build a solitary account manager in React. _(NOTE: The UI does not allow for the account to be renamed, and the starting balance is pre-determined. These features - and more - will be exposed in the UI of the next section of this SPA.)_
 
 
 
@@ -104,31 +104,31 @@ The tested &amp; verified `AccountsController` class was used to build a sophist
 
 __Creating the first account:__
 
-Until the first bank account is created, the user is presented with a very prominent 'New Account' button.
+Until the first bank account is created, the user is presented with a very prominent 'New Account' button, seen above and here, during creation of the initial account.
 <p align="center"><img src="src/accounts1.png" /></p>
 
 &nbsp;
 
-_First account created:__
+Initial account created:__
 
 Now that one account has been created, the 'New Account' button becomes less prominent, but remains easily accessible and highly visible.
 <p align="center"><img src="src/accounts2.png" /></p>
 
 &nbsp;
 
-_Adding the second account:__
+__Adding a second account:__
 <p align="center"><img src="src/accounts3.png" /></p>
 
 &nbsp;
 
-_After adding several accounts:__
+__After adding several accounts:__
 
 From left to right, the four icons next to the right of each account allow for: deposit/withdrawal, transfer between accounts, account renaming, and account deletion.
 <p align="center"><img src="src/accounts4.png" /></p>
 
 &nbsp;
 
-_Attempting to overdraw an account:__
+__Attempting to overdraw an account:__
 <p align="center"><img src="src/accounts5.png" /></p>
 
 &nbsp;
