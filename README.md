@@ -217,19 +217,30 @@ and methods to:
 * grow/shrink the population
 * obtain a classification from 'City' -> 'Large town' -> 'Town' -> 'Village' -> 'Hamlet' based on its population
 
+A `Community` consists of a collection of `City` objects, with methods to:
+* filter the community of cities based on latitude, returning a new community of cities in either the Northern or Southern hemisphere
+* obtain the Nothern-most &amp; Southern-most cities in the community
+* obtain the total population of all cities in the community
+
+The city data is loaded from a JSON file I created from actual population data, and when the 'Cities' app first loads, a community containing all cities is presented to the user.
+
+The user can choose (via the dropdown) to display cities in a particular hemisphere, and using the +/- buttons, grow or shrink the population of a city.
+
 &nbsp;
 
-__sfd:__
+__Showing cities in the Northern hemisphere only:__
 <p align="center"><img src="src/cities1.png" /></p>
 
 &nbsp;
 
-__dfg:__
+__Clicking a +/- button opens a modal where a city's population can be adjusted:__
 <p align="center"><img src="src/cities2.png" /></p>
 
 &nbsp;
 
-__hjk:__
+__Adjusting a city's population affects the community's total population, and can cause a change in the city's status:__
+
+In this case, Jajce went from being a 'Large town' to a 'Village'
 <p align="center"><img src="src/cities3.png" /></p>
 
 
