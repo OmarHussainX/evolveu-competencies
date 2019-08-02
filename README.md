@@ -94,7 +94,7 @@ The tested &amp; verified math functions were then used to build a simple calcul
 _[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
 <p align="center"><img src="src/account.png" /></p>
 
-Test driven development of a simple bank `Account` class in JS, to handle management of a single bank account: creation, renaming, deposit/withdraw, etc.
+Test driven development of a simple bank `Account` class in JS, to handle management of a single bank account: creation, renaming, deposit/withdrawal, etc.
 
 Although JS classes do not officially have private members, I _was_ able to use private members in my `Account` class by taking advantage of an [experimental private field declaration feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations). (Note that this is only possible since Babel takes care of transpiling the code into common JS suitable for all browsers.)
 
@@ -188,6 +188,8 @@ __Accounts can be sorted by balance, in ascending/descending order:__
 &nbsp;
 
 __Accounts can be sorted by name, in ascending/descending order:__
+
+Note that the active sorting criteria (name or balance) is highlighted in blue, and there is visual indication (via arrow glyphs) of ascending/descending order.
 <p align="center"><img src="src/accounts11.png" /></p>
 
 &nbsp;
@@ -203,6 +205,17 @@ __After deleting an account:__
 ### Cities
 _[Solution for Comp 140 - JavaScript Objects and State](src/assignments/Comp%20140%20-%20JavaScript%20Objects%20and%20State.pdf)_
 <p align="center"><img src="src/cities.png" /></p>
+
+Test driven development of `City` and `Community` classes, where a `City` object has properties:
+* name
+* latitude
+* longitude
+* population
+
+and methods to:
+* obtain a `String` representation of the city
+* grow/shrink the population
+* obtain a classification from 'City' -> 'Large town' -> 'Town' -> 'Village' -> 'Hamlet' based on its population
 
 &nbsp;
 
