@@ -100,6 +100,8 @@ _NOTE: View test coverage report at 'coverage/lcov-report/src/components/js/inde
 
 The tested &amp; verified `AccountsController` class was used to build a sophisticated bank account manager in React.
 
+&nbsp;
+
 __Creating the first account:__
 
 Until the first bank account is created, the user is presented with a very prominent 'New Account' button.
