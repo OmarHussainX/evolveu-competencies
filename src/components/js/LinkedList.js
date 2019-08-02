@@ -31,7 +31,8 @@ next()      - makes the next Node the current Node
 previous()  - makes the previous Node the current Node
 
 map()       - returns an Array containing the results of calling the provided
-              callback function on every Node in the in sequence, from head to tail
+              callback function on every Node in the list in sequence, from
+              head to tail
 
 
 --- NOTES ---

@@ -271,7 +271,7 @@ After some thought, I managed to come up with a solution that satisfied both the
 Using TDD, I developed a [`Node` class](src/components/js/Node.js) with attributes:
 * `data` : stores any Object or primitive data type
 * `next` : stores a reference to another `Node`
-* `show()` : checks the type of `data` - if it's a primitive, it can easily be printed, and if it's an Object it's keys & values are enumerated and then printed.
+* `show()` : checks the type of `data` - if it's a primitive, it can easily be printed, and if it's an Object it's keys & values are enumerated and then printed
 
 This approach allows the `Node` class to handle any kind of data. Once the `Node` class was complete, I used TDD to develop a positional [`LinkedList` class](src/components/js/LinkedList.js):
 
@@ -295,7 +295,7 @@ __METHODS__
 * `last()`      - makes the tail the current Node
 * `next()`      - makes the next Node the current Node
 * `previous()`  - makes the previous Node the current Node
-* `map(callback)` - returns an Array containing the results of calling the provided `callback` function on every Node in the in sequence, from head to tail
+* `map(callback)` - returns an Array containing the results of calling the provided `callback` function on every Node in the list in sequence, from head to tail
 
 
 __NOTES__
@@ -315,7 +315,7 @@ I therefore developed a [`MoviesList` class](src/components/js/MoviesList.js) wh
 
 _NOTE: View test coverage report at 'coverage/lcov-report/src/img/components/js/index.html' after cloning the repo._
 
-Test driven development of the [Queue](src/components/js/Queue.js) and [Stack](src/components/js/Stack.js) classes was done using JS' native Array and its methods (as required by the assignment) and was trivial. 
+Test driven development of the [Queue](src/components/js/Queue.js) and [Stack](src/components/js/Stack.js) classes was done using JS' [native Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) and its methods (as required by the assignment) and was trivial. 
 
 The tested &amp; verified classes were then used in React.
 
