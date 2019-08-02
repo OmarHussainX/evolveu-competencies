@@ -109,7 +109,7 @@ Until the first bank account is created, the user is presented with a very promi
 
 &nbsp;
 
-Initial account created:__
+__Initial account created:__
 
 Now that one account has been created, the 'New Account' button becomes less prominent, but remains easily accessible and highly visible.
 <p align="center"><img src="src/accounts2.png" /></p>
