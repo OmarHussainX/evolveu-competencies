@@ -328,7 +328,7 @@ The user can choose between a linked list, queue, and stack which have been popu
 
 &nbsp;
 
-__Linked List:__
+__Linked list:__
 
 By default, the current Node is the tail until position is adjusted. The current node/position can be adjusted using the chevron glyph controls, or by clicking on a node.
 <p align="center"><img src="src/img/data_structures1.png" /></p>
@@ -347,7 +347,7 @@ __Clicking on a node to set position in the list:__
 
 &nbsp;
 
-__Deleting the current node makes the previous Node the current Node:__
+__Deleting the current node (Spider-Verse) made the previous Node the new current Node:__
 <p align="center"><img src="src/img/data_structures4.png" /></p>
 
 &nbsp;
@@ -357,7 +357,7 @@ __Queue - the first movie in the queue (marked/highlighted) is the first one out
 
 &nbsp;
 
-__Queue - the last movie in the stack (marked/highlighted) is the first one out:__
+__Stack - the last movie in the stack (marked/highlighted) is the first one out:__
 <p align="center"><img src="src/img/data_structures6.png" /></p>
 
 &nbsp;
