@@ -109,7 +109,7 @@ class LinkedList {
 
         // A new Node was added to the list, increment length
         this.length++
-        // if (DEBUG_MSG) console.log(`${statusMsg}, length: ${this.length}`)
+        if (DEBUG_MSG) console.log(`${statusMsg}, length: ${this.length}`)
         return this
     }
 
@@ -171,7 +171,7 @@ class LinkedList {
 
         // A Node was removed from the list, decrement length
         this.length--
-        // if (DEBUG_MSG) console.log(`${statusMsg}, length: ${this.length}`)
+        if (DEBUG_MSG) console.log(`${statusMsg}, length: ${this.length}`)
 
         return this
     }
