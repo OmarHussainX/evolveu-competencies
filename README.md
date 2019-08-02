@@ -144,7 +144,7 @@ __Adding a second account:__
 
 __After adding several accounts:__
 
-From left to right, the four icons next to the right of each account allow for: deposit/withdrawal, transfer between accounts, account renaming, and account deletion.
+From left to right, the four icons to the right of each account allow for: deposit/withdrawal, transfer between accounts, account renaming, and account deletion.
 <p align="center"><img src="src/img/accounts4.png" /></p>
 
 &nbsp;
