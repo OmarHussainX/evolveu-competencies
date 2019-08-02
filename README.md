@@ -12,6 +12,8 @@ A single page app (SPA) built with [React](https://reactjs.org/), showcasing sol
 
 
 &nbsp;
+&nbsp;
+
 
 ## Installation
 
