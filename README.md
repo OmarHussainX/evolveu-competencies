@@ -260,7 +260,7 @@ The first portion of [this assignment](src/assignments/Comp%20150%20-%20JavaScri
 * `subject` : stores a string
 * `amount` : stores a numeric value
 * `forwardNode` : stores a reference to another `Node`
-* `show()` : displays the `subject` and `amount`.
+* `show()` : displays the `subject` and `amount`
 
 The `LinkedList` was specified to be a collection of Nodes, with the current position in the list stored in state. Insertion in the list was required to be _after_ the current position. Deletion would remove the `Node` at the current position. A set of methods (`first`, `last`, `next`, `previous`) would allow for movement of position through the list. Finally, a `total` function was required, which would display the total of the amounts of the Nodes in the list.
 
