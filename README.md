@@ -107,21 +107,31 @@ __Creating the first account:__
 Until the first bank account is created, the user is presented with a very prominent 'New Account' button.
 <p align="center"><img src="src/accounts1.png" /></p>
 
-__First account created:__
+&nbsp;
+
+_First account created:__
 
 Now that one account has been created, the 'New Account' button becomes less prominent, but remains easily accessible and highly visible.
 <p align="center"><img src="src/accounts2.png" /></p>
 
-__Adding the second account:__
+&nbsp;
+
+_Adding the second account:__
 <p align="center"><img src="src/accounts3.png" /></p>
 
-__After adding several accounts:__
+&nbsp;
+
+_After adding several accounts:__
 
 From left to right, the four icons next to the right of each account allow for: deposit/withdrawal, transfer between accounts, account renaming, and account deletion.
 <p align="center"><img src="src/accounts4.png" /></p>
 
-__Attempting to overdraw an account:__
+&nbsp;
+
+_Attempting to overdraw an account:__
 <p align="center"><img src="src/accounts5.png" /></p>
+
+&nbsp;
 
 __An illegal operation is not executed, and an error message is displayed:__
 
@@ -132,15 +142,36 @@ The following operations are not allowed, and result in appropriate, descriptive
 * overdrawing an account when transferring funds between accounts
 <p align="center"><img src="src/accounts6.png" /></p>
 
+&nbsp;
+
 __Transferring funds between accounts:__
 
 The account selected in the 'From' dropdown is not available in the 'To' dropdown, and vice versa. Whenever the account selected in one dropdown is changed, the other dropdown is updated appropriately. 
 <p align="center"><img src="src/accounts7.png" /></p>
 
+&nbsp;
+
+__Renaming an account:__
 <p align="center"><img src="src/accounts8.png" /></p>
+
+&nbsp;
+
+__Attempting to delete an account:__
 <p align="center"><img src="src/accounts9.png" /></p>
+
+&nbsp;
+
+__Accounts can be sorted by balance, in ascending/descending order:__
 <p align="center"><img src="src/accounts10.png" /></p>
+
+&nbsp;
+
+__Accounts can be sorted by name, in ascending/descending order:__
 <p align="center"><img src="src/accounts11.png" /></p>
+
+&nbsp;
+
+__After deleting an account:__
 <p align="center"><img src="src/accounts12.png" /></p>
 
 
