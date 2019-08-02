@@ -248,9 +248,9 @@ In this case, Jajce went from being a 'Large town' to a 'Village'
 &nbsp;
 
 
-### Data structires
+### Data structures
 _[Solution for Comp 150 - JavaScript Algorithms](src/assignments/Comp%20150%20-%20JavaScript%20Algorithms.pdf)_
-<p align="center"><img src="src/accounts.png" /></p>
+<p align="center"><img src="src/data_structures.png" /></p>
 
 Test driven development of an `AccountsController` class, allowing for the management of a collection of bank `Account` objects. The `AccountsController` class stores bank `Account` objects in a [private array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations), and provides several methods for managing the collection of bank `Account` objects, e.g.
 * adding, deleting, renaming accounts
@@ -264,10 +264,38 @@ The tested &amp; verified `AccountsController` class was used to build a sophist
 
 &nbsp;
 
-__Creating the first account:__
+__sddfgf:__
 
-Until the first bank account is created, the user is presented with a very prominent 'New Account' button, seen above and here, during creation of the initial account.
-<p align="center"><img src="src/accounts1.png" /></p>
+fsdfsdfsdfsdfsdf.
+<p align="center"><img src="src/data_structures1.png" /></p>
+
+&nbsp;
+
+__sddfgf:__
+
+fsdfsdfsdfsdfsdf.
+<p align="center"><img src="src/data_structures2.png" /></p>
+
+&nbsp;
+
+__sddfgf:__
+
+fsdfsdfsdfsdfsdf.
+<p align="center"><img src="src/data_structures3.png" /></p>
+
+&nbsp;
+
+__sddfgf:__
+
+fsdfsdfsdfsdfsdf.
+<p align="center"><img src="src/data_structures4.png" /></p>
+
+&nbsp;
+
+__sddfgf:__
+
+fsdfsdfsdfsdfsdf.
+<p align="center"><img src="src/data_structures5.png" /></p>
 
 
 
