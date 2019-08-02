@@ -363,8 +363,9 @@ __Stack - the last movie in the stack (marked/highlighted) is the first one out:
 &nbsp;
 
 
-## [&uarr; TOP](#react-spa)
+__[&uarr; BACK TO TOP](#react-spa)__
 
+&nbsp;
 
 
 ---
