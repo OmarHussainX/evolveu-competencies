@@ -47,7 +47,7 @@ Use the icons at the top to navigate to different areas of the app. From left to
 * [Calculator](#calculator)
 * [Manage a single bank account](#one-bank-account)
 * [Manage multiple bank accounts (belonging to one user)](#bank-accounts-manager)
-* View/manage a collection of cities, with filtering by hemisphere
+* [View/manage a collection of cities](#cities)
 * View/manage box office gross data in three different data structures
 
 
