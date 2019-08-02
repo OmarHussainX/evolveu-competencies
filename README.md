@@ -133,9 +133,9 @@ __Attempting to overdraw an account:__
 
 &nbsp;
 
-__An illegal operation is not executed, and an error message is displayed:__
+__An error message is displayed:__
 
-The following operations are not allowed, and result in appropriate, descriptive error messages:
+The following operations are not allowed, and cause descriptive error messages to be displayed:
 * creating an account with a name that already exists
 * making a transfer when only one account exists
 * overdrawing an account when withdrawing funds
