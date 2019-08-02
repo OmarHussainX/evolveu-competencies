@@ -17,7 +17,7 @@ A single page app (SPA) built with [React](https://reactjs.org/), showcasing sol
 
 ## Installation
 
-You'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [npm](http://npmjs.com) installed ([Node.js](https://nodejs.org/en/download/) includes [npm](http://npmjs.com))
+__Prerequsites:__ [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [npm](http://npmjs.com) installed ([Node.js](https://nodejs.org/en/download/) includes [npm](http://npmjs.com))
 
 ```bash
 # Clone repository
