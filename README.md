@@ -3,6 +3,7 @@
 </p>
 
 #  React SPA
+## [&rarr; Live demo](https://evolveu.netlify.com/)
  A single page app (SPA) built with [React](https://reactjs.org/), showcasing solutions for the [JavaScript &amp; React competencies](src/assignments) assigned in EvolveU's [Full Stack Developer Program](https://www.evolveu.ca/program).
 
 
